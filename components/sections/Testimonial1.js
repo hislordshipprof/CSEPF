@@ -38,7 +38,7 @@ export default function Testimonial1() {
                                         <div className="testimonial-content">
                                             <div className="section-title">
                                                 <span>Testimonials</span>
-                                                <h2>What’s Clients Say </h2>
+                                                <h2>What’s Students Say </h2>
                                             </div>
                                             <p className="mt-3 mt-md-0">
                                                 Nullam dignissim, ante scelerisque the  is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus. Aliquam pellentesque nisi dui eget dapibus enim ornare eu. Morbi nunc metus, maximus eu mauris.

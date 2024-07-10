@@ -7,7 +7,7 @@ export default function Brand1() {
             <div className="brand-section fix section-padding pt-0">
                 <div className="container">
                     <div className="brand-wrapper">
-                        <h6 className="text-center wow fadeInUp" data-wow-delay=".3s">Participation Scools</h6>
+                        <h6 className="text-center wow fadeInUp" data-wow-delay=".3s">Participation Schools</h6>
                         <BrandSlider1 />
                     </div>
                 </div>

@@ -43,8 +43,8 @@ export default function Testimonial2() {
                         <div className="section-title">
                             <span className="text-white wow fadeInUp">Testimonials</span>
                             <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
-                                We Prominent Truly Trusted <br />
-                                IT Business Solutions
+                                Get to hear from <br />
+                                our past fellows
                             </h2>
                         </div>
                         <div className="array-button wow fadeInUp" data-wow-delay=".5s">

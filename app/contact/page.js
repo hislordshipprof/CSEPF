@@ -7,7 +7,7 @@ export default function Contact() {
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Contact Us">
+            <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Contact Us">
                 <div>
                     <section className="contact-section fix section-padding">
                         <div className="container">
@@ -26,7 +26,7 @@ export default function Contact() {
                                                     <div className="content">
                                                         <p>Call Us 7/24</p>
                                                         <h3>
-                                                            <Link href="/tel:+2085550112">+208-555-0112</Link>
+                                                            <Link href="/tel:+2085550112">(303)866-4861</Link>
                                                         </h3>
                                                     </div>
                                                 </div>
@@ -41,7 +41,7 @@ export default function Contact() {
                                                     <div className="content">
                                                         <p>Make a Quote</p>
                                                         <h3>
-                                                            <Link href="/mailto:infotech@gmail.com">Infotech@gmail.com</Link>
+                                                            <Link href="/mailto:Director.CSEPF@gmail.com">Director.CSEPF@gmail.com</Link>
                                                         </h3>
                                                     </div>
                                                 </div>
@@ -55,8 +55,9 @@ export default function Contact() {
                                                     <div className="content">
                                                         <p>Location</p>
                                                         <h3>
-                                                            4517 Washington ave.
+                                                            State Service Building
                                                         </h3>
+                                                        <p>1525 Sherman St.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -109,7 +110,7 @@ export default function Contact() {
                     <div className="map-section">
                         <div className="map-items">
                             <div className="googpemap">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style={{ border: 0 }} allowFullScreen loading="lazy" />
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.9615976618393!2d-104.98781862420778!3d39.74051347155632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c792a84797867%3A0xaa938bbcc7464453!2sState%20services%20building%2C%201525%20Sherman%20St%2C%20Denver%2C%20CO%2080203!5e0!3m2!1sen!2sus!4v1720580483957!5m2!1sen!2sus" style={{ border: 0 }} allowfullscreen="" loading="lazy" ></iframe>
                             </div>
                         </div>
                     </div>

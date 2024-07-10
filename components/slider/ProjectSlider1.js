@@ -40,6 +40,14 @@ const swiperOptions = {
         },
     },
 }
+// const data =[
+//     {
+//         id:1,
+//         name:Benjamin,
+//         image:'/assets/img/team/01.jpg'
+//         project:'Data Center'
+//     }
+// ]
 export default function ProjectSlider1({ showDots }) {
     return (
         <>

@@ -8,13 +8,10 @@ export default function Team4() {
                 <div className="container">
                     <div className="section-title-area">
                         <div className="section-title">
-                            <span className="wow fadeInUp">Team Members</span>
-                            <h2 className="wow fadeInUp" data-wow-delay=".3s">Our Dedicated Team <br /> Members</h2>
+                            <span className="wow fadeInUp">Staff Members</span>
+                            <h2 className="wow fadeInUp" data-wow-delay=".3s">Our Dedicated Staff <br /> Members</h2>
                         </div>
-                        <Link href="/team" className="theme-btn wow fadeInUp" data-wow-delay=".5s">
-                            All Member
-                            <i className="fa-solid fa-arrow-right-long" />
-                        </Link>
+                       
                     </div>
                     <div className="row">
                         <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
@@ -24,14 +21,14 @@ export default function Team4() {
                                 </div>
                                 <div className="team-content">
                                     <h3>
-                                        <Link href="/team-details">Leslie Alexander</Link>
+                                        <Link href="/staff-details">Senator Hanson</Link>
                                     </h3>
                                     <p>CTO &amp; Founder</p>
                                     <div className="social-icon d-flex align-items-center">
                                         <Link href="#"><i className="fab fa-facebook-f" /></Link>
                                         <Link href="#"><i className="fa-brands fa-instagram" /></Link>
                                         <Link href="#"><i className="fab fa-twitter" /></Link>
-                                        <Link href="#"><i className="fa-brands fa-pinterest-p" /></Link>
+                                        <Link href="#"><i className="fa-brands fa-linkedin-in" /></Link>
                                     </div>
                                 </div>
                             </div>
@@ -43,14 +40,14 @@ export default function Team4() {
                                 </div>
                                 <div className="team-content">
                                     <h3>
-                                        <Link href="/team-details">Kristin Watson</Link>
+                                        <Link href="/staff-details">Senator Simpson</Link>
                                     </h3>
                                     <p>CTO &amp; Founder</p>
                                     <div className="social-icon d-flex align-items-center">
                                         <Link href="#"><i className="fab fa-facebook-f" /></Link>
                                         <Link href="#"><i className="fa-brands fa-instagram" /></Link>
                                         <Link href="#"><i className="fab fa-twitter" /></Link>
-                                        <Link href="#"><i className="fa-brands fa-pinterest-p" /></Link>
+                                        <Link href="#"><i className="fa-brands fa-linkedin-in" /></Link>
                                     </div>
                                 </div>
                             </div>
@@ -62,14 +59,14 @@ export default function Team4() {
                                 </div>
                                 <div className="team-content">
                                     <h3>
-                                        <Link href="/team-details">Brooklyn Simmons</Link>
+                                        <Link href="/staff-details">Brooklyn Simmons</Link>
                                     </h3>
                                     <p>CTO &amp; Founder</p>
                                     <div className="social-icon d-flex align-items-center">
                                         <Link href="#"><i className="fab fa-facebook-f" /></Link>
                                         <Link href="#"><i className="fa-brands fa-instagram" /></Link>
                                         <Link href="#"><i className="fab fa-twitter" /></Link>
-                                        <Link href="#"><i className="fa-brands fa-pinterest-p" /></Link>
+                                        <Link href="#"><i className="fa-brands fa-linkedin-in" /></Link>
                                     </div>
                                 </div>
                             </div>

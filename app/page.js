@@ -10,13 +10,13 @@ import News1 from "@/components/sections/News1"
 import Project1 from "@/components/sections/Project1"
 import Service1 from "@/components/sections/Service1"
 import Team3 from "@/components/sections/Team3"
-import Testimonial1 from "@/components/sections/Testimonial1"
+import Testimonial3 from "@/components/sections/Testimonial3"
 export default function Home() {
 
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={1}>
+            <Layout headerStyle={1} footerStyle={4}>
                 <Hero1 />
                 <Marque1 />
                 <About1 />
@@ -25,7 +25,7 @@ export default function Home() {
                 <Achievement1 />
                 <Project1 />
                 <Marque2 />
-                <Testimonial1 />
+                <Testimonial3 />
                 <Team3 />
                 
                 <News1 />

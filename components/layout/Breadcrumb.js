@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Breadcrumb({ breadcrumbTitle }) {
     return (
         <>
-            <div className="breadcrumb-wrapper bg-cover" style={{ backgroundImage: 'url("assets/img/breadcrumb.jpg")' }}>
+            <div className="breadcrumb-wrapper bg-cover" style={{ backgroundImage: 'url("assets/img/capitol.jpg")' }}>
                 <div className="border-shape">
                     <img src="/assets/img/element.png" alt="shape-img" />
                 </div>

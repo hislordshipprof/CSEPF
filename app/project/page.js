@@ -6,7 +6,7 @@ export default function Project() {
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Project">
+            <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Project">
                 <section className="project-section section-padding fix">
                     <div className="container">
                         <div className="row g-4">
