@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function About1() {
+
   return (
     <>
       <section className="about-section section-padding fix" id="about">
@@ -43,6 +44,7 @@ export default function About1() {
                         Give policy-making experience to undergraduate and
                         graduate students with backgrounds in (STEM)
                       </p>
+
                     </div>
                   </div>
                 </div>
