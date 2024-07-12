@@ -27,7 +27,7 @@ export default function Header1({
                                     <Link href="/tel:2086660112">+208-666-011200</Link>
                                 </li>
                             </ul>
-                            <div className="top-right">
+                            {/* <div className="top-right">
                                 <div className="social-icon d-flex align-items-center">
                                     <span>Follow Us:</span>
                                     <Link href="#"><i className="fab fa-facebook-f" /></Link>
@@ -35,7 +35,7 @@ export default function Header1({
                                     <Link href="#"><i className="fa-brands fa-linkedin-in" /></Link>
                                     <Link href="#"><i className="fa-brands fa-youtube" /></Link>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -65,14 +65,6 @@ export default function Header1({
                                         </div>
                                     </div>
                                     <a onClick={handleSearch} className="search-trigger search-icon"><i className="fal fa-search" /></a>
-                                    <div className="header-button">
-                                        <Link href="/contact" className="theme-btn">
-                                            <span>
-                                                get A Quote
-                                                <i className="fa-solid fa-arrow-right-long" />
-                                            </span>
-                                        </Link>
-                                    </div>
                                     <div className="header__hamburger d-xl-block my-auto">
                                         <div className="sidebar__toggle" onClick={handleOffCanvas}>
                                             <i className="fas fa-bars" />

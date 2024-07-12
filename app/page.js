@@ -24,7 +24,7 @@ export default function Home() {
                 <Service1 />
                 <Achievement1 />
                 <Project1 />
-                <Marque2 />
+                {/* <Marque2 /> */}
                 <Testimonial3 />
                 <Team3 />
                 

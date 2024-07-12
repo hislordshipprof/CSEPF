@@ -44,12 +44,12 @@ export default function Hero1() {
                 </p>
                 <div className="hero-button">
                   <Link
-                    href="/about"
+                    href="/apply"
                     className="theme-btn wow fadeInUp"
                     data-wow-delay=".8s"
                   >
-                    Explore More
-                    <i className="fa-solid fa-arrow-right-long" />
+                    Apply Now
+                    {/* <i className="fa-solid fa-arrow-right-long" /> */}
                   </Link>
                   <VideoPopup style={3} />
                 </div>
