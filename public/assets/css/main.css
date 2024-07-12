@@ -387,7 +387,7 @@ span {
   display: flex;
   align-items: center;
   gap: 20px;
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
   padding-bottom: 40px;
 }
 @media (max-width: 1399px) {
@@ -6382,7 +6382,7 @@ input.main-search-input::placeholder {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 50px 0;
 }
 @media (max-width: 1199px) {
   .section-padding {

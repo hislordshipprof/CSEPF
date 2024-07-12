@@ -75,8 +75,8 @@ export default function About2() {
                                         <div className="author-image wow fadeInUp" data-wow-delay=".7s">
                                             <img src="/assets/img/about/author.png" alt="author-img" />
                                             <div className="content">
-                                                <h6>Ronald Richards</h6>
-                                                <p>Co, Founder</p>
+                                                <h6>Senator Chris Hansen</h6>
+                                                <p>Founder</p>
                                             </div>
                                         </div>
                                     </div>
