@@ -41,7 +41,7 @@ export default function About1() {
                                     <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
                                     The Colorado Science and Engineering Policy Fellowship is a first of its kind program <br />  in Colorado for STEM students to learn how to impact the future in policy making
                                     </p>
-                                    <div className="about-icon-items">
+                                    {/* <div className="about-icon-items">
                                         <div className="icon-items wow fadeInUp" data-wow-delay=".7s">
                                             <div className="icon">
                                                 <img src="/assets/img/about/icon-2.svg" alt="icon-img" />
@@ -64,7 +64,7 @@ export default function About1() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="about-author">
                                         <div className="about-button wow fadeInUp" data-wow-delay=".5s">
                                             <Link href="/about" className="theme-btn">

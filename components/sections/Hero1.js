@@ -48,9 +48,9 @@ export default function Hero1() {
                         </div>
                         <div className="col-lg-4">
                             <div className="hero-image wow fadeInUp" data-wow-delay=".4s">
-                    {/* <Image src={line_shape} style={{objectFit}} alt="hero-img" /> */}
+                    <Image src={line_shape} style={{objectFit: 'contain'}} alt="hero-img" />
 
-                                <img src="/assets/img/hero/hero.png" alt="hero-img" />
+                                {/* <img src="/assets/img/hero/hero.png" alt="hero-img" /> */}
                             </div>
                         </div>
                     </div>
