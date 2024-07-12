@@ -1649,7 +1649,7 @@ span {
   border-radius: 0;
   box-shadow: none;
   background-color: var(--bg);
-  padding: 25px 30px 0;
+  padding: 20px 25px 0;
   text-transform: capitalize;
   font-size: 20px;
   border: 1px solid var(--border);
@@ -6417,6 +6417,7 @@ input.main-search-input::placeholder {
   padding: 35px 30px;
   position: relative;
   z-index: 9;
+  /* height:300px; */
 }
 .service-box-items::before {
   position: absolute;

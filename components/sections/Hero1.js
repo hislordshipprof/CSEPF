@@ -1,7 +1,9 @@
 
 import Link from 'next/link'
 import VideoPopup from '../elements/VideoPopup'
-import line_shape from '../../public/assets/img/hero/hero.png'
+// import line_shape from '../../public/assets/img/hero/hero.png'
+import line_shape from '../../public/assets/img/hero/7Chris-rem.png'
+
 import Image from 'next/image'
 export default function Hero1() {
     return (
@@ -46,9 +48,9 @@ export default function Hero1() {
                         </div>
                         <div className="col-lg-4">
                             <div className="hero-image wow fadeInUp" data-wow-delay=".4s">
-                    <Image src={line_shape} alt="hero-img" />
+                    {/* <Image src={line_shape} style={{objectFit}} alt="hero-img" /> */}
 
-                                {/* <img src="/assets/img/hero/hero.png" alt="hero-img" /> */}
+                                <img src="/assets/img/hero/hero.png" alt="hero-img" />
                             </div>
                         </div>
                     </div>

@@ -53,46 +53,16 @@ export default function ProjectSlider1({ showDots }) {
         <>
             <div className="swiper project-slider pt-5">
                 <Swiper {...swiperOptions} className="swiper-wrapper">
-                    <SwiperSlide>
-                        <div className="project-items">
-                            <div className="project-image">
-                                <img src="/assets/img/project/01.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Technology</p>
-                                    <h4>
-                                        <Link href="/project-details">Platform Integration</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="project-items">
-                            <div className="project-image">
-                                <img src="/assets/img/project/02.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Security</p>
-                                    <h4>
-                                        <Link href="/project-details">Network Security</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+                    
+                    
                     <SwiperSlide>
                         <div className="project-items">
                             <div className="project-image">
                                 <img src="/assets/img/project/03.jpg" alt="project-img" />
                                 <div className="project-content">
-                                    <p>Solution</p>
+                                    <p>Jimson</p>
                                     <h4>
-                                        <Link href="/project-details">Web Development</Link>
+                                        <Link href="/project-details">Colorado State University</Link>
                                     </h4>
                                     <Link href="/project-details" className="icon">
                                         <i className="fa-solid fa-arrow-right" />
@@ -106,9 +76,9 @@ export default function ProjectSlider1({ showDots }) {
                             <div className="project-image">
                                 <img src="/assets/img/project/04.jpg" alt="project-img" />
                                 <div className="project-content">
-                                    <p>Technology</p>
+                                    <p>Alana</p>
                                     <h4>
-                                        <Link href="/project-details">IT Management</Link>
+                                        <Link href="/project-details">Colordo Boulder</Link>
                                     </h4>
                                     <Link href="/project-details" className="icon">
                                         <i className="fa-solid fa-arrow-right" />
@@ -122,9 +92,9 @@ export default function ProjectSlider1({ showDots }) {
                             <div className="project-image">
                                 <img src="/assets/img/project/03.jpg" alt="project-img" />
                                 <div className="project-content">
-                                    <p>Solution</p>
+                                    <p>Fergurson</p>
                                     <h4>
-                                        <Link href="/project-details">Web Development</Link>
+                                        <Link href="/project-details">Colorado Mines</Link>
                                     </h4>
                                     <Link href="/project-details" className="icon">
                                         <i className="fa-solid fa-arrow-right" />
@@ -138,9 +108,9 @@ export default function ProjectSlider1({ showDots }) {
                             <div className="project-image">
                                 <img src="/assets/img/project/04.jpg" alt="project-img" />
                                 <div className="project-content">
-                                    <p>Technology</p>
+                                    <p>Josh</p>
                                     <h4>
-                                        <Link href="/project-details">IT Management</Link>
+                                        <Link href="/project-details">Denver University</Link>
                                     </h4>
                                     <Link href="/project-details" className="icon">
                                         <i className="fa-solid fa-arrow-right" />

@@ -22,6 +22,7 @@ export default function ProjectDetails() {
                                                     <p>
                                                         Nulla faucibus malesuada. In placerat feugiat eros ac tempor. Integer euismod massa sapien, et consequat enim laoreet et. Nulla sit amet nisi dapibus, gravida turpis sit amet, accumsan nisl. Fusce vel semper risus. Morbi congue eros sagittis, sodales turpis venenatis, iaculis dui. Proin ac purus sed nibh dapibus neque. scelerisque sed quis ante.
                                                     </p>
+                                                    
                                                 </div>
                                             </div>
                                             <div className="col-lg-4">
@@ -30,6 +31,7 @@ export default function ProjectDetails() {
                                                     <ul>
                                                         <li>
                                                             Client:
+
                                                             <span>Ralph Edwards</span>
                                                         </li>
                                                         <li>

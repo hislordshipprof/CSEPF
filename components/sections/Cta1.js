@@ -14,14 +14,14 @@ export default function Cta1() {
                             <img src="/assets/img/circle.png" alt="shape-img" />
                         </div>
                         <div className="cta-image wow fadeInUp" data-wow-delay=".3s">
-                            <img src="/assets/img/cta.png" alt="cta-img" />
+                            <img src="/assets/img/denver.jpg" style={{ width: 380, height: 380, objectFit: 'cover' }} alt="cta-img" />
                         </div>
                         <div className="cta-items">
-                            <h3 className="wow fadeInUp" data-wow-delay=".5s">Stay Connected With <br /> Cutting Edge IT</h3>
-                            <Link href="/contact" className="theme-btn bg-white wow fadeInUp" data-wow-delay=".7s">
+                            <h3 className="wow fadeInUp" data-wow-delay=".5s">Stay Connected With <br /> Cutting State Policy in Colorado</h3>
+                            {/* <Link href="/contact" className="theme-btn bg-white wow fadeInUp" data-wow-delay=".7s">
                                 get A Quote
                                 <i className="fa-solid fa-arrow-right-long" />
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>

@@ -73,9 +73,9 @@ export default function About1() {
                                             </Link>
                                         </div>
                                         <div className="author-image wow fadeInUp" data-wow-delay=".7s">
-                                            <img src="/assets/img/about/author.png" alt="author-img" />
+                                            <img src="/assets/img/hero/7Chris-rem.png" style={{width:60, height:60, objectFit:'contain', borderRadius:50}} alt="author-img" />
                                             <div className="content">
-                                                <h6>Ronald Richards</h6>
+                                                <h6>Senator Chris Hansen</h6>
                                                 <p>Co, Founder</p>
                                             </div>
                                         </div>

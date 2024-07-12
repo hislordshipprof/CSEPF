@@ -69,9 +69,9 @@ export default function Contact() {
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="contact-content">
-                                            <h2>Ready to Get Started?</h2>
+                                            <h2>Wants to get in touch?</h2>
                                             <p>
-                                                Nullam varius, erat quis iaculis dictum, eros urna varius eros, ut blandit felis odio in turpis. Quisque rhoncus, eros in auctor ultrices,
+                                                Fill out the form and we will get back to you as soon as possible
                                             </p>
                                             <form action="contact.php" id="contact-form" method="POST" className="contact-form-items">
                                                 <div className="row g-4">

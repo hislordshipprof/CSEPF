@@ -2,11 +2,17 @@
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 export default function NewsStandard() {
-
+const Tags=[
+    {id:1,
+    name:"Healthcare",},
+    {id:2,
+    
+    }
+]
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Blog Standard">
+            <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Blog Standard">
                 <section className="news-standard fix section-padding">
                     <div className="container">
                         <div className="row g-4">

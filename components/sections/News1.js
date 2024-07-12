@@ -8,7 +8,7 @@ export default function News1() {
                 <div className="container">
                     <div className="section-title text-center">
                         <span className="wow fadeInUp">Article</span>
-                        <h2 className="wow fadeInUp" data-wow-delay=".3s">Read Our Latest Blog</h2>
+                        <h2 className="wow fadeInUp" data-wow-delay=".3s">Read Our Latest Events/Trips</h2>
                     </div>
                 </div>
                 <div className="news-wrapper">
