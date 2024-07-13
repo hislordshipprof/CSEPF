@@ -1,9 +1,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
-import { useState } from "react";
 export default function Project() {
-    const [show, setShow] = useState(false);
     return (
         <>
 
@@ -94,9 +92,9 @@ export default function Project() {
                         </div>
                     </div>
                     <div className="container mt-70">
-                   <div onClick={() => setShow(!show)} className="section-title mb-0"><h3>Projects for Class of 2023</h3></div>
+                   <div  className="section-title mb-0"><h3>Projects for Class of 2023</h3></div>
 
-                      {show &&(  <div className="row g-4">
+                        <div className="row g-4">
                             <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                                 <div className="project-items">
                                     <div className="project-image">
@@ -175,7 +173,7 @@ export default function Project() {
                                     </div>
                                 </div>
                             </div>
-                        </div>)}
+                        </div>
                     </div>
                 </section>
 

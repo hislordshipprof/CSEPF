@@ -64,7 +64,7 @@ export default function MobileMenu() {
                                     <li><Link href="/project-carousel">Project Carousel</Link></li>
                                     <li><Link href="/project-details">Project Details</Link></li>
                                     <li><Link href="/team">Our Team</Link></li>
-                                    <li><Link href="/team-carousel">Team Carousel</Link></li>
+                                    <li><Link href="/cohorts">Cohorts</Link></li>
                                     <li><Link href="/team-details">Team Details</Link></li>
                                     <li><Link href="/pricing">Pricing</Link></li>
                                     <li><Link href="/faq">Faq's</Link></li>
@@ -81,7 +81,7 @@ export default function MobileMenu() {
                                 </Link>
                                 <ul className="submenu" style={{ display: `${activeItem === 4 ? "block" : "none"}` }}>
                                     <li><Link href="/news">Blog Grid</Link></li>
-                                    <li><Link href="/news-standard">Blog Standard</Link></li>
+                                    <li><Link href="/events">Events</Link></li>
                                     <li><Link href="/news-details">Blog Details</Link></li>
                                 </ul>
                                 <a className={`mean-expand ${activeItem === 4 ? "mean-clicked" : ""}`} onClick={() => handleActiveItem(4)}>

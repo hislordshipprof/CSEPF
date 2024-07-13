@@ -41,13 +41,13 @@ export default function Menu() {
                           
                         </li>
                         <li className="has-dropdown">
-                            <Link href="/team-carousel">
-                                Team
+                            <Link href="/cohorts">
+                                Cohorts
                             </Link>
                            
                         </li>
                         <li className="has-dropdown">
-                            <Link href="/news-standard">
+                            <Link href="/events">
                                 Events
                             </Link>
                           

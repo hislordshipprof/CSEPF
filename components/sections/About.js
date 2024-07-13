@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function About1() {
+export default function About() {
   return (
     <>
       <section className="about-section section-padding fix" id="about">
