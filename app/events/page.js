@@ -1,7 +1,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
-export default function NewsStandard() {
+export default function Events() {
 const Tags=[
     {id:1,
     name:"Healthcare",},
