@@ -274,7 +274,7 @@ Overall, the fellowship is designed to give policy-making experience to undergra
                                     <button className="array-next"><i className="fal fa-arrow-left" /></button>
                                 </div>
                             </div>
-                            <div className="project-wrapper">
+                            <div className="project-wrapper1">
                                 <ProjectSlider2 showDots />
                             </div>
                         </div>
@@ -289,9 +289,9 @@ Overall, the fellowship is designed to give policy-making experience to undergra
                         <div className="container">
                             <div className="section-title-area">
                                 <div className="section-title">
-                                    <span className="wow fadeInUp">Staff Members</span>
+                                    <span className="wow fadeInUp">Official Members</span>
                                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                        Our Dedicated Official <br /> Members
+                                        Our Dedicated Supporting Official <br /> Members
                                     </h2>
                                 </div>
                                 <Link href="/staff" className="theme-btn wow fadeInUp" data-wow-delay=".5s">

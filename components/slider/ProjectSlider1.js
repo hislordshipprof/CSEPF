@@ -87,6 +87,23 @@ export default function ProjectSlider1({ showDots }) {
                             </div>
                         </div>
                     </SwiperSlide>
+                      
+                    <SwiperSlide>
+                        <div className="project-items">
+                            <div className="project-image">
+                                <img src="/assets/img/project/03.jpg" alt="project-img" />
+                                <div className="project-content">
+                                    <p>Jimson</p>
+                                    <h4>
+                                        <Link href="/project-details">Colorado State University</Link>
+                                    </h4>
+                                    <Link href="/project-details" className="icon">
+                                        <i className="fa-solid fa-arrow-right" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
                     <SwiperSlide>
                         <div className="project-items">
                             <div className="project-image">
@@ -95,6 +112,23 @@ export default function ProjectSlider1({ showDots }) {
                                     <p>Fergurson</p>
                                     <h4>
                                         <Link href="/project-details">Colorado Mines</Link>
+                                    </h4>
+                                    <Link href="/project-details" className="icon">
+                                        <i className="fa-solid fa-arrow-right" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                      
+                    <SwiperSlide>
+                        <div className="project-items">
+                            <div className="project-image">
+                                <img src="/assets/img/project/03.jpg" alt="project-img" />
+                                <div className="project-content">
+                                    <p>Jimson</p>
+                                    <h4>
+                                        <Link href="/project-details">Colorado State University</Link>
                                     </h4>
                                     <Link href="/project-details" className="icon">
                                         <i className="fa-solid fa-arrow-right" />

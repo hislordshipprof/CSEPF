@@ -10,7 +10,7 @@ import Search from "./Search"
 import Footer4 from "./footer/Footer4"
 import Header1 from "./header/Header1"
 
-export default function Layout({ headerStyle, footerStyle, onePageNav, breadcrumbTitle, children }) {
+export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, children }) {
     const [scroll, setScroll] = useState(0)
 
     const [isOffCanvas, setOffCanvas] = useState(false)
@@ -38,7 +38,7 @@ export default function Layout({ headerStyle, footerStyle, onePageNav, breadcrum
             <MouseCursor />
             <Offcanvas isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} />
 
-            {headerStyle == 1 ? <Header1 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} /> : null}
+            {headerStyle == 1 ? <Header1 scroll={scroll} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} /> : null}
             
             <Search isSearch={isSearch} handleSearch={handleSearch} />
 

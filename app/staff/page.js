@@ -1,6 +1,6 @@
 
 import Layout from "@/components/layout/Layout"
-import Team4 from "@/components/sections/Team4"
+import StaffMembers from "@/components/sections/StaffMembers"
 import Link from "next/link"
 export default function Team() {
 
@@ -10,7 +10,7 @@ export default function Team() {
             <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Team">
 
                 <section className="team-section-4 section-padding">
-                    <Team4 />
+                    <StaffMembers />
                     </section>
             </Layout>
 

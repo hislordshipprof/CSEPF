@@ -12,7 +12,7 @@ const Tags=[
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Blog Standard">
+            <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Our Various Trips">
                 <section className="news-standard fix section-padding">
                     <div className="container">
                         <div className="row g-4">

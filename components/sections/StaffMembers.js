@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 
-export default function Team3() {
+export default function StaffMembers() {
     return (
         <>
             <section className="team-section-3 fix section-padding section-bg" id="team">
@@ -14,13 +14,13 @@ export default function Team3() {
                 <div className="container">
                     <div className="section-title-area">
                         <div className="section-title">
-                            <span className="wow fadeInUp">Team Members</span>
+                            <span className="wow fadeInUp">Official Members</span>
                             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                Our Dedicated Team <br /> Members
+                                Our Dedicated Supporting <br /> Official Members
                             </h2>
                         </div>
                         <Link href="/team" className="theme-btn wow fadeInUp" data-wow-delay=".5s">
-                            All Member
+                            View all Official Members
                             <i className="fa-solid fa-arrow-right-long" />
                         </Link>
                     </div>
@@ -42,7 +42,7 @@ export default function Team3() {
                                     <h3>
                                         <Link href="/team-details">Marvin McKinney</Link>
                                     </h3>
-                                    <p>Web Designer</p>
+                                    <p>Staff Position</p>
                                 </div>
                             </div>
                         </div>
@@ -63,14 +63,14 @@ export default function Team3() {
                                     <h3>
                                         <Link href="/team-details">Marvin McKinney</Link>
                                     </h3>
-                                    <p>Web Designer</p>
+                                    <p>Staff Position</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                        <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                             <div className="single-team-items">
                                 <div className="team-image">
-                                    <img src="/assets/img/team/06.jpg" alt="team-img" />
+                                    <img src="/assets/img/team/04.jpg" alt="team-img" />
                                     <div className="social-profile">
                                         <ul>
                                             <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
@@ -84,14 +84,14 @@ export default function Team3() {
                                     <h3>
                                         <Link href="/team-details">Marvin McKinney</Link>
                                     </h3>
-                                    <p>Web Designer</p>
+                                    <p>Staff Position</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".9s">
+                        <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                             <div className="single-team-items">
                                 <div className="team-image">
-                                    <img src="/assets/img/team/07.jpg" alt="team-img" />
+                                    <img src="/assets/img/team/05.jpg" alt="team-img" />
                                     <div className="social-profile">
                                         <ul>
                                             <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
@@ -105,10 +105,12 @@ export default function Team3() {
                                     <h3>
                                         <Link href="/team-details">Marvin McKinney</Link>
                                     </h3>
-                                    <p>Web Designer</p>
+                                    <p>Staff Position</p>
                                 </div>
                             </div>
                         </div>
+                       
+                       
                     </div>
                 </div>
             </section>
