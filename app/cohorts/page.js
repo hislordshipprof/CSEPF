@@ -37,12 +37,12 @@ const swiperOptions = {
         },
     },
 }
-export default function TeamCarousel() {
+export default function Cohorts() {
 
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Team">
+            <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Our Presents and Past Cohorts">
                 <div>
                     <section className="team-section-4 fix section-padding">
                         <div className="container">

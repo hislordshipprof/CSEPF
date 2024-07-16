@@ -1,6 +1,5 @@
 import Link from "next/link"
 import Menu from "../Menu"
-import OnePageNav from "../OnePageNav"
 
 export default function Header1({
     scroll,
@@ -8,7 +7,6 @@ export default function Header1({
     handleOffCanvas,
     isSearch,
     handleSearch,
-    onePageNav
 }) {
     return (
         <>
@@ -56,20 +54,17 @@ export default function Header1({
                                     <div className="mean__menu-wrapper">
                                         <div className="main-menu">
                                             <nav id="mobile-menu">
-                                                {onePageNav ?
-                                                    <OnePageNav />
-                                                    :
+                                               
                                                     <Menu />
-                                                }
                                             </nav>
                                         </div>
                                     </div>
-                                    <a onClick={handleSearch} className="search-trigger search-icon"><i className="fal fa-search" /></a>
+                                    {/* <a onClick={handleSearch} className="search-trigger search-icon"><i className="fal fa-search" /></a>
                                     <div className="header__hamburger d-xl-block my-auto">
                                         <div className="sidebar__toggle" onClick={handleOffCanvas}>
                                             <i className="fas fa-bars" />
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

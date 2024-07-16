@@ -1,7 +1,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
-export default function NewsStandard() {
+export default function Events() {
 const Tags=[
     {id:1,
     name:"Healthcare",},
@@ -12,7 +12,7 @@ const Tags=[
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Blog Standard">
+            <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Our Various Trips">
                 <section className="news-standard fix section-padding">
                     <div className="container">
                         <div className="row g-4">

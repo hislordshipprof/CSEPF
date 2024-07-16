@@ -1,8 +1,7 @@
 
 import VideoPopup from "@/components/elements/VideoPopup"
 import Layout from "@/components/layout/Layout"
-import Faq1 from "@/components/sections/Faq1"
-import Faq2 from "@/components/sections/Faq2"
+import PolicyIdeas from "@/components/sections/PolicyIdeas"
 import Link from "next/link"
 export default function Curriculum() {
 
@@ -128,7 +127,7 @@ export default function Curriculum() {
                                         </div>
                                     </div>
                                 </div>
-                                <Faq2 />
+                                <PolicyIdeas />
 
                             </div>
                         </div>

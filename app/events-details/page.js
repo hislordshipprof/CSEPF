@@ -74,9 +74,9 @@ export default function NewsDetails() {
                                         <div className="row tag-share-wrap mt-4 mb-5">
                                             <div className="col-lg-8 col-12">
                                                 <div className="tagcloud">
-                                                    <Link href="/news-details">News</Link>
-                                                    <Link href="/news-details">business</Link>
-                                                    <Link href="/news-details">marketing</Link>
+                                                    <Link href="/events-details">News</Link>
+                                                    <Link href="/events-details">business</Link>
+                                                    <Link href="/events-details">marketing</Link>
                                                 </div>
                                             </div>
                                             <div className="col-lg-4 col-12 mt-3 mt-lg-0 text-lg-end">
@@ -99,7 +99,7 @@ export default function NewsDetails() {
                                                 <div className="content">
                                                     <div className="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
                                                         <div className="con">
-                                                            <h5><Link href="/news-details">Albert Flores</Link></h5>
+                                                            <h5><Link href="/events-details">Albert Flores</Link></h5>
                                                             <span>March 20, 2024 at 2:37 pm</span>
                                                         </div>
                                                         <div className="star">
@@ -114,7 +114,7 @@ export default function NewsDetails() {
                                                         veritatis et quasi
                                                         architecto var sed efficitur turpis gilla sed
                                                         sit amet finibus eros. Lorem Ipsum is simply dummy</p>
-                                                    <Link href="/news-details" className="reply">Reply</Link>
+                                                    <Link href="/events-details" className="reply">Reply</Link>
                                                 </div>
                                             </div>
                                             <div className="blog-single-comment d-flex gap-4 pt-5 pb-5">
@@ -124,7 +124,7 @@ export default function NewsDetails() {
                                                 <div className="content">
                                                     <div className="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
                                                         <div className="con">
-                                                            <h5><Link href="/news-details">Alex Flores</Link></h5>
+                                                            <h5><Link href="/events-details">Alex Flores</Link></h5>
                                                             <span>March 20, 2024 at 2:37 pm</span>
                                                         </div>
                                                         <div className="star">
@@ -139,7 +139,7 @@ export default function NewsDetails() {
                                                         veritatis et quasi
                                                         architecto var sed efficitur turpis gilla sed
                                                         sit amet finibus eros. Lorem Ipsum is simply dummy</p>
-                                                    <Link href="/news-details" className="reply">Reply</Link>
+                                                    <Link href="/events-details" className="reply">Reply</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -191,11 +191,11 @@ export default function NewsDetails() {
                                             </div>
                                             <div className="news-widget-categories">
                                                 <ul>
-                                                    <li><Link href="/news-details">Database Security</Link> <span>(08)</span></li>
-                                                    <li><Link href="/news-details">IT Consultancy</Link> <span>(11)</span></li>
-                                                    <li className="active"><Link href="/news-details">App Development</Link><span>(12)</span></li>
-                                                    <li><Link href="/news-details">UI/UX Design</Link> <span>(18)</span></li>
-                                                    <li><Link href="/news-details">Cyber Security</Link> <span>(07)</span></li>
+                                                    <li><Link href="/events-details">Database Security</Link> <span>(08)</span></li>
+                                                    <li><Link href="/events-details">IT Consultancy</Link> <span>(11)</span></li>
+                                                    <li className="active"><Link href="/events-details">App Development</Link><span>(12)</span></li>
+                                                    <li><Link href="/events-details">UI/UX Design</Link> <span>(18)</span></li>
+                                                    <li><Link href="/events-details">Cyber Security</Link> <span>(07)</span></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -216,7 +216,7 @@ export default function NewsDetails() {
                                                             </li>
                                                         </ul>
                                                         <h6>
-                                                            <Link href="/news-details">
+                                                            <Link href="/events-details">
                                                                 Keep Your Business Safe &amp; <br />
                                                                 Endure High Availability
                                                             </Link>
@@ -235,7 +235,7 @@ export default function NewsDetails() {
                                                             </li>
                                                         </ul>
                                                         <h6>
-                                                            <Link href="/news-details">
+                                                            <Link href="/events-details">
                                                                 Tacking the Changes of <br />
                                                                 Retail Industry
                                                             </Link>
@@ -254,7 +254,7 @@ export default function NewsDetails() {
                                                             </li>
                                                         </ul>
                                                         <h6>
-                                                            <Link href="/news-details">
+                                                            <Link href="/events-details">
                                                                 What’s the Holding Back <br />
                                                                 the It Solution
                                                             </Link>
@@ -269,13 +269,13 @@ export default function NewsDetails() {
                                             </div>
                                             <div className="news-widget-categories">
                                                 <div className="tagcloud">
-                                                    <Link href="/news-standard">News</Link>
-                                                    <Link href="/news-details">business</Link>
-                                                    <Link href="/news-details">marketing</Link>
-                                                    <Link href="/news-details">solution</Link>
-                                                    <Link href="/news-details">SMM</Link>
-                                                    <Link href="/news-details">strategy</Link>
-                                                    <Link href="/news-details">SEO</Link>
+                                                    <Link href="/events">Events</Link>
+                                                    <Link href="/events-details">business</Link>
+                                                    <Link href="/events-details">marketing</Link>
+                                                    <Link href="/events-details">solution</Link>
+                                                    <Link href="/events-details">SMM</Link>
+                                                    <Link href="/events-details">strategy</Link>
+                                                    <Link href="/events-details">SEO</Link>
                                                 </div>
                                             </div>
                                         </div>
