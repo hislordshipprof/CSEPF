@@ -5,6 +5,10 @@ export default function Accordion({ topics }) {
   const [activeItem, setActiveItem] = useState(0);
 
   const handleClick = (index) => {
+    if (activeItem === index) {
+      setActiveItem(null);
+      return;
+    }
     setActiveItem(index);
   };
   return (
@@ -41,7 +45,7 @@ export default function Accordion({ topics }) {
               data-bs-parent="#accordion"
             >
               <div className="accordion-body">
-                {topic?.subTopics.map((subtopic) => (
+                {topic?.children.map((subtopic) => (
                   <span>
                     <i class="fa-solid fa-star-sharp"></i>
                     <small style={{ marginRight: 10, marginLeft: 4 }}>

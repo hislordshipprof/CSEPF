@@ -336,7 +336,7 @@ export const POLICY_TOPICS = [
   {
     id: 1,
     name: "Regulatory Policy",
-    subTopics: [
+    children: [
       {
         id: 1,
         name: "Social Media Policy",
@@ -346,7 +346,7 @@ export const POLICY_TOPICS = [
   {
     id: 2,
     name: "Energy Policy",
-    subTopics: [
+    children: [
       {
         id: 1,
         name: "Synthetic Proteins",
@@ -376,7 +376,7 @@ export const POLICY_TOPICS = [
   {
     id: 3,
     name: "Fiscal Policy",
-    subTopics: [
+    children: [
       {
         id: 1,
         name: "Renter’s Tax Credit",
@@ -402,7 +402,7 @@ export const POLICY_TOPICS = [
   {
     id: 4,
     name: "Education Policy",
-    subTopics: [
+    children: [
       {
         id: 1,
         name: "Renter’s Tax Credit",
@@ -428,7 +428,7 @@ export const POLICY_TOPICS = [
   {
     id: 5,
     name: "Water Policy",
-    subTopics: [
+    children: [
       {
         id: 1,
         name: "Renter’s Tax Credit",
@@ -454,7 +454,7 @@ export const POLICY_TOPICS = [
   {
     id: 5,
     name: "Environmental Policy",
-    subTopics: [
+    children: [
       {
         id: 1,
         name: "Renter’s Tax Credit",
