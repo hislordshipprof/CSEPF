@@ -1,5 +1,6 @@
 
 'use client'
+import { participation_schools } from "@/utils/data"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
@@ -38,37 +39,14 @@ export default function BrandSlider1() {
         <>
             <div className="swiper brand-slider">
                 <Swiper {...swiperOptions}  className="swiper-wrapper">
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/csu.png" style={{width: 200, height: 200, objectFit: 'contain'}} alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/cmines.png" style={{width: 200, height: 200, objectFit: 'contain'}}  alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/csubolder.png" style={{width: 200, height: 200, objectFit: 'contain'}}  alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                   
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/csu.png" style={{width: 200, height: 200, objectFit: 'contain'}} alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/cmines.png" style={{width: 200, height: 200, objectFit: 'contain'}}  alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/csubolder.png" style={{width: 200, height: 200, objectFit: 'contain'}}  alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
+                   {participation_schools.map(school => (
+    <SwiperSlide key={school.id}>
+        <div className="brand-image">
+            <img src={school.img} style={{width: 200, height: 200, objectFit: 'contain'}} alt="brand-img" />
+        </div>
+    </SwiperSlide>
+))}
+
                 </Swiper>
             </div>
         </>

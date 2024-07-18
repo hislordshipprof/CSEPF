@@ -1,4 +1,5 @@
 
+import { staff_members } from '@/utils/data'
 import Link from 'next/link'
 
 export default function StaffMembers() {
@@ -25,90 +26,30 @@ export default function StaffMembers() {
                         </Link>
                     </div>
                     <div className="row">
-                        <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                            <div className="single-team-items">
-                                <div className="team-image">
-                                    <img src="/assets/img/team/04.jpg" alt="team-img" />
-                                    <div className="social-profile">
-                                        <ul>
-                                            <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                            <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
-                                            <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                        </ul>
-                                        <span className="plus-btn"><i className="fas fa-share-alt" /></span>
-                                    </div>
-                                </div>
-                                <div className="team-content text-center">
-                                    <h3>
-                                        <Link href="/team-details">Marvin McKinney</Link>
-                                    </h3>
-                                    <p>Staff Position</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                            <div className="single-team-items">
-                                <div className="team-image">
-                                    <img src="/assets/img/team/05.jpg" alt="team-img" />
-                                    <div className="social-profile">
-                                        <ul>
-                                            <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                            <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
-                                            <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                        </ul>
-                                        <span className="plus-btn"><i className="fas fa-share-alt" /></span>
-                                    </div>
-                                </div>
-                                <div className="team-content text-center">
-                                    <h3>
-                                        <Link href="/team-details">Marvin McKinney</Link>
-                                    </h3>
-                                    <p>Staff Position</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                            <div className="single-team-items">
-                                <div className="team-image">
-                                    <img src="/assets/img/team/04.jpg" alt="team-img" />
-                                    <div className="social-profile">
-                                        <ul>
-                                            <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                            <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
-                                            <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                        </ul>
-                                        <span className="plus-btn"><i className="fas fa-share-alt" /></span>
-                                    </div>
-                                </div>
-                                <div className="team-content text-center">
-                                    <h3>
-                                        <Link href="/team-details">Marvin McKinney</Link>
-                                    </h3>
-                                    <p>Staff Position</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                            <div className="single-team-items">
-                                <div className="team-image">
-                                    <img src="/assets/img/team/05.jpg" alt="team-img" />
-                                    <div className="social-profile">
-                                        <ul>
-                                            <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                            <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
-                                            <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                        </ul>
-                                        <span className="plus-btn"><i className="fas fa-share-alt" /></span>
-                                    </div>
-                                </div>
-                                <div className="team-content text-center">
-                                    <h3>
-                                        <Link href="/team-details">Marvin McKinney</Link>
-                                    </h3>
-                                    <p>Staff Position</p>
-                                </div>
-                            </div>
-                        </div>
+                        {staff_members.map((member) => (
+  <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s" key={member.id}>
+    <div className="single-team-items">
+      <div className="team-image">
+        <img src={member.img} alt="team-img" />
+        <div className="social-profile">
+          <ul>
+            <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
+            <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
+            <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
+          </ul>
+          <span className="plus-btn"><i className="fas fa-share-alt" /></span>
+        </div>
+      </div>
+      <div className="team-content text-center">
+        <h3>
+          <Link href="/team-details">{member.name}</Link>
+        </h3>
+        <p>{member.position}</p>
+      </div>
+    </div>
+  </div>
+))}
+                    
                        
                        
                     </div>
