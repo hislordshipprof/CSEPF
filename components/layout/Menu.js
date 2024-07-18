@@ -17,8 +17,8 @@ export default function Menu() {
                     <Link href="/curriculum">Curriculum</Link>
                 </li>
                 <li>
-                    <Link href="/testimonial">
-                        Testimonials
+                    <Link href="/cohorts">
+                        Cohorts
                         {/* <i className="fas fa-angle-down ps-1" /> */}
                     </Link>
                     {/* <ul className="submenu">
@@ -41,14 +41,20 @@ export default function Menu() {
                           
                         </li>
                         <li className="has-dropdown">
-                            <Link href="/cohorts">
-                                Cohorts
+                            <Link href="/testimonial">
+                                Testimonials
                             </Link>
                            
                         </li>
                         <li className="has-dropdown">
                             <Link href="/events">
                                 Events
+                            </Link>
+                          
+                        </li>
+                        <li className="has-dropdown">
+                            <Link href="/team">
+                                Staff
                             </Link>
                           
                         </li>

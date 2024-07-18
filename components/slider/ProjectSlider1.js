@@ -1,5 +1,6 @@
 
 'use client'
+import { featured_class_of_2024 } from "@/utils/data"
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -40,14 +41,7 @@ const swiperOptions = {
         },
     },
 }
-// const data =[
-//     {
-//         id:1,
-//         name:Benjamin,
-//         image:'/assets/img/team/01.jpg'
-//         project:'Data Center'
-//     }
-// ]
+
 export default function ProjectSlider1({ showDots }) {
     return (
         <>
@@ -55,104 +49,27 @@ export default function ProjectSlider1({ showDots }) {
                 <Swiper {...swiperOptions} className="swiper-wrapper">
                     
                     
-                    <SwiperSlide>
-                        <div className="project-items">
-                            <div className="project-image">
-                                <img src="/assets/img/project/03.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Jimson</p>
-                                    <h4>
-                                        <Link href="/project-details">Colorado State University</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="project-items">
-                            <div className="project-image">
-                                <img src="/assets/img/project/04.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Alana</p>
-                                    <h4>
-                                        <Link href="/project-details">Colordo Boulder</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                      
-                    <SwiperSlide>
-                        <div className="project-items">
-                            <div className="project-image">
-                                <img src="/assets/img/project/03.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Jimson</p>
-                                    <h4>
-                                        <Link href="/project-details">Colorado State University</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="project-items">
-                            <div className="project-image">
-                                <img src="/assets/img/project/03.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Fergurson</p>
-                                    <h4>
-                                        <Link href="/project-details">Colorado Mines</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                      
-                    <SwiperSlide>
-                        <div className="project-items">
-                            <div className="project-image">
-                                <img src="/assets/img/project/03.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Jimson</p>
-                                    <h4>
-                                        <Link href="/project-details">Colorado State University</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="project-items">
-                            <div className="project-image">
-                                <img src="/assets/img/project/04.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Josh</p>
-                                    <h4>
-                                        <Link href="/project-details">Denver University</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+                   {featured_class_of_2024.map((student) => (
+  <SwiperSlide key={student.id}>
+    <div className="project-items">
+      <div className="project-image">
+        <img src={student.img} alt="project-img" />
+        <div className="project-content">
+          <p>{student.name}</p>
+          <h4>
+            <Link href="/project-details">{student.school}</Link>
+          </h4>
+          <Link href="/project-details" className="icon">
+            <i className="fa-solid fa-arrow-right" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  </SwiperSlide>
+))}
+          
+                
+                  
                 </Swiper>
 
                 {showDots &&

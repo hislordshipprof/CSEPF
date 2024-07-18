@@ -18,7 +18,7 @@ export default function ProjectDetails() {
                                         <div className="row g-4 justify-content-between">
                                             <div className="col-lg-7">
                                                 <div className="details-content pt-5">
-                                                    <h3>IT Management</h3>
+                                                    <h3>Project Summary</h3>
                                                     <p>
                                                         Nulla faucibus malesuada. In placerat feugiat eros ac tempor. Integer euismod massa sapien, et consequat enim laoreet et. Nulla sit amet nisi dapibus, gravida turpis sit amet, accumsan nisl. Fusce vel semper risus. Morbi congue eros sagittis, sodales turpis venenatis, iaculis dui. Proin ac purus sed nibh dapibus neque. scelerisque sed quis ante.
                                                     </p>
@@ -30,17 +30,23 @@ export default function ProjectDetails() {
                                                     <h3>Project Info: </h3>
                                                     <ul>
                                                         <li>
-                                                            Client:
+                                                            Student:
 
                                                             <span>Ralph Edwards</span>
                                                         </li>
                                                         <li>
-                                                            Category:
-                                                            <span>IT Management</span>
+                                                            Topic:
+                                                            <span>Water Policy</span>
                                                         </li>
                                                         <li>
-                                                            Location:
-                                                            <span>Landon</span>
+                                                            School:
+                                                            <span>CU Boulder</span>
+                                                        </li>
+                                                        <li>
+                                                            Download Project:
+                                                            <a href="/path/to/your/file.pdf" download="YourFileName.pdf" style={{cursor: "pointer", textDecoration: "underline", color: "blue"}}>
+                                                                PDF DOWNLOAD
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             Share:
@@ -117,22 +123,7 @@ export default function ProjectDetails() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="preview-area">
-                                        <div className="preview-item">
-                                            <img src="/assets/img/project/p-1.png" alt="img" />
-                                            <div className="content">
-                                                <h3>Preview</h3>
-                                                <p>Analytic Solutions</p>
-                                            </div>
-                                        </div>
-                                        <div className="preview-item">
-                                            <div className="content text-right">
-                                                <h3>Next</h3>
-                                                <p>Software Development</p>
-                                            </div>
-                                            <img src="/assets/img/project/p-2.png" alt="img" />
-                                        </div>
-                                    </div>
+                                 
                                 </div>
                             </div>
                         </div>

@@ -1,5 +1,6 @@
 
 'use client'
+import { featured_class_of_2024 } from "@/utils/data"
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -47,14 +48,17 @@ export default function ProjectSlider2({ showDots }) {
 
             <div className="swiper project-slider-2">
                 <Swiper {...swiperOptions} className="swiper-wrapper">
-                    <SwiperSlide>
+                    
+                   
+            
+{featured_class_of_2024?.map(  (data)=>(                  <SwiperSlide>
                         <div className="project-items style-2">
                             <div className="project-image">
-                                <img src="/assets/img/project/05.jpg" alt="project-img" />
+                                <img src={data.img} alt="project-img" />
                                 <div className="project-content">
-                                    <p>Technology</p>
+                                    <p>{data.name}</p>
                                     <h4>
-                                        <Link href="/project-details">Software Development</Link>
+                                        <Link href="/project-details">{data.project}</Link>
                                     </h4>
                                     <Link href="/project-details" className="arrow-icon">
                                         <i className="fa-solid fa-arrow-right" />
@@ -63,70 +67,7 @@ export default function ProjectSlider2({ showDots }) {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="project-items style-2">
-                            <div className="project-image">
-                                <img src="/assets/img/project/06.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Technology</p>
-                                    <h4>
-                                        <Link href="/project-details">Analytic Solutions</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="arrow-icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="project-items style-2">
-                            <div className="project-image">
-                                <img src="/assets/img/project/07.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Solutions</p>
-                                    <h4>
-                                        <Link href="/project-details">Design Solutions</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="arrow-icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="project-items style-2">
-                            <div className="project-image">
-                                <img src="/assets/img/project/07.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Solutions</p>
-                                    <h4>
-                                        <Link href="/project-details">Design Solutions</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="arrow-icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="project-items style-2">
-                            <div className="project-image">
-                                <img src="/assets/img/project/07.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Solutions</p>
-                                    <h4>
-                                        <Link href="/project-details">Design Solutions</Link>
-                                    </h4>
-                                    <Link href="/project-details" className="arrow-icon">
-                                        <i className="fa-solid fa-arrow-right" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
 

@@ -36,11 +36,11 @@ const Tags=[
                                                 </li>
                                                 <li>
                                                     <i className="fa-solid fa-tag" />
-                                                    IT Services
+                                                    Site Tour
                                                 </li>
                                             </ul>
                                             <h3>
-                                                <Link href="/news-details">Keep Your Business Safe &amp; Ensure High Availability</Link>
+                                                <Link href="/news-details">See the amazing  &amp; moments fellows had at Google</Link>
                                             </h3>
                                             <p>
                                                 Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur..
@@ -69,11 +69,11 @@ const Tags=[
                                                 </li>
                                                 <li>
                                                     <i className="fa-solid fa-tag" />
-                                                    IT Services
+                                                    Site Tour
                                                 </li>
                                             </ul>
                                             <h3>
-                                                <Link href="/news-details">Tackling the Changes of Retail Industry</Link>
+                                                <Link href="/news-details">Check our fellows visit to Steel manufacturing company</Link>
                                             </h3>
                                             <p>
                                                 Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur..
@@ -102,11 +102,11 @@ const Tags=[
                                                 </li>
                                                 <li>
                                                     <i className="fa-solid fa-tag" />
-                                                    IT Services
+                                                    Industry
                                                 </li>
                                             </ul>
                                             <h3>
-                                                <Link href="/news-details">What’s the Holding Back the It Solution</Link>
+                                                <Link href="/news-details">Fellows had an exciting time at Holcim cement company</Link>
                                             </h3>
                                             <p>
                                                 Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur..
@@ -129,7 +129,7 @@ const Tags=[
                             </div>
                             <div className="col-12 col-lg-4">
                                 <div className="main-sidebar">
-                                    <div className="single-sidebar-widget">
+                                    {/* <div className="single-sidebar-widget">
                                         <div className="wid-title">
                                             <h3>Search</h3>
                                         </div>
@@ -139,18 +139,18 @@ const Tags=[
                                                 <button type="submit"><i className="fa-solid fa-magnifying-glass" /></button>
                                             </form>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="single-sidebar-widget">
                                         <div className="wid-title">
                                             <h3>Categories</h3>
                                         </div>
                                         <div className="news-widget-categories">
                                             <ul>
-                                                <li><Link href="/news-details">Database Security</Link> <span>(08)</span></li>
-                                                <li><Link href="/news-details">IT Consultancy</Link> <span>(11)</span></li>
-                                                <li className="active"><Link href="/news-details">App Development</Link><span>(12)</span></li>
-                                                <li><Link href="/news-details">UI/UX Design</Link> <span>(18)</span></li>
-                                                <li><Link href="/news-details">Cyber Security</Link> <span>(07)</span></li>
+                                                <li><Link href="/news-details">Visit to Google(Boulder)</Link> <span>(08)</span></li>
+                                                <li><Link href="/news-details">Visit to Holcim</Link> <span>(11)</span></li>
+                                                <li className="active"><Link href="/news-details">Visit to Ute tribe</Link><span>(12)</span></li>
+                                                <li><Link href="/news-details">Solar Farms</Link> <span>(18)</span></li>
+                                                <li><Link href="/news-details">Visit to Data Center</Link> <span>(07)</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -167,13 +167,13 @@ const Tags=[
                                                     <ul>
                                                         <li>
                                                             <i className="fa-solid fa-calendar-days" />
-                                                            18 Dec, 2024
+                                                            5th July, 2024
                                                         </li>
                                                     </ul>
                                                     <h6>
                                                         <Link href="/news-details">
-                                                            Keep Your Business Safe &amp; <br />
-                                                            Endure High Availability
+                                                            Fellows Site Tour to <br />
+                                                            Steel Manufacturing at Pueblo
                                                         </Link>
                                                     </h6>
                                                 </div>
@@ -186,13 +186,13 @@ const Tags=[
                                                     <ul>
                                                         <li>
                                                             <i className="fa-solid fa-calendar-days" />
-                                                            18 Dec, 2024
+                                                            1st July, 2024
                                                         </li>
                                                     </ul>
                                                     <h6>
                                                         <Link href="/news-details">
-                                                            Tacking the Changes of <br />
-                                                            Retail Industry
+                                                            Fellows site tour to <br />
+                                                            Google at CU Boulder
                                                         </Link>
                                                     </h6>
                                                 </div>
@@ -205,20 +205,20 @@ const Tags=[
                                                     <ul>
                                                         <li>
                                                             <i className="fa-solid fa-calendar-days" />
-                                                            18 Dec, 2024
+                                                            25th June, 2024
                                                         </li>
                                                     </ul>
                                                     <h6>
                                                         <Link href="/news-details">
-                                                            What’s the Holding Back <br />
-                                                            the It Solution
+                                                            Fellows Visit to the Ute <br />
+                                                            tribe as part of 2days Visit in Alamosa
                                                         </Link>
                                                     </h6>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="single-sidebar-widget">
+                                    {/* <div className="single-sidebar-widget">
                                         <div className="wid-title">
                                             <h3>Tags</h3>
                                         </div>
@@ -233,7 +233,7 @@ const Tags=[
                                                 <Link href="/news-details">SEO</Link>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

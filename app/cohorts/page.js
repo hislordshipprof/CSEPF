@@ -46,6 +46,7 @@ export default function Cohorts() {
                 <div>
                     <section className="team-section-4 fix section-padding">
                         <div className="container">
+                            <h2>Class of 2024</h2>
                             <div className="swiper team-slider">
                                 <Swiper {...swiperOptions} className="swiper-wrapper">
                                     <SwiperSlide>
@@ -65,7 +66,7 @@ export default function Cohorts() {
                                                 <h3>
                                                     <Link href="/team-details">Marvin McKinney</Link>
                                                 </h3>
-                                                <p>Web Designer</p>
+                                                <p>Colorado State </p>
                                             </div>
                                         </div>
                                     </SwiperSlide>
@@ -86,7 +87,7 @@ export default function Cohorts() {
                                                 <h3>
                                                     <Link href="/team-details">Marvin McKinney</Link>
                                                 </h3>
-                                                <p>Web Designer</p>
+                                                <p>Colorado Mines</p>
                                             </div>
                                         </div>
                                     </SwiperSlide>
@@ -107,7 +108,7 @@ export default function Cohorts() {
                                                 <h3>
                                                     <Link href="/team-details">Marvin McKinney</Link>
                                                 </h3>
-                                                <p>Web Designer</p>
+                                                <p>Denver Metro</p>
                                             </div>
                                         </div>
                                     </SwiperSlide>
@@ -128,7 +129,7 @@ export default function Cohorts() {
                                                 <h3>
                                                     <Link href="/team-details">Marvin McKinney</Link>
                                                 </h3>
-                                                <p>Web Designer</p>
+                                                <p>CSU BOULDER</p>
                                             </div>
                                         </div>
                                     </SwiperSlide>
@@ -149,7 +150,122 @@ export default function Cohorts() {
                                                 <h3>
                                                     <Link href="/team-details">Marvin McKinney</Link>
                                                 </h3>
-                                                <p>Web Designer</p>
+                                                <p>Colorado State</p>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                </Swiper>
+                                <div className="swiper-dot-2">
+                                    <div className="dot-2" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="container">
+                            <h2>Class of 2023</h2>
+                            <div className="swiper team-slider">
+                                <Swiper {...swiperOptions} className="swiper-wrapper">
+                                    <SwiperSlide>
+                                        <div className="single-team-items mt-0">
+                                            <div className="team-image">
+                                                <img src="/assets/img/team/04.jpg" alt="team-img" />
+                                                <div className="social-profile">
+                                                    <ul>
+                                                        <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
+                                                        <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
+                                                        <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
+                                                    </ul>
+                                                    <span className="plus-btn"><i className="fas fa-share-alt" /></span>
+                                                </div>
+                                            </div>
+                                            <div className="team-content text-center">
+                                                <h3>
+                                                    <Link href="/team-details">Marvin McKinney</Link>
+                                                </h3>
+                                                <p>Colorado State </p>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className="single-team-items mt-0">
+                                            <div className="team-image">
+                                                <img src="/assets/img/team/05.jpg" alt="team-img" />
+                                                <div className="social-profile">
+                                                    <ul>
+                                                        <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
+                                                        <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
+                                                        <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
+                                                    </ul>
+                                                    <span className="plus-btn"><i className="fas fa-share-alt" /></span>
+                                                </div>
+                                            </div>
+                                            <div className="team-content text-center">
+                                                <h3>
+                                                    <Link href="/team-details">Marvin McKinney</Link>
+                                                </h3>
+                                                <p>Colorado Mines</p>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className="single-team-items mt-0">
+                                            <div className="team-image">
+                                                <img src="/assets/img/team/06.jpg" alt="team-img" />
+                                                <div className="social-profile">
+                                                    <ul>
+                                                        <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
+                                                        <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
+                                                        <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
+                                                    </ul>
+                                                    <span className="plus-btn"><i className="fas fa-share-alt" /></span>
+                                                </div>
+                                            </div>
+                                            <div className="team-content text-center">
+                                                <h3>
+                                                    <Link href="/team-details">Marvin McKinney</Link>
+                                                </h3>
+                                                <p>Denver Metro</p>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className="single-team-items mt-0">
+                                            <div className="team-image">
+                                                <img src="/assets/img/team/07.jpg" alt="team-img" />
+                                                <div className="social-profile">
+                                                    <ul>
+                                                        <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
+                                                        <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
+                                                        <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
+                                                    </ul>
+                                                    <span className="plus-btn"><i className="fas fa-share-alt" /></span>
+                                                </div>
+                                            </div>
+                                            <div className="team-content text-center">
+                                                <h3>
+                                                    <Link href="/team-details">Marvin McKinney</Link>
+                                                </h3>
+                                                <p>CSU BOULDER</p>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className="single-team-items mt-0">
+                                            <div className="team-image">
+                                                <img src="/assets/img/team/07.jpg" alt="team-img" />
+                                                <div className="social-profile">
+                                                    <ul>
+                                                        <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
+                                                        <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
+                                                        <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
+                                                    </ul>
+                                                    <span className="plus-btn"><i className="fas fa-share-alt" /></span>
+                                                </div>
+                                            </div>
+                                            <div className="team-content text-center">
+                                                <h3>
+                                                    <Link href="/team-details">Marvin McKinney</Link>
+                                                </h3>
+                                                <p>Colorado State</p>
                                             </div>
                                         </div>
                                     </SwiperSlide>
