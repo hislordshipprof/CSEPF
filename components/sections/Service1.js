@@ -6,7 +6,8 @@ import PastSpeakerDetailPopUp from "../elements/PastSpeakerDetailPopUp";
 import { useState } from "react";
 import { past_speakers } from "@/utils/data";
 
-const LOREM_IPSUM ="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+const LOREM_IPSUM =
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -75,35 +76,33 @@ export default function Service1() {
           <div className="service-wrapper">
             <div className="swiper service-slider">
               <Swiper {...swiperOptions} className="swiper-wrapper">
-               {past_speakers.map((speaker) => (
-  <SwiperSlide key={speaker.id}>
-    <div className="service-box-items">
-      <div className="icon">
-        <img
-          src={speaker.img || "/assets/img/hero/education.svg"} // Use speaker's image if available, otherwise default
-          width={40}
-          height={40}
-          alt="icon-img"
-        />
-      </div>
-      <div className="content">
-        <h4>
-          <Link href="/service-details">{speaker.name}</Link>
-        </h4>
-        <p>
-          {speaker.presentation.substring(0, 60)}
-        </p>
-        <Link
-          href="/service-details"
-          className="theme-btn-2 mt-3"
-        >
-          Read More <i className="fa-solid fa-arrow-right-long" />
-        </Link>
-      </div>
-    </div>
-  </SwiperSlide>
-))}
-               
+                {past_speakers.map((speaker) => (
+                  <SwiperSlide key={speaker.id}>
+                    <div className="service-box-items">
+                      <div className="icon">
+                        <img
+                          src={speaker.img || "/assets/img/hero/education.svg"} // Use speaker's image if available, otherwise default
+                          width={40}
+                          height={40}
+                          alt="icon-img"
+                        />
+                      </div>
+                      <div className="content">
+                        <h4>
+                          <Link href="/service-details">{speaker.name}</Link>
+                        </h4>
+                        <p>{speaker.presentation.substring(0, 60)}</p>
+                        <Link
+                          href="/service-details"
+                          className="theme-btn-2 mt-3"
+                        >
+                          Read More{" "}
+                          <i className="fa-solid fa-arrow-right-long" />
+                        </Link>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
 
                 <PastSpeakerDetailPopUp
                   handleModalOpen={handleModalOpen}

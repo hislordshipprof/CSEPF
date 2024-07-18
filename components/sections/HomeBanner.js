@@ -9,7 +9,7 @@ export default function HomeBanner() {
         style={{ backgroundImage: 'url("assets/img/hero/hero-bg.jpg")' }}
       >
         <div className="text-transparent">
-          <h2>Technology</h2>
+          <h2>CSEPF CSEPF</h2>
         </div>
         <div className="line-shape">
           {/* <Image src={line_shape} alt="shape-img" /> */}
@@ -49,7 +49,6 @@ export default function HomeBanner() {
                     data-wow-delay=".8s"
                   >
                     Apply Now
-                    {/* <i className="fa-solid fa-arrow-right-long" /> */}
                   </Link>
                   <VideoPopup style={3} />
                 </div>

@@ -8,7 +8,6 @@ export default function About() {
           <div className="about-wrapper">
             <div className="col-lg-12 mt-4 mt-lg-0">
               <div className="about-content">
-
                 <div className="row mb-5">
                   <div className="col-lg-9">
                     <div className="section-title">
@@ -21,12 +20,12 @@ export default function About() {
                     <p
                       className="mt-3 mt-md-0 wow fadeInUp"
                       data-wow-delay=".5s"
-                      style={{maxWidth:"70%"}}
+                      style={{ maxWidth: "70%" }}
                     >
                       The Colorado Science and Engineering Policy Fellowship is
-                      a first of its kind program in Colorado for STEM
+                      a first of its kind program in Colorado for STEM students
+                      to learn how to impact the future in policy making.
                       students to learn how to impact the future in policy
-                      making. students to learn how to impact the future in policy
                       making{" "}
                       <Link href="/about">
                         <span style={{ color: "blue", fontWeight: "bold" }}>
@@ -46,14 +45,14 @@ export default function About() {
                         height={250}
                       />
                       <div className="content center mt-2">
-                      <h6>Senator Chris Hansen</h6>
-                      <p>Founder</p>
+                        <h6>Senator Chris Hansen</h6>
+                        <p>Founder</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="about-icon-items mt-3 " >
+                <div className="about-icon-items mt-3 ">
                   <div className="icon-items wow fadeInUp" data-wow-delay=".7s">
                     <div className="icon">
                       <img src="/assets/img/about/icon-2.svg" alt="icon-img" />
@@ -91,7 +90,6 @@ export default function About() {
                       </p>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>

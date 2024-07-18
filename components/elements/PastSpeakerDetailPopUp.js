@@ -1,13 +1,18 @@
-'use client'
-import { useState } from 'react'
-import ModalVideo from 'react-modal-video'
-import "../../node_modules/react-modal-video/css/modal-video.css"
+"use client";
+import { useState } from "react";
+import ModalVideo from "react-modal-video";
+import "../../node_modules/react-modal-video/css/modal-video.css";
 
-export default function PastSpeakerDetailPopUp({setOpen,isOpen,handleModalOpen, style }) {
-    // const handleModalOpen = () => setOpen(!isOpen)
-    return (
-        <>
-            {/* {style === 1 &&
+export default function PastSpeakerDetailPopUp({
+  setOpen,
+  isOpen,
+  handleModalOpen,
+  style,
+}) {
+  // const handleModalOpen = () => setOpen(!isOpen)
+  return (
+    <>
+      {/* {style === 1 &&
                 <div className="video-box">
                     <a onClick={() => setOpen(true)} className="video-btn ripple video-popup">
                         <i className="fa-solid fa-play" />
@@ -30,8 +35,14 @@ export default function PastSpeakerDetailPopUp({setOpen,isOpen,handleModalOpen, 
                     <span className="ms-4 d-line">Watch IT Video</span>
                 </span>
             } */}
-            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="LRP2DXLMhf8" onClose={() => setOpen(false)} />
-        </>
-    )
+      <ModalVideo
+        channel="youtube"
+        autoplay
+        isOpen={isOpen}
+        videoId="LRP2DXLMhf8"
+        onClose={() => setOpen(false)}
+      />
+    </>
+  );
 }
 // LRP2DXLMhf8?si=DB0x0qmHCteblj5B

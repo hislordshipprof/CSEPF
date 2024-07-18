@@ -1,46 +1,40 @@
+import { MENU } from "@/utils/data";
 import Link from "next/link";
 
 export default function Menu() {
-  return (
-    <>
+  const renderMenu = () => {
+    return (
       <ul>
-        <li className="has-dropdown active menu-thumb">
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/curriculum">Curriculum</Link>
-        </li>
-        <li>
-          <Link href="/testimonial">Testimonials</Link>
-        </li>
-        <li className="has-dropdown">
-          <Link href="#">
-            Resources
-            <i className="fas fa-angle-down ps-1" />
-          </Link>
-          <ul className="submenu">
-            <li className="has-dropdown">
-              <Link href="/project">Projects</Link>
-            </li>
-            <li className="has-dropdown">
-              <Link href="/cohorts">Cohorts</Link>
-            </li>
-            <li className="has-dropdown">
-              <Link href="/events">Events</Link>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact Us</Link>
-        </li>
-        <li>
-          <Link href="/apply">Apply</Link>
-        </li>
+        {MENU.map((menu) => (
+          <li
+            key={menu.id}
+            className={`${
+              menu.submenu ? "has-dropdown" : ""
+            } ${menu.active ? "active" : ""}`}
+          >
+            <Link href={menu.link}>
+              {menu.submenu ? (
+                <>
+                  {menu.name}
+                  <i className="fas fa-angle-down ps-1" />
+                </>
+              ) : (
+                menu.name
+              )}
+            </Link>
+            {menu.submenu && (
+              <ul className="submenu">
+                {menu.submenu.map((sub) => (
+                  <li key={sub.id}>
+                    <Link href={sub.link}>{sub.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
       </ul>
-    </>
-  );
+    );
+  };
+  return <>{renderMenu()}</>;
 }
