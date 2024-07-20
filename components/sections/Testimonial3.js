@@ -2,10 +2,11 @@
 import { testimonial } from "@/utils/data";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import VideoPopup from "../elements/VideoPopup";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
-  speed: 1500,
+  speed: 0,
   loop: true,
   spaceBetween: 30,
   autoplay: {
@@ -86,6 +87,8 @@ export default function Testimonial3() {
                           <i className="fas fa-star" />
                         </div>
                       </div>
+                      <VideoPopup  style={3} />
+
                     </div>
                     <p>{testimonial.text}</p>
                   </div>
