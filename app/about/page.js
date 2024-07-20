@@ -424,7 +424,6 @@ export default function About() {
           </section>
           {/*<< Marque Section Start >>*/}
           <div className="marque-section-3 section-padding">
-            {/* <Marque2 /> */}
           </div>
           {/*<< Team Section Start >>*/}
           <section className="team-section-3 fix pt-0 section-padding">
