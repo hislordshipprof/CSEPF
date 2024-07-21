@@ -458,8 +458,8 @@ export const MENU = [
         link: "/project",
       },
       {
-        id: "menu-events-id",
-        name: "Events",
+        id: "menu-trips-id",
+        name: "Trips",
         link: "/events",
       },
       {

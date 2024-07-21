@@ -36,7 +36,7 @@ export default function Events() {
                         </li>
                       </ul>
                       <h3>
-                        <Link href="/news-details">
+                        <Link href="/events-details">
                           See the amazing &amp; moments fellows had at Google
                         </Link>
                       </h3>
@@ -45,7 +45,7 @@ export default function Events() {
                         Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
                         sit amet sapien fringilla, mattis ligula consectetur..
                       </p>
-                      <Link href="/news-details" className="theme-btn mt-4">
+                      <Link href="/events-details" className="theme-btn mt-4">
                         Read More
                         <i className="fa-solid fa-arrow-right-long" />
                       </Link>
@@ -73,7 +73,7 @@ export default function Events() {
                         </li>
                       </ul>
                       <h3>
-                        <Link href="/news-details">
+                        <Link href="/events-details">
                           Check our fellows visit to Steel manufacturing company
                         </Link>
                       </h3>
@@ -82,7 +82,7 @@ export default function Events() {
                         Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
                         sit amet sapien fringilla, mattis ligula consectetur..
                       </p>
-                      <Link href="/news-details" className="theme-btn mt-4">
+                      <Link href="/events-details" className="theme-btn mt-4">
                         Read More
                         <i className="fa-solid fa-arrow-right-long" />
                       </Link>
@@ -110,7 +110,7 @@ export default function Events() {
                         </li>
                       </ul>
                       <h3>
-                        <Link href="/news-details">
+                        <Link href="/events-details">
                           Fellows had an exciting time at Holcim cement company
                         </Link>
                       </h3>
@@ -119,7 +119,7 @@ export default function Events() {
                         Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
                         sit amet sapien fringilla, mattis ligula consectetur..
                       </p>
-                      <Link href="/news-details" className="theme-btn mt-4">
+                      <Link href="/events-details" className="theme-btn mt-4">
                         Read More
                         <i className="fa-solid fa-arrow-right-long" />
                       </Link>
@@ -171,25 +171,25 @@ export default function Events() {
                     <div className="news-widget-categories">
                       <ul>
                         <li>
-                          <Link href="/news-details">
+                          <Link href="/events-details">
                             Visit to Google(Boulder)
                           </Link>{" "}
                           <span>(08)</span>
                         </li>
                         <li>
-                          <Link href="/news-details">Visit to Holcim</Link>{" "}
+                          <Link href="/events-details">Visit to Holcim</Link>{" "}
                           <span>(11)</span>
                         </li>
                         <li className="active">
-                          <Link href="/news-details">Visit to Ute tribe</Link>
+                          <Link href="/events-details">Visit to Ute tribe</Link>
                           <span>(12)</span>
                         </li>
                         <li>
-                          <Link href="/news-details">Solar Farms</Link>{" "}
+                          <Link href="/events-details">Solar Farms</Link>{" "}
                           <span>(18)</span>
                         </li>
                         <li>
-                          <Link href="/news-details">Visit to Data Center</Link>{" "}
+                          <Link href="/events-details">Visit to Data Center</Link>{" "}
                           <span>(07)</span>
                         </li>
                       </ul>
@@ -212,7 +212,7 @@ export default function Events() {
                             </li>
                           </ul>
                           <h6>
-                            <Link href="/news-details">
+                            <Link href="/events-details">
                               Fellows Site Tour to <br />
                               Steel Manufacturing at Pueblo
                             </Link>
@@ -231,7 +231,7 @@ export default function Events() {
                             </li>
                           </ul>
                           <h6>
-                            <Link href="/news-details">
+                            <Link href="/events-details">
                               Fellows site tour to <br />
                               Google at CU Boulder
                             </Link>
@@ -250,7 +250,7 @@ export default function Events() {
                             </li>
                           </ul>
                           <h6>
-                            <Link href="/news-details">
+                            <Link href="/events-details">
                               Fellows Visit to the Ute <br />
                               tribe as part of 2days Visit in Alamosa
                             </Link>
@@ -259,22 +259,7 @@ export default function Events() {
                       </div>
                     </div>
                   </div>
-                  {/* <div className="single-sidebar-widget">
-                                        <div className="wid-title">
-                                            <h3>Tags</h3>
-                                        </div>
-                                        <div className="news-widget-categories">
-                                            <div className="tagcloud">
-                                                <Link href="/news-standard">News</Link>
-                                                <Link href="/news-details">business</Link>
-                                                <Link href="/news-details">marketing</Link>
-                                                <Link href="/news-details">solution</Link>
-                                                <Link href="/news-details">SMM</Link>
-                                                <Link href="/news-details">strategy</Link>
-                                                <Link href="/news-details">SEO</Link>
-                                            </div>
-                                        </div>
-                                    </div> */}
+                  
                 </div>
               </div>
             </div>

@@ -18,6 +18,9 @@ export default function Testimonial2({filteredProjects}) {
       delay: 1500,
       disableOnInteraction: false,
     },
+    // grid: {
+    //   rows: 2,
+    // },
     navigation: {
       nextEl: ".array-prev",
       prevEl: ".array-next",
@@ -63,11 +66,16 @@ export default function Testimonial2({filteredProjects}) {
               </button>
             </div>
           </div>
-          <div className="swiper testimonial-slider-2">
-            <Swiper {...swiperOptions} className="swiper-wrapper">
+          <div className="swiper testimonial-slider-2 ">
+              <div className="testimonial-grid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
             {filteredProjects.map((testimonial) => (
-                <SwiperSlide key={testimonial.id}>
-                  <div className="testimonial-box-items">
+                  <div className="testimonial-box-items wow fadeInUp col-lg-5"   style={{
+                    flex: '0 0 calc(50% - 20px)', 
+                    marginBottom: '20px', 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    alignItems: 'center', 
+                  }}>
                     <div className="icon">
                       <img
                         src="/assets/img/testimonial/icon.png"
@@ -95,9 +103,8 @@ export default function Testimonial2({filteredProjects}) {
                     </div>
                     <p>{testimonial.text}</p>
                   </div>
-                </SwiperSlide>
               ))}
-            </Swiper>
+              </div>
           </div>
         </div>
       </section>

@@ -136,7 +136,7 @@ export default function ServiceCarousel() {
             </div>
           </section>
           {/* Brand Section Start */}
-          <div className="brand-section fix section-padding pt-0 mt-5">
+          {/* <div className="brand-section fix section-padding pt-0 mt-5">
             <div className="container">
               <div className="brand-wrapper">
                 <h6 className="text-center wow fadeInUp" data-wow-delay=".3s">
@@ -145,7 +145,7 @@ export default function ServiceCarousel() {
                 <SchoolsSlider />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Layout>
     </>
