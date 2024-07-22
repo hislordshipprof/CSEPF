@@ -6106,6 +6106,80 @@ input.main-search-input::placeholder {
   right: 9%;
   z-index: 1;
 }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.modal-left img {
+  max-width: 260px;
+  margin-right: 20px;
+}
+
+.modal-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-right h4 {
+  margin-bottom: 10px;
+}
+
+.modal-right p {
+  margin-bottom: 20px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.theme-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
 
 .project-wrapper {
   margin-left: -22%;
@@ -6368,6 +6442,7 @@ input.main-search-input::placeholder {
   text-align: center;
   margin: 0 auto;
 }
+
 
 .main-bg {
   background-color: var(--bg);

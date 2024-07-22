@@ -65,7 +65,7 @@ export default function Cohorts() {
           <section className="team-section-4 fix section-padding">
             
             <div className="container">
-            <div style={{ position: "relative", display: "inline-block",zIndex: 100 }}>
+            <div style={{ justifyContent: "flex-end",display: "flex",zIndex: 100 }}>
                 <button
                   onClick={toggleDropdown}
                   style={{
@@ -122,9 +122,14 @@ export default function Cohorts() {
                     {/* Add more classes as needed */}
                   </div>
                 )}
+                
               </div>
-              <h2>Class of {selectedClass}</h2>
               <div className="row g-4">
+                <div className="col-xl-12 col-lg-12 col-md-12 p-4">
+              <h2 >Class of {selectedClass}</h2>
+
+                </div>
+
               {filteredProjects.map((data) => (
                 <div
                   className="col-xl-4 col-lg-4 col-md-6 wow fadeInUp"

@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
-export default function Events() {
+export default function Trips() {
   const Tags = [{ id: 1, name: "Healthcare" }, { id: 2 }];
   return (
     <>
@@ -36,7 +36,7 @@ export default function Events() {
                         </li>
                       </ul>
                       <h3>
-                        <Link href="/events-details">
+                        <Link href="/trips-details">
                           See the amazing &amp; moments fellows had at Google
                         </Link>
                       </h3>
@@ -45,7 +45,7 @@ export default function Events() {
                         Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
                         sit amet sapien fringilla, mattis ligula consectetur..
                       </p>
-                      <Link href="/events-details" className="theme-btn mt-4">
+                      <Link href="/trips-details" className="theme-btn mt-4">
                         Read More
                         <i className="fa-solid fa-arrow-right-long" />
                       </Link>
@@ -73,7 +73,7 @@ export default function Events() {
                         </li>
                       </ul>
                       <h3>
-                        <Link href="/events-details">
+                        <Link href="/trips-details">
                           Check our fellows visit to Steel manufacturing company
                         </Link>
                       </h3>
@@ -82,7 +82,7 @@ export default function Events() {
                         Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
                         sit amet sapien fringilla, mattis ligula consectetur..
                       </p>
-                      <Link href="/events-details" className="theme-btn mt-4">
+                      <Link href="/trips-details" className="theme-btn mt-4">
                         Read More
                         <i className="fa-solid fa-arrow-right-long" />
                       </Link>
@@ -110,7 +110,7 @@ export default function Events() {
                         </li>
                       </ul>
                       <h3>
-                        <Link href="/events-details">
+                        <Link href="/trips-details">
                           Fellows had an exciting time at Holcim cement company
                         </Link>
                       </h3>
@@ -119,7 +119,7 @@ export default function Events() {
                         Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
                         sit amet sapien fringilla, mattis ligula consectetur..
                       </p>
-                      <Link href="/events-details" className="theme-btn mt-4">
+                      <Link href="/trips-details" className="theme-btn mt-4">
                         Read More
                         <i className="fa-solid fa-arrow-right-long" />
                       </Link>
@@ -171,25 +171,25 @@ export default function Events() {
                     <div className="news-widget-categories">
                       <ul>
                         <li>
-                          <Link href="/events-details">
+                          <Link href="/trips-details">
                             Visit to Google(Boulder)
                           </Link>{" "}
                           <span>(08)</span>
                         </li>
                         <li>
-                          <Link href="/events-details">Visit to Holcim</Link>{" "}
+                          <Link href="/trips-details">Visit to Holcim</Link>{" "}
                           <span>(11)</span>
                         </li>
                         <li className="active">
-                          <Link href="/events-details">Visit to Ute tribe</Link>
+                          <Link href="/trips-details">Visit to Ute tribe</Link>
                           <span>(12)</span>
                         </li>
                         <li>
-                          <Link href="/events-details">Solar Farms</Link>{" "}
+                          <Link href="/trips-details">Solar Farms</Link>{" "}
                           <span>(18)</span>
                         </li>
                         <li>
-                          <Link href="/events-details">Visit to Data Center</Link>{" "}
+                          <Link href="/trips-details">Visit to Data Center</Link>{" "}
                           <span>(07)</span>
                         </li>
                       </ul>
@@ -212,7 +212,7 @@ export default function Events() {
                             </li>
                           </ul>
                           <h6>
-                            <Link href="/events-details">
+                            <Link href="/trips-details">
                               Fellows Site Tour to <br />
                               Steel Manufacturing at Pueblo
                             </Link>
@@ -231,7 +231,7 @@ export default function Events() {
                             </li>
                           </ul>
                           <h6>
-                            <Link href="/events-details">
+                            <Link href="/trips-details">
                               Fellows site tour to <br />
                               Google at CU Boulder
                             </Link>
@@ -250,7 +250,7 @@ export default function Events() {
                             </li>
                           </ul>
                           <h6>
-                            <Link href="/events-details">
+                            <Link href="/trips-details">
                               Fellows Visit to the Ute <br />
                               tribe as part of 2days Visit in Alamosa
                             </Link>

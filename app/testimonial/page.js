@@ -60,7 +60,9 @@ export default function ServiceCarousel() {
         <div>
           <section className="service-section-3 fix section-padding">
             <div className="container">
-            <div style={{ position: "absolute",left:120, right: 0, top: 2, justifyContent: "center", alignItems: "center",zIndex:100 }}>
+            
+              <div className="swiper service-slider-2">
+              <div style={{justifyContent:'flex-end',display:'flex', }}>
                 <button
                   onClick={toggleDropdown}
                   style={{
@@ -118,7 +120,6 @@ export default function ServiceCarousel() {
                   </div>
                 )}
               </div>
-              <div className="swiper service-slider-2">
                 <div>
                   <p style={{ fontSize: "20px", marginBottom: "40px" }}>
                     Have sometime to read through what the past Fellows who
@@ -129,23 +130,11 @@ export default function ServiceCarousel() {
                 </div>
                 <Testimonial2 filteredProjects={filteredProjects}/>
 
-                <div className="swiper-dot-2">
-                  <div className="dot-2" />
-                </div>
+               
               </div>
             </div>
           </section>
-          {/* Brand Section Start */}
-          {/* <div className="brand-section fix section-padding pt-0 mt-5">
-            <div className="container">
-              <div className="brand-wrapper">
-                <h6 className="text-center wow fadeInUp" data-wow-delay=".3s">
-                  Participation Schools
-                </h6>
-                <SchoolsSlider />
-              </div>
-            </div>
-          </div> */}
+        
         </div>
       </Layout>
     </>

@@ -4,7 +4,8 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import PastSpeakerDetailPopUp from "../elements/PastSpeakerDetailPopUp";
 import { useState } from "react";
-import { past_speakers } from "@/utils/data";
+import { FEATURED_SPEAKERS } from "@/utils/data";
+import CustomModal from "../layout/CustomModal";
 
 const LOREM_IPSUM =
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ";
@@ -44,7 +45,12 @@ const swiperOptions = {
 
 export default function FeaturedPastSpeakers() {
   const [isOpen, setOpen] = useState(false);
-  const handleModalOpen = () => setOpen(!isOpen);
+  const [currentSpeaker, setCurrentSpeaker] = useState(null);
+  // const handleModalOpen = () => setOpen(!isOpen);
+  const handleModalOpen = (speaker) => {
+    setCurrentSpeaker(speaker);
+    setOpen(!isOpen);
+  };
   return (
     <>
       <section
@@ -69,7 +75,7 @@ export default function FeaturedPastSpeakers() {
                 className="theme-btn wow fadeInUp"
                 data-wow-delay=".5s"
               >
-                View All Speakers <br/> Presentations
+                View All Presentations
                 <i className="fa-solid fa-arrow-right-long" />
               </Link>
             </div>
@@ -77,7 +83,7 @@ export default function FeaturedPastSpeakers() {
           <div className="service-wrapper" >
             <div className="swiper service-slider">
               <Swiper {...swiperOptions} className="swiper-wrapper">
-                {past_speakers.map((speaker) => (
+                {FEATURED_SPEAKERS.map((speaker) => (
                   <SwiperSlide key={speaker.id}>
                     <div className="service-box-items">
                       <div className="icon">
@@ -95,7 +101,7 @@ export default function FeaturedPastSpeakers() {
                         <p>{speaker.presentation.substring(0, 60)}</p>
                         <a
                           // href="#"
-                          onClick={handleModalOpen}
+                          onClick={() => handleModalOpen(speaker)}
                           className="theme-btn-2 mt-3"
                         >
                           Read More{" "}
@@ -110,7 +116,11 @@ export default function FeaturedPastSpeakers() {
               </Swiper>
             </div>
             
-           
+            <CustomModal
+          isOpen={isOpen}
+          handleModalOpen={handleModalOpen}
+          speaker={currentSpeaker}
+        />
             <div className="service-text wow fadeInUp" data-wow-delay=".4s">
               
               <div className="array-button justify-content-end">
@@ -122,22 +132,20 @@ export default function FeaturedPastSpeakers() {
                   <i className="fal fa-arrow-left" />
                 </button>
               </div>
-              <PastSpeakerDetailPopUp
-                  handleModalOpen={handleModalOpen}
-                  setOpen={setOpen}
-                  isOpen={isOpen}
-                />
+             
+             
             </div>
           </div>
         
         </div>
-        <div style={{ display: "flex",zIndex: "9999",position: "absolute",top: "10" }}>
+        {/* <div style={{ display: "flex",zIndex: "9999",position: "absolute",top: "10" }}>
             <PastSpeakerDetailPopUp
                   handleModalOpen={handleModalOpen}
                   setOpen={setOpen}
                   isOpen={isOpen}
                 />
-            </div>
+            </div> */}
+           
       </section>
     </>
   );

@@ -5,7 +5,7 @@ import 'swiper/css'; // Import Swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-export default function NewsDetails() {
+export default function TripsDetails() {
   const images = [
     "assets/img/news/post-1.jpg",
     "assets/img/news/post-2.jpg",
@@ -27,27 +27,10 @@ export default function NewsDetails() {
       prevEl: ".array-next",
     },
   
-    // breakpoints: {
-    //   1199: {
-    //     slidesPerView: 4,
-    //   },
-    //   991: {
-    //     slidesPerView: 2,
-    //   },
-    //   767: {
-    //     slidesPerView: 2,
-    //   },
-    //   575: {
-    //     slidesPerView: 2,
-    //   },
-    //   0: {
-    //     slidesPerView: 1,
-    //   },
-    // },
   };
   return (
     <>
-      <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Blog Details">
+      <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Trips Details">
         <section className="news-standard fix section-padding">
           <div className="container">
             <div className="news-details-area">
@@ -140,7 +123,7 @@ export default function NewsDetails() {
                               </li>
                             </ul>
                             <h6>
-                              <Link href="/events-details">
+                              <Link href="/trips-details">
                                 Keep Your Business Safe &amp; <br />
                                 Endure High Availability
                               </Link>
@@ -159,7 +142,7 @@ export default function NewsDetails() {
                               </li>
                             </ul>
                             <h6>
-                              <Link href="/events-details">
+                              <Link href="/trips-details">
                                 Tacking the Changes of <br />
                                 Retail Industry
                               </Link>
@@ -178,7 +161,7 @@ export default function NewsDetails() {
                               </li>
                             </ul>
                             <h6>
-                              <Link href="/events-details">
+                              <Link href="/trips-details">
                                 What’s the Holding Back <br />
                                 the It Solution
                               </Link>
@@ -196,4 +179,5 @@ export default function NewsDetails() {
       </Layout>
     </>
   );
+
 }

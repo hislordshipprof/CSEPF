@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import BackToTop from "../elements/BackToTop";
 import Breadcrumb from "./Breadcrumb";
 import MouseCursor from "./MouseCursor";
-import Offcanvas from "./Offcanvas";
 import Search from "./Search";
 
 import Footer4 from "./footer/Footer4";
@@ -17,9 +16,7 @@ export default function Layout({
 }) {
   const [scroll, setScroll] = useState(0);
 
-  const [isOffCanvas, setOffCanvas] = useState(false);
-  const handleOffCanvas = () => setOffCanvas(!isOffCanvas);
-
+  
   const [isSearch, setSearch] = useState(false);
   const handleSearch = () => setSearch(!isSearch);
 
@@ -40,13 +37,11 @@ export default function Layout({
   return (
     <>
       <MouseCursor />
-      <Offcanvas isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} />
 
       {headerStyle == 1 ? (
         <Header1
           scroll={scroll}
-          isOffCanvas={isOffCanvas}
-          handleOffCanvas={handleOffCanvas}
+        
           isSearch={isSearch}
           handleSearch={handleSearch}
         />

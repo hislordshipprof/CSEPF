@@ -45,26 +45,19 @@ export default function Testimonial2({filteredProjects}) {
   return (
     <>
       <section
-        className="tesimonial-section-2 pb-0 section-padding bg-cover"
+        className="tesimonial-section-2a pb-0 section-padding bg-cover"
         style={{ backgroundImage: 'url("assets/img/testimonial/bg.jpg")' }}
       >
-        <div className="container">
-          <div className="section-title-area">
+        <div className="container" >
+          <div className="section-title-area" >
             <div className="section-title">
-              <span className="text-white wow fadeInUp">Testimonials</span>
-              <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
+              <span className="text-black wow fadeInUp">Testimonials</span>
+              <h2 className="text-black wow fadeInUp" data-wow-delay=".3s">
                 Get to hear from <br />
                 our past fellows
               </h2>
             </div>
-            <div className="array-button wow fadeInUp" data-wow-delay=".5s">
-              <button className="array-prev border-white">
-                <i className="fal fa-arrow-right" />
-              </button>
-              <button className="array-next">
-                <i className="fal fa-arrow-left" />
-              </button>
-            </div>
+          
           </div>
           <div className="swiper testimonial-slider-2 ">
               <div className="testimonial-grid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
@@ -75,6 +68,7 @@ export default function Testimonial2({filteredProjects}) {
                     display: 'flex', 
                     flexDirection: 'column', 
                     alignItems: 'center', 
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', 
                   }}>
                     <div className="icon">
                       <img

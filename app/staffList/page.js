@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { staff_members } from "@/utils/data";
 import Link from "next/link";
-export default function Team() {
+export default function StaffList() {
   return (
     <>
       <Layout

@@ -3,8 +3,6 @@ import Menu from "../Menu";
 
 export default function Header1({
   scroll,
-  isOffCanvas,
-  handleOffCanvas,
   isSearch,
   handleSearch,
 }) {
@@ -78,12 +76,7 @@ export default function Header1({
                       </nav>
                     </div>
                   </div>
-                  {/* <a onClick={handleSearch} className="search-trigger search-icon"><i className="fal fa-search" /></a>
-                                    <div className="header__hamburger d-xl-block my-auto">
-                                        <div className="sidebar__toggle" onClick={handleOffCanvas}>
-                                            <i className="fas fa-bars" />
-                                        </div>
-                                    </div> */}
+
                 </div>
               </div>
             </div>

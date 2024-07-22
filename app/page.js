@@ -4,11 +4,11 @@ import Achievement1 from "@/components/sections/Achievement1";
 import ParticipatingSchools from "@/components/sections/ParticipatingSchools";
 import Cta1 from "@/components/sections/Cta1";
 import HomeBanner from "@/components/sections/HomeBanner";
-import News1 from "@/components/sections/News1";
 import FellowsProjects from "@/components/sections/FellowsProjects";
 import StaffMembers from "@/components/sections/StaffMembers";
 import Testimonial3 from "@/components/sections/Testimonial3";
 import FeaturedPastSpeakers from "@/components/sections/FeaturedPastSpeakers";
+import FeaturedTrips from "@/components/sections/FeaturedTrips";
 export default function Home() {
   return (
     <>
@@ -22,7 +22,7 @@ export default function Home() {
         <Testimonial3 />
         <StaffMembers />
 
-        <News1 />
+        <FeaturedTrips />
         <Cta1 />
       </Layout>
     </>
