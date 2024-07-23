@@ -25,37 +25,49 @@ export const participation_schools = [
   },
 ];
 
-export const past_speakers = [
+export const FEATURED_SPEAKERS = [
   {
     id: 1,
     name: "Governor Jared Polis",
+    img: "/assets/img/hero/government.svg",
+    image: "/assets/img/project/03.jpg",
+    email: "JHb5N@example.com",
     presentation:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
   },
   {
     id: 2,
     name: "Congressman Joe Neguse",
+    email: "JHb5N@example.com",
     presentation:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     img: "/assets/img/hero/education.svg",
+    image: "/assets/img/project/04.jpg",
   },
   {
     id: 3,
     name: "Governor Jared Polis",
+    email: "JHb5N@example.com",
     presentation:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     img: "/assets/img/hero/government.svg",
+    image: "/assets/img/project/03.jpg",
   },
   {
     id: 4,
     name: "Governor Jared Polis",
+    email: "JHb5N@example.com",
     presentation:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     img: "/assets/img/hero/government.svg",
+    image: "/assets/img/project/04.jpg",
   },
   {
     id: 5,
     name: "Governor Jared Polis",
+    email: "JHb5N@example.com",
+    img: "/assets/img/hero/education.svg",
+    image:"/assets/img/project/03.jpg",
     presentation:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
   },
@@ -64,7 +76,7 @@ export const past_speakers_list = [
     {
       id: 1,
       name: "Governor Jared Polis",
-      img: "assets/img/testimonial/02.jpg",
+      img: "assets/img/team/02.jpg",
       presentation:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     },
@@ -73,21 +85,21 @@ export const past_speakers_list = [
       name: "Congressman Joe Neguse",
       presentation:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-      img: "assets/img/testimonial/03.jpg",
+      img: "assets/img/team/03.jpg",
     },
     {
       id: 3,
       name: "Governor Jared Polis",
       presentation:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-      img: "assets/img/testimonial/02.jpg",
+      img: "assets/img/team/02.jpg",
     },
     {
       id: 4,
       name: "Governor Jared Polis",
       presentation:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-      img:"assets/img/testimonial/03.jpg",
+      img:"assets/img/team/03.jpg",
     },
     {
       id: 5,
@@ -458,14 +470,19 @@ export const MENU = [
         link: "/project",
       },
       {
-        id: "menu-events-id",
-        name: "Events",
-        link: "/events",
+        id: "menu-trips-id",
+        name: "Trips",
+        link: "/trips",
       },
       {
         id: "menu-staff-id",
         name: "Staff",
-        link: "/team",
+        link: "/staffList",
+      },
+      {
+        id: "presentation-id",
+        name: "Past Speakers",
+        link: "/pastSpeakers",
       },
     ],
   },

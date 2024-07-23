@@ -26,8 +26,10 @@ export default function Project() {
       >
         <section className="project-section section-padding fix">
           <div className="container">
-            <div className="section-title ">
-              <div style={{ position: "absolute",left:14, right: 0, top: 26, justifyContent: "center", alignItems: "center" }}>
+            {/* <div className="section-title ">
+           
+            </div> */}
+               <div style={{ justifyContent:'flex-end', display:'flex'}}>
                 <button
                   onClick={toggleDropdown}
                   style={{
@@ -85,7 +87,6 @@ export default function Project() {
                   </div>
                 )}
               </div>
-            </div>
             <div className="section-title mb-5 pb-2" style={{ left: 18 }}>
               <h3>Fellow's Projects for Class of {selectedClass} </h3>
             </div>

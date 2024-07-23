@@ -18,6 +18,9 @@ export default function Testimonial2({filteredProjects}) {
       delay: 1500,
       disableOnInteraction: false,
     },
+    // grid: {
+    //   rows: 2,
+    // },
     navigation: {
       nextEl: ".array-prev",
       prevEl: ".array-next",
@@ -42,32 +45,31 @@ export default function Testimonial2({filteredProjects}) {
   return (
     <>
       <section
-        className="tesimonial-section-2 pb-0 section-padding bg-cover"
+        className="tesimonial-section-2a pb-0 section-padding bg-cover"
         style={{ backgroundImage: 'url("assets/img/testimonial/bg.jpg")' }}
       >
-        <div className="container">
-          <div className="section-title-area">
+        <div className="container" >
+          <div className="section-title-area" >
             <div className="section-title">
-              <span className="text-white wow fadeInUp">Testimonials</span>
-              <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
+              <span className="text-black wow fadeInUp">Testimonials</span>
+              <h2 className="text-black wow fadeInUp" data-wow-delay=".3s">
                 Get to hear from <br />
                 our past fellows
               </h2>
             </div>
-            <div className="array-button wow fadeInUp" data-wow-delay=".5s">
-              <button className="array-prev border-white">
-                <i className="fal fa-arrow-right" />
-              </button>
-              <button className="array-next">
-                <i className="fal fa-arrow-left" />
-              </button>
-            </div>
+          
           </div>
-          <div className="swiper testimonial-slider-2">
-            <Swiper {...swiperOptions} className="swiper-wrapper">
+          <div className="swiper testimonial-slider-2 ">
+              <div className="testimonial-grid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
             {filteredProjects.map((testimonial) => (
-                <SwiperSlide key={testimonial.id}>
-                  <div className="testimonial-box-items">
+                  <div className="testimonial-box-items wow fadeInUp col-lg-5"   style={{
+                    flex: '0 0 calc(50% - 20px)', 
+                    marginBottom: '20px', 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    alignItems: 'center', 
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', 
+                  }}>
                     <div className="icon">
                       <img
                         src="/assets/img/testimonial/icon.png"
@@ -95,9 +97,8 @@ export default function Testimonial2({filteredProjects}) {
                     </div>
                     <p>{testimonial.text}</p>
                   </div>
-                </SwiperSlide>
               ))}
-            </Swiper>
+              </div>
           </div>
         </div>
       </section>

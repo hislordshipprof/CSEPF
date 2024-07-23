@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function News1() {
+export default function FeaturedTrips() {
   return (
     <>
       <section className="news-section section-padding fix" id="blog">
@@ -8,7 +8,7 @@ export default function News1() {
           <div className="section-title text-center">
             <span className="wow fadeInUp">Article</span>
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              Read Our Latest Events/Trips
+              Read Our Latest Trips
             </h2>
           </div>
         </div>

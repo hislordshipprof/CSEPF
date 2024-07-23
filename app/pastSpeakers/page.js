@@ -15,6 +15,12 @@ export default function PastSpeakers() {
     >
        <section className="team-section-4 section-padding">
           <div className="container">
+          <div>
+            
+          <h5 className="section-title mb-0 p-4 " >
+                Get to know our past speakers and their various excellent presenation which they<br/> rendred to the fellows as a resource to help them in their Research.
+              </h5>
+          </div>
             <div className="row g-4">
               {past_speakers_list.map((data) => {
                   const [showFullPresentation, setShowFullPresentation] = useState(false);
@@ -39,7 +45,7 @@ return(
                         src={data.img}
                         alt="team-img"
                         style={{
-                          width: 430,
+                          width: "100%",
                           height: 400,
                           objectFit: "contain",
                         }}
