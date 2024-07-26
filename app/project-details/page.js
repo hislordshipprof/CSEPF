@@ -1,8 +1,9 @@
 import Layout from "@/components/layout/Layout";
+
 export default function ProjectDetails() {
   return (
     <>
-      <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Project Details">
+      <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Project Details">
         <section className="Project-details-section fix section-padding">
           <div className="container">
             <div className="project-details-wrapper">

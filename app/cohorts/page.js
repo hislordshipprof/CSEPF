@@ -7,6 +7,8 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { fellow_project_2023, fellow_project_2024, staff_members } from "@/utils/data";
 import ParticipatingSchools from "@/components/sections/ParticipatingSchools";
+import { fellow_project_2023, fellow_project_2024, staff_members } from "@/utils/data";
+import ParticipatingSchools from "@/components/sections/ParticipatingSchools";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -141,9 +143,9 @@ export default function Cohorts() {
                         src={data.img}
                         alt="team-img"
                         style={{
-                          width: 430,
+                          // width: 430,
                           height: 400,
-                          objectFit: "contain",
+                          objectFit: "cover",
                         }}
                       />
                       <div className="social-profile">
@@ -171,8 +173,10 @@ export default function Cohorts() {
                     </div>
                     <div className="team-content text-center">
                       <h3>
-                        <Link href="/team-details">{data.name}</Link>
+                        <Link href="/team-details" >{data.name}</Link>
                       </h3>
+                      <p>{data.school}</p>
+
                       <p>{data.project}</p>
                       
                     </div>

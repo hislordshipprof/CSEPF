@@ -6129,7 +6129,15 @@ input.main-search-input::placeholder {
   flex-direction: column;
   justify-content: space-between;
 }
-
+.scrollable-bio {
+  max-height: 200px; /* Limit the height */
+  overflow-y: auto;  /* Enable vertical scrolling */
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Spacing of 10px between elements */
+}
 .modal-header {
   display: flex;
   justify-content: flex-end;

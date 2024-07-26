@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
-export default function TeamDetails() {
+export default function TeamDetails({params}) {
+  console.log(params)
   return (
     <>
       <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Team Details">
