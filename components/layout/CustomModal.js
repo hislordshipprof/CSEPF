@@ -24,16 +24,21 @@ const CustomModal = ({ isOpen, handleModalOpen, speaker }) => {
         <div className="modal-body">
           <div className="modal-left">
             <img src={speaker.image || "/assets/img/hero/education.svg"} alt={speaker.name} />
-            <p>Contact: <a target="_blank" rel="noreferrer" style={{color: "blue"}} href={`mailto:${speaker.email}`}>{speaker.email}</a></p>
           </div>
-          <div className="modal-right">
+          <div className="modal-right column-layout">
+            <div>
             <h4>{speaker.name}</h4>
-            <p>{speaker.presentation}</p>
+            <p>Contact: <a target="_blank" rel="noreferrer" style={{color: "blue"}} href={`mailto:${speaker.email}`}>{speaker.email}</a></p>
+
             <a href={speaker.presentationUrl} download className="theme-btn">
               Download Presentation
             </a>
+            </div>
+            
           </div>
         </div>
+            <p className="scrollable-bio">{speaker.bio}</p>
+
       </div>
     </div>
   );

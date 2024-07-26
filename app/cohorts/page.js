@@ -141,9 +141,9 @@ export default function Cohorts() {
                         src={data.img}
                         alt="team-img"
                         style={{
-                          width: 430,
+                          // width: 430,
                           height: 400,
-                          objectFit: "contain",
+                          objectFit: "cover",
                         }}
                       />
                       <div className="social-profile">
@@ -173,6 +173,8 @@ export default function Cohorts() {
                       <h3>
                         <Link href="/team-details">{data.name}</Link>
                       </h3>
+                      <p>{data.school}</p>
+
                       <p>{data.project}</p>
                       
                     </div>

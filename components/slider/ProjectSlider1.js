@@ -20,7 +20,7 @@ export default function ProjectSlider1({ showDots }) {
             <SwiperSlide key={student.id}>
               <div className="project-items">
                 <div className="project-image">
-                  <img src={student.img} alt="project-img" />
+                  <img src={student.img} style={{objectFit:"cover"}} alt="project-img" />
                   <div className="project-content">
                     <p>{student.name}</p>
                     <h4>
