@@ -173,7 +173,7 @@ export default function Cohorts() {
                     </div>
                     <div className="team-content text-center">
                       <h3>
-                        <Link href="/team-details">{data.name}</Link>
+                        <Link href="/team-details" >{data.name}</Link>
                       </h3>
                       <p>{data.school}</p>
 
