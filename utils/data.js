@@ -26,6 +26,7 @@ export const participation_schools = [
 ];
 
 export const FEATURED_SPEAKERS = [
+export const FEATURED_SPEAKERS = [
   {
     id: 1,
     name: "Anna Evans (Alumni Fellows panel)",
