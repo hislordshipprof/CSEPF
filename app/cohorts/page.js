@@ -7,8 +7,6 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { fellow_project_2023, fellow_project_2024, staff_members } from "@/utils/data";
 import ParticipatingSchools from "@/components/sections/ParticipatingSchools";
-import { fellow_project_2023, fellow_project_2024, staff_members } from "@/utils/data";
-import ParticipatingSchools from "@/components/sections/ParticipatingSchools";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
