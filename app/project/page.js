@@ -103,8 +103,8 @@ export default function Project() {
                         src={data.img}
                         alt="project-img"
                         style={{
-                          width: 430,
-                          height: 400,
+                          // width: 430,
+                          // height: 400,
                           objectFit: "contain",
                         }}
                       />

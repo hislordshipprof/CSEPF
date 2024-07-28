@@ -19,13 +19,14 @@ export default function StaffMembers() {
             <div className="section-title">
               <span className="wow fadeInUp">Official Members</span>
               <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                Our Dedicated Supporting <br /> Official Members
+                Our  Official Members
               </h2>
             </div>
             <Link
               href="/team"
-              className="theme-btn wow fadeInUp"
+              className="theme-btn wow fadeInUp pt-2"
               data-wow-delay=".5s"
+
             >
               View all Official Members
               <i className="fa-solid fa-arrow-right-long" />
