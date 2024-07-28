@@ -21,12 +21,8 @@ export default function PastSpeakers() {
   const [selectedClass, setSelectedClass] = useState("2024");
   const [filteredProjects, setFilteredProjects] = useState([]);
   useEffect(() => {
-    if (selectedClass === "2024") {
-      setFilteredProjects(past_speakers_list);
-    } else if (selectedClass === "2023") {
-      setFilteredProjects(past_speakers_list_b);
-    }
   }, [selectedClass]);
+  
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);

@@ -1,7 +1,23 @@
+"use client";
 import Layout from "@/components/layout/Layout";
-import { staff_members } from "@/utils/data";
 import Link from "next/link";
+import { useStaff } from "@/utils/apiRequestHooks";
+import { DEFAULT_AVATAR } from "@/utils/utils";
+
+
 export default function StaffList() {
+  
+  const { staff, isLoading, isError } = useStaff({is_featured: true});
+  if (isLoading) return <div>Loading...</div>;
+
+  const getSocialLinks = (socials) => {
+    const socialLinks = {
+      facebook: socials?.facebook || "",
+      twitter: socials?.twitter || "",
+      linkedin: socials?.linkedin || "",
+    };
+    return socialLinks;
+  };
   return (
     <>
       <Layout
@@ -12,7 +28,7 @@ export default function StaffList() {
         <section className="team-section-4 section-padding">
           <div className="container">
             <div className="row g-4">
-              {staff_members.map((data) => (
+              {staff?.map((data) => (
                 <div
                   className="col-xl-4 col-lg-4 col-md-6 wow fadeInUp"
                   data-wow-delay=".5s"
@@ -20,7 +36,7 @@ export default function StaffList() {
                   <div className="team-card-items mt-0">
                     <div className="team-image">
                       <img
-                        src={data.img}
+                        src={data?.user?.picture || DEFAULT_AVATAR}
                         alt="team-img"
                         style={{
                           width: 430,
@@ -34,17 +50,17 @@ export default function StaffList() {
                         </span>
                         <ul>
                           <li>
-                            <Link href="#">
+                            <Link target="_blank" href={getSocialLinks(staff?.user?.info?.socials).facebook}>
                               <i className="fab fa-facebook-f" />
                             </Link>
                           </li>
                           <li>
-                            <Link href="#">
+                            <Link target="_blank" href={getSocialLinks(staff?.user?.info?.socials).twitter}>
                               <i className="fa-brands fa-twitter" />
                             </Link>
                           </li>
                           <li>
-                            <Link href="#">
+                            <Link target="_blank" href={getSocialLinks(staff?.user?.info?.socials).linkedin}>
                               <i className="fab fa-linkedin-in" />
                             </Link>
                           </li>
@@ -53,9 +69,9 @@ export default function StaffList() {
                     </div>
                     <div className="team-content text-center">
                       <h3>
-                        <Link href="/team-details">{data.name}</Link>
+                        <Link href="/team-details">{data?.user?.full_name}</Link>
                       </h3>
-                      <p>{data.position}</p>
+                      <p>{data.role}</p>
                     </div>
                   </div>
                 </div>
