@@ -88,9 +88,9 @@ export default function FeaturedPastSpeakers() {
                     <div className="service-box-items">
                       <div className="icon">
                         <img
-                          src={speaker.img || "/assets/img/hero/education.svg"} // Use speaker's image if available, otherwise default
-                          width={40}
-                          height={40}
+                          src={speaker.image } 
+                          loading="lazy"
+                          style={{ objectFit: "cover" , width: 80, height: 80,borderRadius: 50,backgroundColor:'grey'}}
                           alt="icon-img"
                         />
                       </div>

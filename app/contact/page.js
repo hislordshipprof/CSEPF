@@ -1,7 +1,27 @@
+"use client";
 import VideoPopup from "@/components/elements/VideoPopup";
 import Layout from "@/components/layout/Layout";
+import React, { useState } from "react";
 import Link from "next/link";
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    alert('Form Data:', formData);
+  };
+
   return (
     <>
       <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Contact Us">
@@ -63,10 +83,10 @@ export default function Contact() {
                             </svg>
                           </div>
                           <div className="content">
-                            <p>Make a Quote</p>
+                            <p>Email Us</p>
                             <h3>
-                              <Link href="/mailto:Director.CSEPF@gmail.com">
-                                Director.CSEPF@gmail.com
+                              <Link href="/mailto:director.csepf@gmail.com">
+                                director.csepf@gmail.com
                               </Link>
                             </h3>
                           </div>
@@ -115,10 +135,11 @@ export default function Contact() {
                         possible
                       </p>
                       <form
-                        action="contact.php"
+                        // action="contact.php"
                         id="contact-form"
                         method="POST"
                         className="contact-form-items"
+                        onSubmit={handleSubmit}
                       >
                         <div className="row g-4">
                           <div
@@ -128,11 +149,13 @@ export default function Contact() {
                             <div className="form-clt">
                               <span>Your name*</span>
                               <input
-                                type="text"
-                                name="name"
-                                id="name"
-                                placeholder="Your Name"
-                              />
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+          />
                             </div>
                           </div>
                           <div
@@ -142,11 +165,13 @@ export default function Contact() {
                             <div className="form-clt">
                               <span>Your Email*</span>
                               <input
-                                type="text"
-                                name="email"
-                                id="email"
-                                placeholder="Your Email"
-                              />
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
                             </div>
                           </div>
                           <div
@@ -156,10 +181,12 @@ export default function Contact() {
                             <div className="form-clt">
                               <span>Write Message*</span>
                               <textarea
-                                name="message"
-                                id="message"
-                                placeholder="Write Message"
-                              />
+            name="message"
+            id="message"
+            placeholder="Write Message"
+            value={formData.message}
+            onChange={handleChange}
+          />
                             </div>
                           </div>
                           <div

@@ -5,6 +5,7 @@ import Link from "next/link";
 import ParticipatingSchools from "@/components/sections/ParticipatingSchools";
 import { useFellows } from "@/utils/apiRequestHooks";
 import { DEFAULT_AVATAR, YEARS } from "@/utils/utils";
+import Preloader from "@/components/elements/Preloader";
 
 export default function Cohorts() {
   const [selectedClass, setSelectedClass] = useState("");
@@ -27,7 +28,7 @@ export default function Cohorts() {
     return socialLinks;
   };
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div><Preloader /></div>;
   return (
     <>
       <Layout
@@ -119,9 +120,9 @@ export default function Cohorts() {
                         </div>
                         <div className="team-content text-center">
                           <h3>
-                            <Link href="/team-details">
-                              {data?.applicant?.full_name}
-                            </Link>
+                          <Link href={{ pathname: '/cohort-details', query: { _id: data?.id } }}>
+                                      {data?.applicant?.full_name}
+</Link>
                           </h3>
                           <p>{data?.applicant?.school}</p>
 
