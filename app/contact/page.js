@@ -63,10 +63,10 @@ export default function Contact() {
                             </svg>
                           </div>
                           <div className="content">
-                            <p>Make a Quote</p>
+                            <p>Email Us</p>
                             <h3>
-                              <Link href="/mailto:Director.CSEPF@gmail.com">
-                                Director.CSEPF@gmail.com
+                              <Link href="/mailto:director.csepf@gmail.com">
+                                director.csepf@gmail.com
                               </Link>
                             </h3>
                           </div>

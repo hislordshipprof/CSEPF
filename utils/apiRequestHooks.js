@@ -1,19 +1,35 @@
-import { APICall } from "./apiCall";
-import URLS from "./urls";
 import useSWR from 'swr';
+import { APICall } from './apiCall';
+import URLS from './urls';
 
-
-const fetcher = async(data) => {
-    let res  =  await APICall(data[0], data[1]);
-    return res;
+const fetcher = async (params) => {
+  let res = await APICall(params[0], params[1]);
+  return res;
 };
 
 export const useFellows = (params) => {
-    const { data, error } = useSWR([URLS.LIST_FELLOWS, params], fetcher);
+  const { data, error } = useSWR([URLS.LIST_FELLOWS, params], fetcher);
+  return {
+    fellows: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+};
 
-    return {
-        fellows: data?.data,
-        isLoading: !error && !data,
-        isError: error,
-    };
+export const useStaff = (params) => {
+  const { data, error } = useSWR([URLS.LIST_STAFF,params], fetcher);
+  return {
+    staff: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+};
+
+export const usePastSpeakers = (params) => {
+  const { data, error } = useSWR([URLS.LIST_PAST_SPEAKERS,params], fetcher);
+  return {
+    pastSpeakers: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
 };
