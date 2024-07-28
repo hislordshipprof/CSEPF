@@ -522,7 +522,7 @@ export const MENU = [
       {
         id: "menu-staff-id",
         name: "Staff",
-        link: "/staffList",
+        link: "/staff",
       },
       {
         id: "presentation-id",

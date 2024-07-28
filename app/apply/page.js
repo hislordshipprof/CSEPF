@@ -1,7 +1,32 @@
+"use client";
 import VideoPopup from "@/components/elements/VideoPopup";
 import Layout from "@/components/layout/Layout";
+import React, { useState } from "react";
 import Link from "next/link";
 export default function Apply() {
+  const [formData, setFormData] = useState({
+    name:'',
+    email: '',
+    program: '',
+    school: '',
+    resume: null,
+    picture: null,
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    setFormData({
+      ...formData,
+      [name]: files ? files[0] : value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    alert('Form Data sent:', formData);
+  };
 return (
 <>
   <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Apply for this year fellowship">
@@ -45,46 +70,62 @@ return (
                     below to get your application processed!. We cant wait
                     to have you!
                   </p>
-                  <form action="contact.php" id="contact-form" method="POST" className="contact-form-items">
+                  <form onSubmit={handleSubmit} id="contact-form" className="contact-form-items">
                     <div className="row g-4">
                       <div className="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                         <div className="form-clt">
                           <span>Name in Full</span>
-                          <input type="text" name="name" id="name" placeholder="Your Name" />
+                          <input type="text" name="name" id="name" placeholder="John Doe" value={formData.name}
+            onChange={handleChange} />
                         </div>
                       </div>
                       <div className="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
                         <div className="form-clt">
                           <span>Email Address</span>
-                          <input type="text" name="email" id="email" placeholder="Your Email" />
+                          <input type="text" name="email" id="email" placeholder="JohnDoe@example.com"  value={formData.email}
+            onChange={handleChange}/>
                         </div>
                       </div>
                     </div>
                     <div className="row g-4">
                       <div className="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                         <div className="form-clt">
-                          <span>Program of Study & Year</span>
-                          <input type="text" name="program" id="program" placeholder="Program of Study & Year" />
+                          <span>Program of Study</span>
+                          <input type="text" name="program" id="program" placeholder="Msc/Bsc/Phd Electrical Engineering " value={formData.program}
+            onChange={handleChange}/>
                         </div>
                       </div>
                       <div className="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
                         <div className="form-clt">
                           <span>Your School</span>
-                          <input type="text" name="school" id="school" placeholder="Your School" />
+                          <input type="text" name="school" id="school" placeholder="Your School" value={formData.school}
+            onChange={handleChange}/>
                         </div>
                       </div>
                       <div className="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
                         <div className="form-clt">
                           <span>Upload Resume</span>
-                          <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx"
-                            placeholder="Upload Resume" />
+                          <input
+            type="file"
+            name="resume"
+            id="resume"
+            accept=".pdf,.doc,.docx"
+            placeholder="Upload Resume"
+            onChange={handleChange}
+          />
                         </div>
                       </div>
                       <div className="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
                         <div className="form-clt">
                           <span>Upload Your Picture</span>
-                          <input type="file" name="picture" id="picture" accept="image/png, image/jpeg"
-                            placeholder="Upload Your Picture" />
+                          <input
+            type="file"
+            name="picture"
+            id="picture"
+            accept="image/png, image/jpeg"
+            placeholder="Upload Your Picture"
+            onChange={handleChange}
+          />
                         </div>
                       </div>
                       <div className="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
@@ -92,7 +133,13 @@ return (
                           <span>
                             What motivate's you to join this fellowship?
                           </span>
-                          <textarea name="message" id="message" placeholder="Write Message" />
+                          <textarea
+            name="message"
+            id="message"
+            placeholder="Write Message"
+            value={formData.message}
+            onChange={handleChange}
+          />
                           </div>
                           </div>
                           <div

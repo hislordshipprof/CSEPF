@@ -45,7 +45,7 @@ export default function Testimonial2({filteredProjects}) {
   return (
     <>
       <section
-        className="tesimonial-section-2a pb-0 section-padding bg-cover"
+        className="tesimonial-section-2 pb-0 section-padding bg-cover"
         style={{ backgroundImage: 'url("assets/img/testimonial/bg.jpg")' }}
       >
         <div className="container" >

@@ -120,9 +120,9 @@ export default function Cohorts() {
                         </div>
                         <div className="team-content text-center">
                           <h3>
-                            <Link href="/team-details">
-                              {data?.applicant?.full_name}
-                            </Link>
+                          <Link href={{ pathname: '/cohort-details', query: { _id: data?.id } }}>
+                                      {data?.applicant?.full_name}
+</Link>
                           </h3>
                           <p>{data?.applicant?.school}</p>
 
