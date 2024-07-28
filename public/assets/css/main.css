@@ -6341,7 +6341,7 @@ input.main-search-input::placeholder {
   background-color: var(--white);
   box-shadow: var(--box-shadow);
   border-top: 4px solid var(--theme);
-  margin-top: -150px;
+  /* margin-top: -150px; */
   margin-right: 30px;
 }
 @media (max-width: 991px) {

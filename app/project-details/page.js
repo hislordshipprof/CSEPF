@@ -1,6 +1,16 @@
+'use client';
+import Preloader from "@/components/elements/Preloader";
 import Layout from "@/components/layout/Layout";
+import { getFellows } from "@/utils/apiRequestHooks";
+import { DEFAULT_AVATAR } from "@/utils/utils";
 
-export default function ProjectDetails() {
+export default function ProjectDetails({ searchParams }) {
+
+  const { fellows:fellow, isLoading, isError } = getFellows({ fellow_id: searchParams._id });
+  if (isLoading) return <div><Preloader /></div>;
+
+  console.log('===== ToLog ========', fellow);
+
   return (
     <>
       <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Project Details">
@@ -10,46 +20,43 @@ export default function ProjectDetails() {
               <div className="row">
                 <div className="col-lg-12">
                   <div className="project-details-items">
-                    <div className="details-image">
-                      <img src="/assets/img/project/details.jpg" alt="img" />
-                    </div>
+                    {/* <div className="details-image">
+                      <img src={fellow?.applicant?.picture || DEFAULT_AVATAR} alt="img"/>
+                    </div> */}
                     <div className="row g-4 justify-content-between">
                       <div className="col-lg-7">
-                        <div className="details-content pt-5">
-                          <h3>Project Summary</h3>
+                        <div className="details-content">
+                          <h3>{fellow?.project?.title}</h3>
                           <p>
-                            Nulla faucibus malesuada. In placerat feugiat eros
-                            ac tempor. Integer euismod massa sapien, et
-                            consequat enim laoreet et. Nulla sit amet nisi
-                            dapibus, gravida turpis sit amet, accumsan nisl.
-                            Fusce vel semper risus. Morbi congue eros sagittis,
-                            sodales turpis venenatis, iaculis dui. Proin ac
-                            purus sed nibh dapibus neque. scelerisque sed quis
-                            ante.
+                            {fellow?.project?.summary}
                           </p>
+                          <div className="mt-10">
+                            {fellow?.project?.topics?.map((tag, index) => (
+                              <span key={index} className="badge bg-info me-1">
+                                {tag?.title}
+                              </span>
+                            ))}
+                          
+                          </div>
                         </div>
                       </div>
                       <div className="col-lg-4">
                         <div className="project-catagory">
-                          <h3>Project Info: </h3>
+                          {/* <h3>Project Info: </h3> */}
                           <ul>
                             <li>
                               Student:
-                              <span>Ralph Edwards</span>
+                              <span>{fellow?.applicant?.full_name}</span>
                             </li>
                             <li>
-                              Topic:
-                              <span>Water Policy</span>
-                            </li>
-                            <li>
-                              School:
-                              <span>CU Boulder</span>
+                              Program:
+                              <span>{fellow?.applicant?.program}</span>
                             </li>
                             <li>
                               Download Project:
                               <a
-                                href="/path/to/your/file.pdf"
-                                download="YourFileName.pdf"
+                                href={fellow?.project?.document}
+                                download={`${fellow?.project?.title}.pdf`}
                                 style={{
                                   cursor: "pointer",
                                   textDecoration: "underline",

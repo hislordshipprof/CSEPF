@@ -1,3 +1,4 @@
+import { DEFAULT_AVATAR } from '@/utils/utils';
 import React, { useEffect } from 'react';
 
 const CustomModal = ({ isOpen, handleModalOpen, speaker }) => {
@@ -23,21 +24,21 @@ const CustomModal = ({ isOpen, handleModalOpen, speaker }) => {
         </div>
         <div className="modal-body">
           <div className="modal-left">
-            <img src={speaker.image || "/assets/img/hero/education.svg"} alt={speaker.name} />
+            <img src={speaker?.picture || DEFAULT_AVATAR} alt={speaker?.presenter} />
           </div>
           <div className="modal-right column-layout">
             <div>
-            <h4>{speaker.name}</h4>
-            <p>Contact: <a target="_blank" rel="noreferrer" style={{color: "blue"}} href={`mailto:${speaker.email}`}>{speaker.email}</a></p>
+            <h4>{speaker?.presenter}</h4>
+            <p>Contact: <a target="_blank" rel="noreferrer" style={{color: "blue"}} href={`mailto:${speaker?.email}`}>{speaker?.email}</a></p>
 
-            <a href={speaker.presentationUrl} download className="theme-btn">
+            <a href={speaker?.media}  target='_blank'download className="theme-btn">
               Download Presentation
             </a>
             </div>
             
           </div>
         </div>
-            <p className="scrollable-bio">{speaker.bio}</p>
+            <p className="scrollable-bio">{speaker?.summary}</p>
 
       </div>
     </div>
