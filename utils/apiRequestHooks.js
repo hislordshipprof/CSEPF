@@ -16,6 +16,15 @@ export const useFellows = (params) => {
   };
 };
 
+export const getFellows = (params) => {
+  const { data, error } = useSWR([URLS.GET_FELLOW , params], fetcher);
+  return {
+    fellows: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+};
+
 export const useStaff = (params) => {
   const { data, error } = useSWR([URLS.LIST_STAFF,params], fetcher);
   return {
@@ -24,7 +33,14 @@ export const useStaff = (params) => {
     isError: error,
   };
 };
-
+export const useGetStaff = (params) => {
+  const { data, error } = useSWR([URLS.GET_STAFF ,params], fetcher);
+  return {
+    staffData: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+};
 export const usePastSpeakers = (params) => {
   const { data, error } = useSWR([URLS.LIST_PAST_SPEAKERS,params], fetcher);
   return {

@@ -5981,21 +5981,24 @@ input.main-search-input::placeholder {
   opacity: 0;
 }
 
+
+
 .project-items .project-image {
   position: relative;
   height: 457px;
+  /* width: 300px; */
 }
 .project-items .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: 'contain';
 }
 .project-items .project-image .project-content {
   position: absolute;
-  bottom: 25px;
-  left: 25px;
+  bottom: 0px;
+  left: 0px;
   right: 25px;
-  padding: 35px 30px;
+  padding: 25px 25px;
   background-color: var(--white);
   overflow: hidden;
 }
@@ -6058,6 +6061,7 @@ input.main-search-input::placeholder {
 .project-section-2 {
   position: relative;
 }
+
 .project-section-2::before {
   position: absolute;
   top: 0;
@@ -7677,8 +7681,8 @@ input.main-search-input::placeholder {
   width: 100%;
   height: 100%;
   content: "";
-  background: #15067D;
-  opacity: 0.6;
+  background: #ffff;
+  /* opacity: 0.6; */
 }
 .tesimonial-section-2::after {
   position: absolute;
