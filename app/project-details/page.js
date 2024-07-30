@@ -1,6 +1,13 @@
+'use client';
+import Preloader from "@/components/elements/Preloader";
 import Layout from "@/components/layout/Layout";
+import { useGetProject } from "@/utils/apiRequestHooks";
 
-export default function ProjectDetails() {
+export default function ProjectDetails({ searchParams }) {
+
+  const { project, isLoading, isError } = useGetProject({ project_id: searchParams._id });
+  if (isLoading) return <div><Preloader /></div>;
+
   return (
     <>
       <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Project Details">
@@ -10,46 +17,43 @@ export default function ProjectDetails() {
               <div className="row">
                 <div className="col-lg-12">
                   <div className="project-details-items">
-                    <div className="details-image">
-                      <img src="/assets/img/project/details.jpg" alt="img" />
-                    </div>
+                    {/* <div className="details-image">
+                      <img src={fellow?.applicant?.picture || DEFAULT_AVATAR} alt="img"/>
+                    </div> */}
                     <div className="row g-4 justify-content-between">
                       <div className="col-lg-7">
-                        <div className="details-content pt-5">
-                          <h3>Project Summary</h3>
+                        <div className="details-content">
+                          <h3>{project?.title}</h3>
                           <p>
-                            Nulla faucibus malesuada. In placerat feugiat eros
-                            ac tempor. Integer euismod massa sapien, et
-                            consequat enim laoreet et. Nulla sit amet nisi
-                            dapibus, gravida turpis sit amet, accumsan nisl.
-                            Fusce vel semper risus. Morbi congue eros sagittis,
-                            sodales turpis venenatis, iaculis dui. Proin ac
-                            purus sed nibh dapibus neque. scelerisque sed quis
-                            ante.
+                            {project?.summary}
                           </p>
+                          <div className="mt-10">
+                            {project?.topics?.map((tag, index) => (
+                              <span key={index} className="badge bg-info me-1">
+                                {tag?.title}
+                              </span>
+                            ))}
+                          
+                          </div>
                         </div>
                       </div>
                       <div className="col-lg-4">
                         <div className="project-catagory">
-                          <h3>Project Info: </h3>
+                          {/* <h3>Project Info: </h3> */}
                           <ul>
                             <li>
                               Student:
-                              <span>Ralph Edwards</span>
+                              <span>{project?.fellow?.full_name}</span>
                             </li>
                             <li>
-                              Topic:
-                              <span>Water Policy</span>
-                            </li>
-                            <li>
-                              School:
-                              <span>CU Boulder</span>
+                              Program:
+                              <span>{project?.fellow?.program}</span>
                             </li>
                             <li>
                               Download Project:
                               <a
-                                href="/path/to/your/file.pdf"
-                                download="YourFileName.pdf"
+                                href={project?.document}
+                                download={`${project?.title}.pdf`}
                                 style={{
                                   cursor: "pointer",
                                   textDecoration: "underline",
@@ -59,14 +63,14 @@ export default function ProjectDetails() {
                                 PDF DOWNLOAD
                               </a>
                             </li>
-                            <li>
+                            {/* <li>
                               Share:
                               <span>
                                 <i className="fa-brands fa-facebook-f me-3" />
                                 <i className="fa-brands fa-instagram me-3" />
                                 <i className="fa-brands fa-linkedin-in" />
                               </span>
-                            </li>
+                            </li> */}
                           </ul>
                         </div>
                       </div>

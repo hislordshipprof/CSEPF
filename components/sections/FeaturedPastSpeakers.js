@@ -6,6 +6,8 @@ import PastSpeakerDetailPopUp from "../elements/PastSpeakerDetailPopUp";
 import { useState } from "react";
 import { FEATURED_SPEAKERS } from "@/utils/data";
 import CustomModal from "../layout/CustomModal";
+import { usePastSpeakers } from "@/utils/apiRequestHooks";
+import { DEFAULT_AVATAR } from "@/utils/utils";
 
 const LOREM_IPSUM =
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ";
@@ -51,21 +53,23 @@ export default function FeaturedPastSpeakers() {
     setCurrentSpeaker(speaker);
     setOpen(!isOpen);
   };
+
+  const { pastSpeakers, isLoading, isError } = usePastSpeakers({is_featured: true});
+
   return (
     <>
       <section
         className="service-section fix section-padding bg-cover "
-       
-        style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")', }}
+        style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")' }}
         id="service"
       >
-        <div className="container" >
+        <div className="container">
           <div className="section-title-area">
             <div className="section-title">
               <span className="wow fadeInUp">Policy Speakers</span>
               <h3 className="wow fadeInUp" data-wow-delay=".3s">
-                See below Speakers who shared insights <br /> With the
-                Fellows on various topics in Policy Making
+                See below Speakers who shared insights <br /> With the Fellows
+                on various topics in Policy Making
               </h3>
             </div>
 
@@ -80,25 +84,31 @@ export default function FeaturedPastSpeakers() {
               </Link>
             </div>
           </div>
-          <div className="service-wrapper" >
+          <div className="service-wrapper">
             <div className="swiper service-slider">
               <Swiper {...swiperOptions} className="swiper-wrapper">
-                {FEATURED_SPEAKERS.map((speaker) => (
+                {pastSpeakers?.map((speaker) => (
                   <SwiperSlide key={speaker.id}>
                     <div className="service-box-items">
                       <div className="icon">
                         <img
-                          src={speaker.image } 
+                          src={speaker.picture || DEFAULT_AVATAR}
                           loading="lazy"
-                          style={{ objectFit: "cover" , width: 80, height: 80,borderRadius: 50,backgroundColor:'grey'}}
+                          style={{
+                            objectFit: "cover",
+                            width: 80,
+                            height: 80,
+                            borderRadius: 50,
+                            backgroundColor: "grey",
+                          }}
                           alt="icon-img"
                         />
                       </div>
                       <div className="content">
                         <h4>
-                          <Link href="/service-details">{speaker.name}</Link>
+                          <Link href="/service-details">{speaker?.presenter}</Link>
                         </h4>
-                        <p>{speaker.presentation.substring(0, 60)}</p>
+                        <p>{speaker?.summary?.substring(0, 60)}</p>
                         <a
                           // href="#"
                           onClick={() => handleModalOpen(speaker)}
@@ -111,20 +121,16 @@ export default function FeaturedPastSpeakers() {
                     </div>
                   </SwiperSlide>
                 ))}
-
-              
               </Swiper>
             </div>
-            
+
             <CustomModal
-          isOpen={isOpen}
-          handleModalOpen={handleModalOpen}
-          speaker={currentSpeaker}
-        />
+              isOpen={isOpen}
+              handleModalOpen={handleModalOpen}
+              speaker={currentSpeaker}
+            />
             <div className="service-text wow fadeInUp" data-wow-delay=".4s">
-              
               <div className="array-button justify-content-end">
-                
                 <button className="array-prev">
                   <i className="fal fa-arrow-right" />
                 </button>
@@ -132,14 +138,9 @@ export default function FeaturedPastSpeakers() {
                   <i className="fal fa-arrow-left" />
                 </button>
               </div>
-             
-             
             </div>
           </div>
-        
         </div>
-      
-           
       </section>
     </>
   );

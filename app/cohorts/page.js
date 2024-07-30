@@ -6,6 +6,7 @@ import ParticipatingSchools from "@/components/sections/ParticipatingSchools";
 import { useFellows } from "@/utils/apiRequestHooks";
 import { DEFAULT_AVATAR, YEARS } from "@/utils/utils";
 import Preloader from "@/components/elements/Preloader";
+import Preloader from "@/components/elements/Preloader";
 
 export default function Cohorts() {
   const [selectedClass, setSelectedClass] = useState("");
@@ -39,13 +40,17 @@ export default function Cohorts() {
         <div>
           <section className="team-section-4 fix section-padding">
             <div className="container">
-                <div
-                  style={{
-                    justifyContent: "flex-end",
-                    display: "flex",
-                  }}
-                  >
-                <select style={{  maxWidth: 200,}} class="form-select" onChange={(e) => setSelectedClass(e.target.value)}>
+              <div
+                style={{
+                  justifyContent: "flex-end",
+                  display: "flex",
+                }}
+              >
+                <select
+                  style={{ maxWidth: 200 }}
+                  class="form-select"
+                  onChange={(e) => setSelectedClass(e.target.value)}
+                >
                   <option value="">Select Cohort</option>
                   {YEARS.map((year) => (
                     <option key={year} value={year}>

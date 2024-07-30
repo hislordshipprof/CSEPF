@@ -3,6 +3,10 @@ import React, { useState,useEffect } from 'react';
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 import { past_speakers_list, past_speakers_list_b } from '@/utils/data';
+import { usePastSpeakers } from '@/utils/apiRequestHooks';
+import Preloader from '@/components/elements/Preloader';
+import { DEFAULT_AVATAR } from '@/utils/utils';
+
 
 export default function PastSpeakers() {
   // Initialize state to keep track of expanded presentations
@@ -26,6 +30,11 @@ export default function PastSpeakers() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
+  const { pastSpeakers, isLoading, isError } = usePastSpeakers({});
+
+  if (isLoading) return <div><Preloader /></div>;
+  console.log("pastSpeakers", pastSpeakers);
 
   return (
     <>
@@ -104,9 +113,9 @@ export default function PastSpeakers() {
               </h5>
             </div>
             <div className="row g-4">
-              {filteredProjects.map((data, index) => {
+              {pastSpeakers?.map((data, index) => {
                 // Split the presentation text
-                const words = data.presentation.split(' ');
+                const words = data?.summary?.split(' ');
                 const preview = words.slice(0, 20).join(' ');
                 const rest = words.length > 20 ? words.slice(20).join(' ') : '';
 
@@ -119,7 +128,7 @@ export default function PastSpeakers() {
                     <div className="team-card-items mt-0">
                       <div className="team-image">
                         <img
-                          src={data.image}
+                          src={data?.picture || DEFAULT_AVATAR}
                           alt="team-img"
                           style={{
                             width: "100%",
@@ -141,8 +150,8 @@ export default function PastSpeakers() {
                         </div>
                       </div>
                       <div className="team-content text-center">
-                        <h3>{data.name}</h3>
-                        <p className='scrollable-bio'>{data.position}</p>
+                        <h3>{data?.presenter}</h3>
+                        <p className='scrollable-bio'>{data?.title}</p>
                         <p>
                           {expandedPresentations[index]
                             ? `${preview} ${rest}`
@@ -160,7 +169,8 @@ export default function PastSpeakers() {
                         </p>
                         <p>
                           <a
-                            href="URL_TO_YOUR_FILE"
+                            href={data?.media}
+                            target='_blank'
                             className="btn btn-primary"
                             download="filename.ext"
                           >

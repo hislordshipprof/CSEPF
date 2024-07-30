@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SwiperSlide } from "swiper/react";
 import Slider from "./Slider";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { DEFAULT_AVATAR } from "@/utils/utils";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -38,22 +39,22 @@ const swiperOptions = {
   },
 };
 
-export default function ProjectSlider1({ showDots }) {
+export default function ProjectSlider1({ fellows }) {
   return (
     <>
       <div className="swiper project-slider pt-5">
         <Slider options={swiperOptions}>
-          {featured_class_of_2024.map((student) => (
+          {fellows?.map((student) => (
             <SwiperSlide key={student.id}>
               <div className="project-items">
                 <div className="project-image">
-                  <img src={student.img} style={{objectFit:"cover"}} alt="project-img" />
+                  <img src={student?.applicant?.picture || DEFAULT_AVATAR} style={{objectFit:"cover"}} alt="project-img" />
                   <div className="project-content">
-                    <p>{student.name}</p>
+                    <p>{student?.applicant?.full_name}</p>
                     <h4>
-                      <Link href="/project-details">{student.school}</Link>
+                      <Link href="/project-details">{student?.applicant?.school}</Link>
                     </h4>
-                    <Link href="/project-details" className="icon">
+                    <Link href={{pathname:"/cohort-details", query:{_id:student?.id}}} className="icon">
                       <i className="fa-solid fa-arrow-right" />
                     </Link>
                   </div>
@@ -62,12 +63,6 @@ export default function ProjectSlider1({ showDots }) {
             </SwiperSlide>
           ))}
         </Slider>
-
-        {showDots && (
-          <div className="swiper-dot-2">
-            <div className="dot-3" />
-          </div>
-        )}
       </div>
     </>
   );
