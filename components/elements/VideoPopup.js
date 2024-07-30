@@ -1,10 +1,21 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import ModalVideo from "react-modal-video";
 import "../../node_modules/react-modal-video/css/modal-video.css";
 
 export default function VideoPopup({ style, url }) {
   const [isOpen, setOpen] = useState(false);
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isOpen]);
+
   return (
     <>
       {style === 3 && (
@@ -35,6 +46,7 @@ export default function VideoPopup({ style, url }) {
           autoplay
           isOpen={isOpen}
           videoId="LRP2DXLMhf8"
+          
           onClose={() => setOpen(false)}
         />
       )}

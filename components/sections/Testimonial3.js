@@ -36,6 +36,7 @@ const swiperOptions = {
 };
 
 export default function Testimonial3() {
+  
   return (
     <>
       <section className="tesimonial-section-3 section-padding section-bg-2 bg-cover">

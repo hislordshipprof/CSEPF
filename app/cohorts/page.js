@@ -6,7 +6,6 @@ import ParticipatingSchools from "@/components/sections/ParticipatingSchools";
 import { useFellows } from "@/utils/apiRequestHooks";
 import { DEFAULT_AVATAR, YEARS } from "@/utils/utils";
 import Preloader from "@/components/elements/Preloader";
-import Preloader from "@/components/elements/Preloader";
 
 export default function Cohorts() {
   const [selectedClass, setSelectedClass] = useState("");
@@ -18,8 +17,7 @@ export default function Cohorts() {
 
   const { fellows, isLoading, isError } = useFellows({ cohort: selectedClass });
 
-  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-
+ 
   const getSocialLinks = (socials) => {
     const socialLinks = {
       facebook: socials?.facebook || "",

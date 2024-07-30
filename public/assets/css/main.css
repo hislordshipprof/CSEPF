@@ -6117,6 +6117,10 @@ input.main-search-input::placeholder {
   z-index: 1000;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .modal-content {
   background: #fff;
   padding: 20px;
@@ -6129,6 +6133,10 @@ input.main-search-input::placeholder {
 }
 .scrollable-bio {
   max-height: 200px; /* Limit the height */
+  overflow-y: auto;  /* Enable vertical scrolling */
+}
+.scrollable-bio-2 {
+  max-height: 100px; /* Limit the height */
   overflow-y: auto;  /* Enable vertical scrolling */
 }
 .column-layout {
@@ -7728,6 +7736,9 @@ input.main-search-input::placeholder {
   width: 100px;
   height: 100px;
 }
+.swiper-grid-column > .swiper-wrapper{
+  flex-direction: unset !important;
+  }
 .testimonial-box-items .client-items .client-content h4 {
   margin-bottom: 5px;
 }
