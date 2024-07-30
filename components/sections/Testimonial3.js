@@ -1,8 +1,10 @@
 "use client";
-import { testimonial } from "@/utils/data";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import VideoPopup from "../elements/VideoPopup";
+import { useTestimonials } from "@/utils/apiRequestHooks";
+import Preloader from "../elements/Preloader";
+import { DEFAULT_AVATAR } from "@/utils/utils";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -36,7 +38,15 @@ const swiperOptions = {
 };
 
 export default function Testimonial3() {
+
+  const {testimonials,isLoading, isError} = useTestimonials({is_featured:true});
   
+  if (isLoading)
+    return (
+      <div>
+        <Preloader />
+      </div>
+    );
   return (
     <>
       <section className="tesimonial-section-3 section-padding section-bg-2 bg-cover">
@@ -63,23 +73,17 @@ export default function Testimonial3() {
           </div>
           <div className="swiper testimonial-slider-2">
             <Swiper {...swiperOptions} className="swiper-wrapper">
-              {testimonial.map((testimonial) => (
+              {testimonials?.map((testimonial) => (
                 <SwiperSlide key={testimonial.id}>
                   <div className="testimonial-box-items">
-                    <div className="icon">
-                      <img
-                        src="/assets/img/testimonial/icon.png"
-                        alt="icon-img"
-                      />
-                    </div>
                     <div className="client-items">
                       <div
                         className="client-image style-2 bg-cover"
-                        style={{ backgroundImage: `url("${testimonial.img}")` }}
+                        style={{ backgroundImage: `url("${testimonial?.user?.applicant?.picture || DEFAULT_AVATAR}")` }}
                       />
                       <div className="client-content">
-                        <h4>{testimonial.name}</h4>
-                        <p>{testimonial.school}</p>
+                        <h4>{testimonial?.user?.applicant?.full_name}</h4>
+                        <p>{testimonial?.user?.applicant?.school}</p>
                         <div className="star">
                           <i className="fas fa-star" />
                           <i className="fas fa-star" />
@@ -88,10 +92,10 @@ export default function Testimonial3() {
                           <i className="fas fa-star" />
                         </div>
                       </div>
-                      <VideoPopup  style={3} />
+                      <VideoPopup  style={3} url={testimonial?.media}/>
 
                     </div>
-                    <p>{testimonial.text}</p>
+                    <p>{testimonial?.content}</p>
                   </div>
                 </SwiperSlide>
               ))}
