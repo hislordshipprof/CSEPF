@@ -1,6 +1,10 @@
+'use client';
+import { useFellows } from "@/utils/apiRequestHooks";
 import ProjectSlider1 from "../slider/ProjectSlider1";
 
 export default function FellowsProjects() {
+  const { fellows, isLoading, isError } = useFellows({ cohort: new Date().getFullYear() });
+
   return (
     <>
       <section
@@ -19,7 +23,7 @@ export default function FellowsProjects() {
             Class of 2024
           </p>
         </div>
-        <ProjectSlider1 showDots />
+        <ProjectSlider1 fellows={fellows} />
       </section>
     </>
   );

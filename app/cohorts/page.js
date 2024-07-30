@@ -28,7 +28,12 @@ export default function Cohorts() {
     return socialLinks;
   };
 
-  if (isLoading) return <div><Preloader /></div>;
+  if (isLoading)
+    return (
+      <div>
+        <Preloader />
+      </div>
+    );
   return (
     <>
       <Layout
@@ -39,13 +44,17 @@ export default function Cohorts() {
         <div>
           <section className="team-section-4 fix section-padding">
             <div className="container">
-                <div
-                  style={{
-                    justifyContent: "flex-end",
-                    display: "flex",
-                  }}
-                  >
-                <select style={{  maxWidth: 200,}} class="form-select" onChange={(e) => setSelectedClass(e.target.value)}>
+              <div
+                style={{
+                  justifyContent: "flex-end",
+                  display: "flex",
+                }}
+              >
+                <select
+                  style={{ maxWidth: 200 }}
+                  class="form-select"
+                  onChange={(e) => setSelectedClass(e.target.value)}
+                >
                   <option value="">Select Cohort</option>
                   {YEARS.map((year) => (
                     <option key={year} value={year}>
@@ -120,9 +129,14 @@ export default function Cohorts() {
                         </div>
                         <div className="team-content text-center">
                           <h3>
-                          <Link href={{ pathname: '/cohort-details', query: { _id: data?.id } }}>
-                                      {data?.applicant?.full_name}
-</Link>
+                            <Link
+                              href={{
+                                pathname: "/cohort-details",
+                                query: { _id: data?.id },
+                              }}
+                            >
+                              {data?.applicant?.full_name}
+                            </Link>
                           </h3>
                           <p>{data?.applicant?.school}</p>
 

@@ -6,7 +6,6 @@ import Link from "next/link";
 export default function StaffDetails({searchParams}) {
 
   const { staffData, isLoading, isError } = useGetStaff({staff_id: searchParams._id});
- console.log("========satffData=====",JSON.stringify(staffData, null, 2))
   if (isLoading) return <div><Preloader /></div>;
   const getSocialLinks = (socials) => {
     const socialLinks = {

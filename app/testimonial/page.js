@@ -7,6 +7,8 @@ import Link from "next/link";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { testimonial_2023, testimonial_2024 } from "@/utils/data";
+import { useTestimonials } from "@/utils/apiRequestHooks";
+import Preloader from "@/components/elements/Preloader";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -44,15 +46,22 @@ export default function ServiceCarousel() {
   const [selectedClass, setSelectedClass] = useState("2024");
   const [filteredProjects, setFilteredProjects] = useState([]);
   useEffect(() => {
-    if (selectedClass === "2024") {
-      setFilteredProjects(testimonial_2024);
-    } else if (selectedClass === "2023") {
-      setFilteredProjects(testimonial_2023);
-    }
   }, [selectedClass]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
+  const {testimonials,isLoading, isError} = useTestimonials({});
+
+  console.log("=====>",testimonials)
+
+  
+  if (isLoading)
+    return (
+      <div>
+        <Preloader />
+      </div>
+    );
 
   return (
     <>
@@ -128,7 +137,7 @@ export default function ServiceCarousel() {
                     program.
                   </p>
                 </div>
-                <Testimonial2 filteredProjects={filteredProjects}/>
+                <Testimonial2 filteredProjects={testimonials}/>
 
                
               </div>

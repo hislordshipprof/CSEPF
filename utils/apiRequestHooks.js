@@ -49,3 +49,50 @@ export const usePastSpeakers = (params) => {
     isError: error,
   };
 };
+
+
+export const useProjects = (params) => {
+  const { data, error } = useSWR([URLS.LIST_PROJECTS,params], fetcher);
+  return {
+    projects: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+
+export const useGetProject = (params) => {
+  const { data, error } = useSWR([URLS.GET_PROJECT ,params], fetcher);
+  return {
+    project: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+
+export const useTestimonials = (params) => {
+  const { data, error } = useSWR([URLS.LIST_TESTIMONIALS,params], fetcher);
+  return {
+    testimonials: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+
+export const useTrips = (params) => {
+  const { data, error } = useSWR([URLS.LIST_TRIPS,params], fetcher);
+  return {
+    trips: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+
+export const useGetTrip = (params) => {
+  const { data, error } = useSWR([URLS.GET_TRIP ,params], fetcher);
+  return {
+    trip: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+
