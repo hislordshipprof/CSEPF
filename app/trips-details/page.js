@@ -4,14 +4,11 @@ import Link from "next/link";
 import 'swiper/css'; // Import Swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import Preloader from "@/components/elements/Preloader";
+import { useGetTrip } from "@/utils/apiRequestHooks";
 
-export default function TripsDetails() {
-  const images = [
-    "assets/img/news/post-1.jpg",
-    "assets/img/news/post-2.jpg",
-    "assets/img/news/post-3.jpg",
-    "assets/img/news/post-4.jpg",
-  ];
+export default function TripsDetails({ searchParams }) {
+
   const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
     spaceBetween: 30,
@@ -28,6 +25,33 @@ export default function TripsDetails() {
     },
   
   };
+  const { trip, isLoading, isError } = useGetTrip({trip_id:searchParams?._id});
+
+  if (isLoading)
+    return (
+      <div>
+        <Preloader />
+      </div>
+    );
+
+
+
+    const images = trip?.images?.map((image) => image.image) || [];
+
+    const get_day_month = () => {
+      const d = new Date(trip?.date);
+      return {
+        day: d.getDate(),
+        month: d.toLocaleString("default", { month: "short" }),
+        year: d.getFullYear(),
+        niceDate:
+          d.toLocaleString("default", { month: "short" }) +
+          " " +
+          d.getDate() +
+          ", " +
+          d.getFullYear(),
+      };
+    };
   return (
     <>
       <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Trips Details">
@@ -45,17 +69,11 @@ export default function TripsDetails() {
                           <SwiperSlide key={index}>
                             <div
                               className="post-featured-thumb bg-cover"
-                              style={{ backgroundImage: `url("${image}")`,width: "100%", height: 400 }}
+                              style={{ backgroundImage: `url("${image}")`,width: "100%", height: 400, objectFit: "contain" }}
                             />
                           </SwiperSlide>
                         ))}
                       </Swiper>
-                      {/* <div
-                        className="post-featured-thumb bg-cover"
-                        style={{
-                          backgroundImage: 'url("assets/img/news/post-4.jpg")',
-                        }}
-                      /> */}
                       <div className="post-content">
                         <ul className="post-list d-flex align-items-center">
                           <li>
@@ -64,112 +82,16 @@ export default function TripsDetails() {
                           </li>
                           <li>
                             <i className="fa-solid fa-calendar-days" />
-                            18 Dec, 2024
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-tag" />
-                            IT Services
+                            {get_day_month().niceDate}
                           </li>
                         </ul>
-                        <h3>Tackling the Changes of Retail Industry</h3>
-                        <p className="mb-3">
-                          Consectetur adipisicing elit, sed do eiusmod tempor
-                          incididunt ut labore et dolore of magna aliqua. Ut
-                          enim ad minim veniam, made of owl the quis nostrud
-                          exercitation ullamco laboris nisi ut aliquip ex ea
-                          dolor commodo consequat. Duis aute irure and dolor in
-                          reprehenderit.
-                        </p>
-                        <p className="mb-3">
-                          The is ipsum dolor sit amet consectetur adipiscing
-                          elit. Fusce eleifend porta arcu In hac habitasse the
-                          is platea augue thelorem turpoi dictumst. In lacus
-                          libero faucibus at malesuada sagittis placerat eros
-                          sed istincidunt augue ac ante rutrum sed the is
-                          sodales augue consequat.
-                        </p>
-                        <p>
-                          Nulla facilisi. Vestibulum tristique sem in eros
-                          eleifend imperdiet. Donec quis convallis neque. In id
-                          lacus pulvinar lacus, eget vulputate lectus. Ut
-                          viverra bibendum lorem, at tempus nibh mattis in. Sed
-                          a massa eget lacus consequat auctor.
-                        </p>
-                       
-                       
-                
+                        <h3>{trip?.location}</h3>
+                        <p className="mb-3" style={{textAlign:'justify'}}>
+                          {trip?.summary}
+                        </p>    
                       </div>
                     </div>
                 
-                  </div>
-                </div>
-                <div className="col-12 col-lg-4">
-                  <div className="main-sidebar">
-                   
-                    <div className="single-sidebar-widget">
-                      <div className="wid-title">
-                        <h3>Recent Post</h3>
-                      </div>
-                      <div className="recent-post-area">
-                        <div className="recent-items">
-                          <div className="recent-thumb">
-                            <img src="/assets/img/news/pp3.jpg" alt="img" />
-                          </div>
-                          <div className="recent-content">
-                            <ul>
-                              <li>
-                                <i className="fa-solid fa-calendar-days" />
-                                18 Dec, 2024
-                              </li>
-                            </ul>
-                            <h6>
-                              <Link href="/trips-details">
-                                Keep Your Business Safe &amp; <br />
-                                Endure High Availability
-                              </Link>
-                            </h6>
-                          </div>
-                        </div>
-                        <div className="recent-items">
-                          <div className="recent-thumb">
-                            <img src="/assets/img/news/pp4.jpg" alt="img" />
-                          </div>
-                          <div className="recent-content">
-                            <ul>
-                              <li>
-                                <i className="fa-solid fa-calendar-days" />
-                                18 Dec, 2024
-                              </li>
-                            </ul>
-                            <h6>
-                              <Link href="/trips-details">
-                                Tacking the Changes of <br />
-                                Retail Industry
-                              </Link>
-                            </h6>
-                          </div>
-                        </div>
-                        <div className="recent-items">
-                          <div className="recent-thumb">
-                            <img src="/assets/img/news/pp5.jpg" alt="img" />
-                          </div>
-                          <div className="recent-content">
-                            <ul>
-                              <li>
-                                <i className="fa-solid fa-calendar-days" />
-                                18 Dec, 2024
-                              </li>
-                            </ul>
-                            <h6>
-                              <Link href="/trips-details">
-                                What’s the Holding Back <br />
-                                the It Solution
-                              </Link>
-                            </h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
