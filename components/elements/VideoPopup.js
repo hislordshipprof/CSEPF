@@ -18,7 +18,7 @@ export default function VideoPopup({ style, url }) {
           >
             <i className="fa-solid fa-play" />
           </a>
-          <span className="ms-4 d-line">Watch</span>
+          <span className="ms-4 d-line">Watch video</span>
         </span>
       )}
       {url ? (

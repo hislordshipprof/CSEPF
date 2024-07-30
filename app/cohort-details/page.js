@@ -2,6 +2,7 @@
 import Preloader from "@/components/elements/Preloader";
 import Layout from "@/components/layout/Layout";
 import { getFellows } from "@/utils/apiRequestHooks";
+import { DEFAULT_AVATAR } from "@/utils/utils";
 import Link from "next/link";
 export default function CohortDetails({searchParams}) {
   const { fellows, isLoading, isError } = getFellows({ fellow_id: searchParams._id });
@@ -16,7 +17,7 @@ export default function CohortDetails({searchParams}) {
               <div className="row g-4 align-items-center">
                 <div className="col-lg-5">
                   <div className="team-details-image">
-                    <img src={fellows?.applicant?.picture} alt="team-img" />
+                    <img src={fellows?.applicant?.picture || DEFAULT_AVATAR} alt="team-img" />
                   </div>
                 </div>
                 <div className="col-lg-7">

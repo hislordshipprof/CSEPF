@@ -1,20 +1,19 @@
 "use client";
 import Layout from "@/components/layout/Layout";
 import { useState, useEffect } from "react";
-import { fellow_project_2023, fellow_project_2024 } from "@/utils/data";
 import Link from "next/link";
 import { useProjects } from "@/utils/apiRequestHooks";
 import Preloader from "@/components/elements/Preloader";
 export default function Project() {
   const [selectedClass, setSelectedClass] = useState("");
-  const [filteredProjects, setFilteredProjects] = useState([]);
+  
   useEffect(() => {}, [selectedClass]);
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
-  const { projects, isLoading, isError } = useProjects({
+  const { projects, isLoading } = useProjects({
     cohort: selectedClass,
   });
 

@@ -52,9 +52,6 @@ export default function ServiceCarousel() {
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   const {testimonials,isLoading, isError} = useTestimonials({});
-
-  console.log("=====>",testimonials)
-
   
   if (isLoading)
     return (
