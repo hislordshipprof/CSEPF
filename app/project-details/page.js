@@ -1,15 +1,12 @@
 'use client';
 import Preloader from "@/components/elements/Preloader";
 import Layout from "@/components/layout/Layout";
-import { getFellows } from "@/utils/apiRequestHooks";
-import { DEFAULT_AVATAR } from "@/utils/utils";
+import { useGetProject } from "@/utils/apiRequestHooks";
 
 export default function ProjectDetails({ searchParams }) {
 
-  const { fellows:fellow, isLoading, isError } = getFellows({ fellow_id: searchParams._id });
+  const { project, isLoading, isError } = useGetProject({ project_id: searchParams._id });
   if (isLoading) return <div><Preloader /></div>;
-
-  console.log('===== ToLog ========', fellow);
 
   return (
     <>
@@ -26,12 +23,12 @@ export default function ProjectDetails({ searchParams }) {
                     <div className="row g-4 justify-content-between">
                       <div className="col-lg-7">
                         <div className="details-content">
-                          <h3>{fellow?.project?.title}</h3>
+                          <h3>{project?.title}</h3>
                           <p>
-                            {fellow?.project?.summary}
+                            {project?.summary}
                           </p>
                           <div className="mt-10">
-                            {fellow?.project?.topics?.map((tag, index) => (
+                            {project?.topics?.map((tag, index) => (
                               <span key={index} className="badge bg-info me-1">
                                 {tag?.title}
                               </span>
@@ -46,17 +43,17 @@ export default function ProjectDetails({ searchParams }) {
                           <ul>
                             <li>
                               Student:
-                              <span>{fellow?.applicant?.full_name}</span>
+                              <span>{project?.fellow?.full_name}</span>
                             </li>
                             <li>
                               Program:
-                              <span>{fellow?.applicant?.program}</span>
+                              <span>{project?.fellow?.program}</span>
                             </li>
                             <li>
                               Download Project:
                               <a
-                                href={fellow?.project?.document}
-                                download={`${fellow?.project?.title}.pdf`}
+                                href={project?.document}
+                                download={`${project?.title}.pdf`}
                                 style={{
                                   cursor: "pointer",
                                   textDecoration: "underline",
@@ -66,14 +63,14 @@ export default function ProjectDetails({ searchParams }) {
                                 PDF DOWNLOAD
                               </a>
                             </li>
-                            <li>
+                            {/* <li>
                               Share:
                               <span>
                                 <i className="fa-brands fa-facebook-f me-3" />
                                 <i className="fa-brands fa-instagram me-3" />
                                 <i className="fa-brands fa-linkedin-in" />
                               </span>
-                            </li>
+                            </li> */}
                           </ul>
                         </div>
                       </div>

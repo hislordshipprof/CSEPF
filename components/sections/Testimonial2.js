@@ -4,6 +4,7 @@ import { testimonial } from "@/utils/data";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import VideoPopup from "../elements/VideoPopup";
+import { DEFAULT_AVATAR } from "@/utils/utils";
 
 
 
@@ -61,7 +62,7 @@ export default function Testimonial2({filteredProjects}) {
           </div>
           <div className="swiper testimonial-slider-2 ">
               <div className="testimonial-grid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
-            {filteredProjects.map((testimonial) => (
+            {filteredProjects?.map((testimonial) => (
                   <div className="testimonial-box-items wow fadeInUp col-lg-5"   style={{
                     flex: '0 0 calc(50% - 20px)', 
                     marginBottom: '20px', 
@@ -70,20 +71,20 @@ export default function Testimonial2({filteredProjects}) {
                     alignItems: 'center', 
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', 
                   }}>
-                    <div className="icon">
+                    {/* <div className="icon">
                       <img
                         src="/assets/img/testimonial/icon.png"
                         alt="icon-img"
                       />
-                    </div>
+                    </div> */}
                     <div className="client-items">
                       <div
                         className="client-image style-2 bg-cover"
-                        style={{ backgroundImage: `url("${testimonial.img}")` }}
+                        style={{ backgroundImage: `url("${testimonial?.user?.applicant?.picture || DEFAULT_AVATAR}")` }}
                       />
                       <div className="client-content">
-                        <h4>{testimonial.name}</h4>
-                        <p>{testimonial.school}</p>
+                        <h4>{testimonial?.user?.applicant?.full_name}</h4>
+                        <p>{testimonial?.user?.applicant?.school}</p>
                         <div className="star">
                           <i className="fas fa-star" />
                           <i className="fas fa-star" />
@@ -92,10 +93,12 @@ export default function Testimonial2({filteredProjects}) {
                           <i className="fas fa-star" />
                         </div>
                       </div>
-                      <VideoPopup  style={3} />
+                      {
+                        testimonial?.media && <VideoPopup  style={3} url={testimonial?.media} />
+                      }
 
                     </div>
-                    <p>{testimonial.text}</p>
+                    <p>{testimonial.content}</p>
                   </div>
               ))}
               </div>

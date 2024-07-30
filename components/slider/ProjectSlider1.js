@@ -54,7 +54,7 @@ export default function ProjectSlider1({ fellows }) {
                     <h4>
                       <Link href="/project-details">{student?.applicant?.school}</Link>
                     </h4>
-                    <Link href={{pathname:"/project-details", query:{_id:student?.id}}} className="icon">
+                    <Link href={{pathname:"/cohort-details", query:{_id:student?.id}}} className="icon">
                       <i className="fa-solid fa-arrow-right" />
                     </Link>
                   </div>
