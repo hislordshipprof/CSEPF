@@ -44,7 +44,7 @@ export default function FeaturedTrips() {
                 <div
                   className="news-image bg-cover"
                   style={{ backgroundImage: `url(${trip?.images[0]?.image || DEFAULT_AVATAR})`,
-                  height: "350px" }}
+                  height: "320px" }}
                 >
                   <div className="post-date">
                  <span>{get_day_month(trip?.date).day}</span> <span>{get_day_month(trip?.date).month}</span> <span>{get_day_month(trip?.date).year}</span>
