@@ -9,7 +9,6 @@ import { DEFAULT_AVATAR } from "@/utils/utils";
 import "swiper/css/grid";
 
 export default function Testimonial2({filteredProjects}) {
- console.log("=========filteredProject",JSON.stringify(filteredProjects,null,2))
   const swiperOptions = {
     modules: [Autoplay,Grid, Pagination, Navigation],
     // spaceBetween: 30,
@@ -56,7 +55,7 @@ export default function Testimonial2({filteredProjects}) {
           </div>
           <div className="swiper testimonial-slider-2">
             <Swiper {...swiperOptions} className="swiper-wrapper">
-              {testimonial.map((testimonial) => (
+              {filteredProjects.map((testimonial) => (
                 <SwiperSlide key={testimonial.id}>
                   <div className="testimonial-box-items">
                     <div className="icon">
@@ -68,11 +67,11 @@ export default function Testimonial2({filteredProjects}) {
                     <div className="client-items">
                       <div
                         className="client-image style-2 bg-cover"
-                        style={{ backgroundImage: `url("${testimonial.img}")` }}
+                        style={{ backgroundImage: `url("${testimonial?.user?.applicant?.picture}")` }}
                       />
                       <div className="client-content">
-                        <h4>{testimonial.name}</h4>
-                        <p>{testimonial.school}</p>
+                        <h4>{testimonial?.user?.applicant?.full_name}</h4>
+                        <p>{testimonial?.user?.applicant?.school}</p>
                         <div className="star">
                           <i className="fas fa-star" />
                           <i className="fas fa-star" />
@@ -81,10 +80,11 @@ export default function Testimonial2({filteredProjects}) {
                           <i className="fas fa-star" />
                         </div>
                       </div>
-                      <VideoPopup  style={3} />
-
+                     {
+                        testimonial?.media && <VideoPopup  style={3} url={testimonial?.media} />
+                      }
                     </div>
-                    <p>{testimonial.text}</p>
+                    <p className="scrollable-bio-2">{testimonial?.content}</p>
                   </div>
                 </SwiperSlide>
               ))}

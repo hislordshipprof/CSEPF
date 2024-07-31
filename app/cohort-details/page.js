@@ -7,7 +7,14 @@ import Link from "next/link";
 export default function CohortDetails({searchParams}) {
   const { fellows, isLoading, isError } = getFellows({ fellow_id: searchParams._id });
   if (isLoading) return <div><Preloader /></div>;
-
+  const getSocialLinks = (socials) => {
+    const socialLinks = {
+      facebook: socials?.facebook || "",
+      twitter: socials?.twitter || "",
+      linkedin: socials?.linkedin || "",
+    };
+    return socialLinks;
+  };
   return (
     <>
       <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Cohort Details">
@@ -24,9 +31,12 @@ export default function CohortDetails({searchParams}) {
                   <div className="team-details-content">
                     <div className="details-info">
                       <h3>{fellows?.applicant?.full_name}</h3>
-                      <span>{fellows?.applicant.school}</span>
+
+                      <span>School: {fellows?.applicant.school}</span>
                       <br/>
-                      <span>{fellows?.applicant.email}</span>
+                      <span>Program: {fellows?.applicant?.program}</span>
+                      <br/>
+                      <span>Email:{fellows?.applicant.email}</span>
 
                     </div>
                     <p className="mt-3">
@@ -37,7 +47,9 @@ export default function CohortDetails({searchParams}) {
                 
                         <div className="pro-items">
                           <div className="pro-head">
-                            <h6 className="title">Resume</h6>
+                            <h6 className="title">
+                              <i className="fas fa-file-alt"></i> {/* Font Awesome file icon */}
+                            </h6>
                             <a href={fellows?.applicant?.resume} download className="point" style={{color:'blue',cursor:'pointer'}}>Download Resume</a>
                           </div>
                           <div className="progress">
@@ -48,28 +60,46 @@ export default function CohortDetails({searchParams}) {
                     </div>
                     <div className="social-icon">
                       <span>Social Media:</span>
-                      <Link href="#">
-                        <i className="fa-brands fa-facebook-f" />
-                      </Link>
-                      <Link href="#" className="active">
-                        <i className="fa-brands fa-twitter" />
-                      </Link>
-                      <Link href="#">
-                        <i className="fa-brands fa-linkedin-in" />
-                      </Link>
-                      <Link href="#">
-                        <i className="fa-brands fa-youtube" />
-                      </Link>
+                      
+                                <Link
+                                  target="_blank"
+                                  href={
+                                    getSocialLinks(fellows?.info?.socials)
+                                      ?.facebook
+                                  }
+                                >
+                                  <i className="fab fa-facebook-f" />
+                                </Link>
+                              
+                                <Link
+                                  target="_blank"
+                                  href={
+                                    getSocialLinks(fellows?.info?.socials)?.twitter
+                                  }
+                                >
+                                  <i className="fa-brands fa-twitter" />
+                                </Link>
+                              
+                                <Link
+                                  target="_blank"
+                                  href={
+                                    getSocialLinks(fellows?.info?.socials)
+                                      ?.linkedin
+                                  }
+                                >
+                                  <i className="fab fa-linkedin-in" />
+                                </Link>
+                             
                     </div>
                   </div>
                 </div>
               </div>
               <div className="team-single-history pt-5">
                 <div className="title">
-                  <h3>Education Background</h3>
+                  {/* <h3>Education Background</h3> */}
                 </div>
                 <h5 className="pt-5">
-                  {fellows?.applicant?.program}
+                  {/* {fellows?.applicant?.program} */}
                 </h5>
             
               </div>

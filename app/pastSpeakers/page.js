@@ -5,7 +5,7 @@ import Link from "next/link";
 import { past_speakers_list, past_speakers_list_b } from '@/utils/data';
 import { usePastSpeakers } from '@/utils/apiRequestHooks';
 import Preloader from '@/components/elements/Preloader';
-import { DEFAULT_AVATAR } from '@/utils/utils';
+import { DEFAULT_AVATAR, YEARS } from '@/utils/utils';
 
 
 export default function PastSpeakers() {
@@ -23,18 +23,14 @@ export default function PastSpeakers() {
     });
   };
   const [selectedClass, setSelectedClass] = useState("2024");
-  const [filteredProjects, setFilteredProjects] = useState([]);
   useEffect(() => {
   }, [selectedClass]);
   
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-
+  
   const { pastSpeakers, isLoading, isError } = usePastSpeakers({});
 
   if (isLoading) return <div><Preloader /></div>;
-  console.log("pastSpeakers", pastSpeakers);
+  console.log("pastSpeakers", JSON.stringify(pastSpeakers, null, 2));
 
   return (
     <>
@@ -46,75 +42,31 @@ export default function PastSpeakers() {
         <section className="team-section-4 section-padding">
        
           <div className="container">
-          <div style={{ justifyContent:'flex-end', display:'flex',width:'90%'}}>
-                <button
-                  onClick={toggleDropdown}
-                  style={{
-                    backgroundColor: "gray",
-                    color: "white",
-                    padding: "10px 20px",
-                    border: "none",
-                    cursor: "pointer",
-                  }}
+          <div
+                style={{
+                  justifyContent: "flex-end",
+                  display: "flex",
+                }}
+              >
+                <select
+                  style={{ maxWidth: 200 }}
+                  class="form-select"
+                  onChange={(e) => setSelectedClass(e.target.value)}
                 >
-                  Select Speaker Years
-                </button>
-                {isDropdownOpen && (
-                  <div
-                    className="dropdown-content"
-                    style={{
-                      position: "absolute",
-                      backgroundColor: "#f9f9f9",
-                      minWidth: "160px",
-                      boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
-                      zIndex: 1,
-                    }}
-                  >
-                    <a
-                      href="#"
-                      onClick={() => {
-                        setSelectedClass("2024");
-                        toggleDropdown();
-                      }}
-                      style={{
-                        padding: "12px 16px",
-                        textDecoration: "none",
-                        display: "block",
-                        color: "black",
-                      }}
-                    >
-                      Projects for 2024
-                    </a>
-                    <a
-                      href="#"
-                      onClick={() => {
-                        setSelectedClass("2023");
-                        toggleDropdown();
-                      }}
-                      style={{
-                        padding: "12px 16px",
-                        textDecoration: "none",
-                        display: "block",
-                        color: "black",
-                      }}
-                    >
-                      Projects for 2023
-                    </a>
-                    {/* Add more classes as needed */}
-                  </div>
-                )}
+                  <option value="">Select Speakers</option>
+                  {YEARS.map((year) => (
+                    <option key={year} value={year}>
+                      {year} Speakers
+                    </option>
+                  ))}
+                </select>
               </div>
             <div>
               
-              <h5 className="section-title mb-0 p-4">
-                Get to know our past speakers and their various excellent
-                presentation which they<br /> rendered to the fellows as a
-                resource to help them in their Research.
-              </h5>
+             
             </div>
             <div className="row g-4">
               {pastSpeakers?.map((data, index) => {
-                // Split the presentation text
                 const words = data?.summary?.split(' ');
                 const preview = words.slice(0, 20).join(' ');
                 const rest = words.length > 20 ? words.slice(20).join(' ') : '';
@@ -133,7 +85,7 @@ export default function PastSpeakers() {
                           style={{
                             width: "100%",
                             height: 400,
-                            objectFit: "contain",
+                            objectFit: "cover",
                           }}
                         />
                         <div className="social-profile">

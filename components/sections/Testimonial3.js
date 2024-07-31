@@ -8,13 +8,7 @@ import { DEFAULT_AVATAR } from "@/utils/utils";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
-  speed: 0,
-  loop: true,
   spaceBetween: 30,
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-  },
   navigation: {
     nextEl: ".array-prev",
     prevEl: ".array-next",
@@ -95,7 +89,7 @@ export default function Testimonial3() {
                       <VideoPopup  style={3} url={testimonial?.media}/>
 
                     </div>
-                    <p>{testimonial?.content}</p>
+                    <p className="scrollable-bio-2">{testimonial?.content}</p>
                   </div>
                 </SwiperSlide>
               ))}
