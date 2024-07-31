@@ -17,8 +17,7 @@ export default function Cohorts() {
 
   const { fellows, isLoading, isError } = useFellows({ cohort: selectedClass });
 
-  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-
+ 
   const getSocialLinks = (socials) => {
     const socialLinks = {
       facebook: socials?.facebook || "",
@@ -28,12 +27,7 @@ export default function Cohorts() {
     return socialLinks;
   };
 
-  if (isLoading)
-    return (
-      <div>
-        <Preloader />
-      </div>
-    );
+  if (isLoading) return <div><Preloader /></div>;
   return (
     <>
       <Layout
@@ -129,14 +123,9 @@ export default function Cohorts() {
                         </div>
                         <div className="team-content text-center">
                           <h3>
-                            <Link
-                              href={{
-                                pathname: "/cohort-details",
-                                query: { _id: data?.id },
-                              }}
-                            >
-                              {data?.applicant?.full_name}
-                            </Link>
+                          <Link href={{ pathname: '/cohort-details', query: { _id: data?.id } }}>
+                                      {data?.applicant?.full_name}
+</Link>
                           </h3>
                           <p>{data?.applicant?.school}</p>
 

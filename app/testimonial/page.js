@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { testimonial_2023, testimonial_2024 } from "@/utils/data";
 import { useTestimonials } from "@/utils/apiRequestHooks";
 import Preloader from "@/components/elements/Preloader";
+import { YEARS } from "@/utils/utils";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -44,14 +45,12 @@ const swiperOptions = {
 };
 export default function ServiceCarousel() {
   const [selectedClass, setSelectedClass] = useState("2024");
-  const [filteredProjects, setFilteredProjects] = useState([]);
   useEffect(() => {
   }, [selectedClass]);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-
+ 
   const {testimonials,isLoading, isError} = useTestimonials({});
+
+
   
   if (isLoading)
     return (
@@ -68,63 +67,24 @@ export default function ServiceCarousel() {
             <div className="container">
             
               <div className="swiper service-slider-2">
-              <div style={{justifyContent:'flex-end',display:'flex', }}>
-                <button
-                  onClick={toggleDropdown}
-                  style={{
-                    backgroundColor: "gray",
-                    color: "white",
-                    padding: "10px 20px",
-                    border: "none",
-                    cursor: "pointer",
-                  }}
+              <div
+                style={{
+                  justifyContent: "flex-end",
+                  display: "flex",
+                }}
+              >
+                <select
+                  style={{ maxWidth: 200 }}
+                  class="form-select"
+                  onChange={(e) => setSelectedClass(e.target.value)}
                 >
-                  Select Testimonial Years
-                </button>
-                {isDropdownOpen && (
-                  <div
-                    className="dropdown-content"
-                    style={{
-                      position: "absolute",
-                      backgroundColor: "#f9f9f9",
-                      minWidth: "160px",
-                      boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
-                      zIndex: 1,
-                    }}
-                  >
-                    <a
-                      href="#"
-                      onClick={() => {
-                        setSelectedClass("2024");
-                        toggleDropdown();
-                      }}
-                      style={{
-                        padding: "12px 16px",
-                        textDecoration: "none",
-                        display: "block",
-                        color: "black",
-                      }}
-                    >
-                      Testimonial for 2024
-                    </a>
-                    <a
-                      href="#"
-                      onClick={() => {
-                        setSelectedClass("2023");
-                        toggleDropdown();
-                      }}
-                      style={{
-                        padding: "12px 16px",
-                        textDecoration: "none",
-                        display: "block",
-                        color: "black",
-                      }}
-                    >
-                      Testimonial for 2023
-                    </a>
-                    {/* Add more classes as needed */}
-                  </div>
-                )}
+                  <option value="">Select Testimonial</option>
+                  {YEARS.map((year) => (
+                    <option key={year} value={year}>
+                      {year} Testimonial
+                    </option>
+                  ))}
+                </select>
               </div>
                 <div>
                   <p style={{ fontSize: "20px", marginBottom: "40px" }}>

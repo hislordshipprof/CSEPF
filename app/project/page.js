@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useProjects } from "@/utils/apiRequestHooks";
 import Preloader from "@/components/elements/Preloader";
+import { YEARS } from "@/utils/utils";
 export default function Project() {
   const [selectedClass, setSelectedClass] = useState("");
   
@@ -11,10 +12,9 @@ export default function Project() {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
-  const { projects, isLoading } = useProjects({
-    cohort: selectedClass,
+  const { projects, isLoading, isError } = useProjects({
+    project: selectedClass,
   });
 
   if (isLoading)
@@ -34,67 +34,25 @@ export default function Project() {
       >
         <section className="project-section section-padding fix">
           <div className="container">
-            {/* <div className="section-title ">
-           
-            </div> */}
-            <div style={{ justifyContent: "flex-end", display: "flex" }}>
-              <button
-                onClick={toggleDropdown}
+          <div
                 style={{
-                  backgroundColor: "gray",
-                  color: "white",
-                  padding: "10px 20px",
-                  border: "none",
-                  cursor: "pointer",
+                  justifyContent: "flex-end",
+                  display: "flex",
                 }}
               >
-                Select Project Years
-              </button>
-              {isDropdownOpen && (
-                <div
-                  className="dropdown-content"
-                  style={{
-                    position: "absolute",
-                    backgroundColor: "#f9f9f9",
-                    minWidth: "160px",
-                    boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
-                    zIndex: 1,
-                  }}
+                <select
+                  style={{ maxWidth: 200 }}
+                  class="form-select"
+                  onChange={(e) => setSelectedClass(e.target.value)}
                 >
-                  <a
-                    href="#"
-                    onClick={() => {
-                      setSelectedClass("2024");
-                      toggleDropdown();
-                    }}
-                    style={{
-                      padding: "12px 16px",
-                      textDecoration: "none",
-                      display: "block",
-                      color: "black",
-                    }}
-                  >
-                    Projects for 2024
-                  </a>
-                  <a
-                    href="#"
-                    onClick={() => {
-                      setSelectedClass("2023");
-                      toggleDropdown();
-                    }}
-                    style={{
-                      padding: "12px 16px",
-                      textDecoration: "none",
-                      display: "block",
-                      color: "black",
-                    }}
-                  >
-                    Projects for 2023
-                  </a>
-                  {/* Add more classes as needed */}
-                </div>
-              )}
-            </div>
+                  <option value="">Select Project</option>
+                  {YEARS.map((year) => (
+                    <option key={year} value={year}>
+                      {year} Projects
+                    </option>
+                  ))}
+                </select>
+              </div>
             <div className="section-title mb-5 pb-2" style={{ left: 18 }}>
               <h3>
                 {selectedClass
@@ -115,6 +73,7 @@ export default function Project() {
                         src={data?.fellow?.picture || DEFAULT_AVATAR}
                         alt="project-img"
                         style={{
+                          
                           objectFit: "contain",
                         }}
                       />
