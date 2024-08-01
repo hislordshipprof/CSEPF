@@ -96,3 +96,12 @@ export const useGetTrip = (params) => {
   };
 }
 
+export const useCreateApplication = (params) => {
+  const { data, error } = useSWR([URLS.APPLY ,params], fetcher);
+  return {
+    application: data?.data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+
