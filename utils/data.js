@@ -515,20 +515,20 @@ export const MENU = [
         link: "/project",
       },
       {
-        id: "menu-trips-id",
-        name: "Trips",
-        link: "/trips",
-      },
-      {
-        id: "menu-staff-id",
-        name: "Staff",
-        link: "/staff",
-      },
-      {
         id: "presentation-id",
         name: "Past Speakers",
         link: "/pastSpeakers",
       },
+      {
+        id: "menu-trips-id",
+        name: "Field Trips",
+        link: "/trips",
+      },
+      // {
+      //   id: "menu-staff-id",
+      //   name: "Staff",
+      //   link: "/staff",
+      // },
     ],
   },
   {
