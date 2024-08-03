@@ -48,11 +48,11 @@ export default function ProjectSlider1({ fellows }) {
             <SwiperSlide key={student.id}>
               <div className="project-items">
                 <div className="project-image">
-                  <img src={student?.applicant?.picture || DEFAULT_AVATAR} style={{objectFit:"cover"}} alt="project-img" />
+                  <img src={student?.picture || DEFAULT_AVATAR} style={{objectFit:"cover"}} alt="project-img" />
                   <div className="project-content">
-                    <p>{student?.applicant?.full_name}</p>
+                    <p>{student?.full_name}</p>
                     <h4>
-                      <Link href="/project-details">{student?.applicant?.school}</Link>
+                      <Link href="/project-details">{student?.school}</Link>
                     </h4>
                     <Link href={{pathname:"/cohort-details", query:{_id:student?.id}}} className="icon">
                       <i className="fa-solid fa-arrow-right" />

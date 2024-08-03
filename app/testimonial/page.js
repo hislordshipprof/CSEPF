@@ -2,11 +2,7 @@
 import { useEffect, useState } from "react";
 import Layout from "@/components/layout/Layout";
 import Testimonial2 from "@/components/sections/Testimonial2";
-import SchoolsSlider from "@/components/slider/SchoolsSlider";
-import Link from "next/link";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { testimonial_2023, testimonial_2024 } from "@/utils/data";
 import { useTestimonials } from "@/utils/apiRequestHooks";
 import Preloader from "@/components/elements/Preloader";
 import { YEARS } from "@/utils/utils";
