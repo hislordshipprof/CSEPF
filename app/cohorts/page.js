@@ -17,7 +17,6 @@ export default function Cohorts() {
 
   const { fellows, isLoading, isError } = useFellows({ cohort: selectedClass });
 
- 
   const getSocialLinks = (socials) => {
     const socialLinks = {
       facebook: socials?.facebook || "",
@@ -27,7 +26,12 @@ export default function Cohorts() {
     return socialLinks;
   };
 
-  if (isLoading) return <div><Preloader /></div>;
+  if (isLoading)
+    return (
+      <div>
+        <Preloader />
+      </div>
+    );
   return (
     <>
       <Layout
@@ -73,7 +77,7 @@ export default function Cohorts() {
                       <div className="team-card-items mt-0">
                         <div className="team-image">
                           <img
-                            src={data?.applicant?.picture || DEFAULT_AVATAR}
+                            src={data?.picture || DEFAULT_AVATAR}
                             alt="team-img"
                             style={{
                               // width: 430,
@@ -123,11 +127,16 @@ export default function Cohorts() {
                         </div>
                         <div className="team-content text-center">
                           <h3>
-                          <Link href={{ pathname: '/cohort-details', query: { _id: data?.id } }}>
-                                      {data?.applicant?.full_name}
-</Link>
+                            <Link
+                              href={{
+                                pathname: "/cohort-details",
+                                query: { _id: data?.id },
+                              }}
+                            >
+                              {data?.full_name}
+                            </Link>
                           </h3>
-                          <p>{data?.applicant?.school}</p>
+                          <p>{data?.school}</p>
 
                           <p style={{ color: "purple", fontWeight: "bold" }}>
                             {data.project?.title || "N/A"}

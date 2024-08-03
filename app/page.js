@@ -8,7 +8,7 @@ import FellowsProjects from "@/components/sections/FellowsProjects";
 import Testimonial3 from "@/components/sections/Testimonial3";
 import FeaturedPastSpeakers from "@/components/sections/FeaturedPastSpeakers";
 import FeaturedTrips from "@/components/sections/FeaturedTrips";
-import FeaturedStaff from "@/components/sections/FeaturedStaff";
+// import FeaturedStaff from "@/components/sections/FeaturedStaff";
 export default function Home() {
   return (
     <>
@@ -20,7 +20,7 @@ export default function Home() {
         <Achievement1 />
         <FellowsProjects />
         <Testimonial3 />
-        <FeaturedStaff />
+        {/* <FeaturedStaff /> */}
 
         <FeaturedTrips />
         <Cta1 />

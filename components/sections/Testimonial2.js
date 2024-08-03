@@ -67,11 +67,11 @@ export default function Testimonial2({filteredProjects}) {
                     <div className="client-items">
                       <div
                         className="client-image style-2 bg-cover"
-                        style={{ backgroundImage: `url("${testimonial?.user?.applicant?.picture}")` }}
+                        style={{ backgroundImage: `url("${testimonial?.user?.picture}")` }}
                       />
                       <div className="client-content">
-                        <h4>{testimonial?.user?.applicant?.full_name}</h4>
-                        <p>{testimonial?.user?.applicant?.school}</p>
+                        <h4>{testimonial?.user?.full_name}</h4>
+                        <p>{testimonial?.user?.school}</p>
                         <div className="star">
                           <i className="fas fa-star" />
                           <i className="fas fa-star" />
