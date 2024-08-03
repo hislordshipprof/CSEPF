@@ -65,7 +65,7 @@ export default function PastSpeakers() {
               
              
             </div>
-            <div className="row g-4">
+            <div className="row g-4 justify-content-center pt-5">
               {pastSpeakers?.map((data, index) => {
                 const words = data?.summary?.split(' ');
                 const preview = words.slice(0, 20).join(' ');
@@ -103,8 +103,8 @@ export default function PastSpeakers() {
                       </div>
                       <div className="team-content text-center">
                         <h3>{data?.presenter}</h3>
-                        <p className='scrollable-bio'>{data?.title}</p>
-                        <p>
+                        <p >{data?.title}</p>
+                        <p className='scrollable-bio'>
                           {expandedPresentations[index]
                             ? `${preview} ${rest}`
                             : `${preview}... `}

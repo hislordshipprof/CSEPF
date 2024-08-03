@@ -9,6 +9,7 @@ import { DEFAULT_AVATAR } from "@/utils/utils";
 import "swiper/css/grid";
 
 export default function Testimonial2({filteredProjects}) {
+  console.log('======filtered',JSON.stringify(filteredProjects,null,2))
   const swiperOptions = {
     modules: [Autoplay,Grid, Pagination, Navigation],
     // spaceBetween: 30,
@@ -81,7 +82,7 @@ export default function Testimonial2({filteredProjects}) {
                         </div>
                       </div>
                      {
-                        testimonial?.media && <VideoPopup  style={3} url={testimonial?.media} />
+                        testimonial?.media != null && <VideoPopup  style={3} url={testimonial?.media} />
                       }
                     </div>
                     <p className="scrollable-bio-2">{testimonial?.content}</p>
