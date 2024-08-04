@@ -29,72 +29,63 @@ export default function CohortDetails({ searchParams }) {
           <div className="container">
             <div className="team-details-wrapper">
               <div className="row g-4 align-items-center">
-                <div className="col-lg-5 "  >
+                <div className="col-lg-5 ">
                   <div className="team-details-image">
                     <img
                       src={fellows?.picture || DEFAULT_AVATAR}
                       alt="team-img"
-                      style={{height:"450px",objectFit:"cover",}}
+                      style={{ height: "450px", objectFit: "cover" }}
                     />
                   </div>
                 </div>
                 <div className="col-lg-7">
                   <div className="team-details-content">
-              
                     <div className="progress-area mt-0">
-                    <div className="details-info">
-                      <h3>{fellows?.full_name}</h3>
+                      <div className="details-info">
+                        <h3>{fellows?.full_name}</h3>
 
-                      <span>School: {fellows?.school}</span>
-                      <br />
-                      <span>Program: {fellows?.program}</span>
-                      <br />
-                      <span>Email:{fellows?.email}</span>
-                    </div>
-                    <p className="mt-3">{fellows?.bio}</p>
-                      <div className="progress-wrap">
-                        <div className="pro-items">
-                          <div className="pro-head">
-                            <h6 className="title">
-                              <i className="fas fa-file-alt"></i>{" "}
-                              <a
-                              href={fellows?.resume}
-                              download
-                              className="point"
-                              style={{ color: "blue", cursor: "pointer" }}
-                            >
-                              Download Resume
-                            </a>
-                            </h6>
-                           
-                          </div>
-                          
-                        </div>
+                        <span>School: {fellows?.school}</span>
+                        <br />
+                        <span>Program: {fellows?.program}</span>
+                        <br />
+                        <span>Email:{fellows?.email}</span>
                       </div>
-                    </div>
-                    <div className="social-icon">
-                      <span>Social Media:</span>
+                      <p className="mt-3" style={{ textAlign: "justify" }}>
+                        {fellows?.bio}
+                      </p>
+                      {/* <div className="progress-wrap"> */}
+                        <div className="social-icon">
+                          <Link
+                            target="_blank"
+                            href={
+                              getSocialLinks(fellows?.info?.socials)?.facebook
+                            }
+                          >
+                            <i className="fab fa-facebook-f" />
+                          </Link>
 
-                      <Link
-                        target="_blank"
-                        href={getSocialLinks(fellows?.info?.socials)?.facebook}
-                      >
-                        <i className="fab fa-facebook-f" />
-                      </Link>
+                          <Link
+                            target="_blank"
+                            href={
+                              getSocialLinks(fellows?.info?.socials)?.twitter
+                            }
+                          >
+                            <i className="fa-brands fa-twitter" />
+                          </Link>
 
-                      <Link
-                        target="_blank"
-                        href={getSocialLinks(fellows?.info?.socials)?.twitter}
-                      >
-                        <i className="fa-brands fa-twitter" />
-                      </Link>
-
-                      <Link
-                        target="_blank"
-                        href={getSocialLinks(fellows?.info?.socials)?.linkedin}
-                      >
-                        <i className="fab fa-linkedin-in" />
-                      </Link>
+                          <Link
+                            target="_blank"
+                            href={
+                              getSocialLinks(fellows?.info?.socials)?.linkedin
+                            }
+                          >
+                            <i className="fab fa-linkedin-in" />
+                          </Link>
+                          <Link href={fellows?.resume || ""} download>
+                            <i className="fa-solid fa-file-arrow-down"></i>
+                          </Link>
+                        </div>
+                      {/* </div> */}
                     </div>
                   </div>
                 </div>

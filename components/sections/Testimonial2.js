@@ -9,14 +9,14 @@ import { DEFAULT_AVATAR } from "@/utils/utils";
 import "swiper/css/grid";
 
 export default function Testimonial2({filteredProjects}) {
-  console.log('======filtered',JSON.stringify(filteredProjects,null,2))
+
   const swiperOptions = {
     modules: [Autoplay,Grid, Pagination, Navigation],
-    // spaceBetween: 30,
+    // spaceBetween: 2,
     grid: {
       rows: 2,
       fill: "row",
-      
+      gap: 10,
     },
     
    
@@ -48,16 +48,15 @@ export default function Testimonial2({filteredProjects}) {
             <div className="section-title">
               <span className="text-black wow fadeInUp">Testimonials</span>
               <h2 className="text-black wow fadeInUp" data-wow-delay=".3s">
-                Get to hear from <br />
+                Hear from <br />
                 our past fellows
               </h2>
             </div>
           
           </div>
-          <div className="swiper testimonial-slider-2">
-            <Swiper {...swiperOptions} className="swiper-wrapper">
+          <div className="row">
               {filteredProjects.map((testimonial) => (
-                <SwiperSlide key={testimonial.id}>
+                <div key={testimonial.id} className="col-md-6 col-sm-12 col xl-4">
                   <div className="testimonial-box-items">
                     <div className="icon">
                       <img
@@ -87,9 +86,8 @@ export default function Testimonial2({filteredProjects}) {
                     </div>
                     <p className="scrollable-bio-2">{testimonial?.content}</p>
                   </div>
-                </SwiperSlide>
+                </div>
               ))}
-            </Swiper>
           </div>
         </div>
       </section>

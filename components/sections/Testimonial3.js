@@ -90,7 +90,9 @@ export default function Testimonial3() {
                       <VideoPopup  style={3} url={testimonial?.media}/>}
 
                     </div>
-                    <p className="scrollable-bio-2">{testimonial?.content}</p>
+                    <div className="scrollable-bio-2" style={{marginTop:25}}>
+                    <p >{testimonial?.content}</p>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}

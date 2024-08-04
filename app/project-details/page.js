@@ -17,14 +17,11 @@ export default function ProjectDetails({ searchParams }) {
               <div className="row">
                 <div className="col-lg-12">
                   <div className="project-details-items">
-                    {/* <div className="details-image">
-                      <img src={fellow?.applicant?.picture || DEFAULT_AVATAR} alt="img"/>
-                    </div> */}
                     <div className="row g-4 justify-content-between">
                       <div className="col-lg-7">
                         <div className="details-content">
                           <h3>{project?.title}</h3>
-                          <p>
+                          <p style={{textAlign:'justify'}}>
                             {project?.summary}
                           </p>
                           <div className="mt-10">
@@ -42,15 +39,13 @@ export default function ProjectDetails({ searchParams }) {
                           {/* <h3>Project Info: </h3> */}
                           <ul>
                             <li>
-                              Student:
-                              <span>{project?.fellow?.full_name}</span>
+                              Student: {"\t"}{project?.fellow?.full_name}
                             </li>
                             <li>
-                              Program:
-                              <span>{project?.fellow?.program}</span>
+                              Program:{"\t"}{project?.fellow?.program}
                             </li>
                             <li>
-                              Download Project:
+                              Download:
                               <a
                                 href={project?.document}
                                 download={`${project?.title}.pdf`}
@@ -60,7 +55,7 @@ export default function ProjectDetails({ searchParams }) {
                                   color: "blue",
                                 }}
                               >
-                                PDF DOWNLOAD
+                                Project Document
                               </a>
                             </li>
                             {/* <li>

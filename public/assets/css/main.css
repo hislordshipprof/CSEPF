@@ -3730,6 +3730,7 @@ span {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-top: 20px;
 }
 .array-button .array-prev {
   width: 56px;
@@ -6145,7 +6146,7 @@ input.main-search-input::placeholder {
   overflow-y: auto;  /* Enable vertical scrolling */
 }
 .scrollable-bio-2 {
-  max-height: 100px; /* Limit the height */
+  height: 180px; /* Limit the height */
   overflow-y: auto;  /* Enable vertical scrolling */
 }
 .column-layout {
@@ -7530,7 +7531,7 @@ input.main-search-input::placeholder {
   }
 }
 .team-details-wrapper .team-details-content .social-icon {
-  margin-top: 40px;
+  margin-top: 15px;
 }
 .team-details-wrapper .team-details-content .social-icon span {
   font-size: 16px;
@@ -7764,6 +7765,7 @@ input.main-search-input::placeholder {
 
 .tesimonial-section-3 {
   position: relative;
+  padding-bottom: 75px;
 }
 .tesimonial-section-3 .line-shape {
   position: absolute;

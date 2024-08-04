@@ -106,7 +106,7 @@ export default function FeaturedPastSpeakers() {
                       </div>
                       <div className="content">
                         <h4>
-                          <Link href="/service-details">{speaker?.presenter}</Link>
+                          <p >{speaker?.presenter}</p>
                         </h4>
                         <p>{speaker?.summary?.substring(0, 60)}</p>
                         <a
