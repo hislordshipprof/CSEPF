@@ -40,20 +40,20 @@ const swiperOptions = {
 };
 
 export default function ProjectSlider1({ fellows }) {
-  console.log('=======fellows',JSON.stringify(fellows,null,2))
+  // console.log('=======fellows',JSON.stringify(fellows,null,2))
   return (
     <>
       <div className="swiper project-slider pt-5">
         <Slider options={swiperOptions}>
           {fellows?.map((student) => (
-            <SwiperSlide key={student.id}>
+            <SwiperSlide key={student?.id}>
               <div className="project-items">
                 <div className="project-image">
-                  <img src={student?.applicant?.picture || DEFAULT_AVATAR} style={{objectFit:"cover"}} alt="project-img" />
+                  <img src={student?.picture || DEFAULT_AVATAR} style={{objectFit:"cover"}} alt="project-img" />
                   <div className="project-content">
-                    <p>{student?.applicant?.full_name}</p>
+                    <p>{student?.full_name}</p>
                     <h4>
-                      <Link href="/project-details">{student?.applicant?.school}</Link>
+                      <Link href="#">{student?.school}</Link>
                     </h4>
                     <Link href={{pathname:"/cohort-details", query:{_id:student?.id}}} className="icon">
                       <i className="fa-solid fa-arrow-right" />
