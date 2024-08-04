@@ -1,7 +1,7 @@
 import { DEFAULT_AVATAR } from '@/utils/utils';
 import React, { useEffect } from 'react';
 
-const CustomModal = ({ isOpen, handleModalOpen, speaker }) => {
+const CustomModal = ({ isPastList,isOpen, handleModalOpen, speaker }) => {
     useEffect(() => {
         if (isOpen) {
           document.body.classList.add('no-scroll');
@@ -22,7 +22,7 @@ const CustomModal = ({ isOpen, handleModalOpen, speaker }) => {
             &times;
           </button>
         </div>
-        <div className="modal-body">
+       {isPastList && <div className="modal-body">
           <div className="modal-left">
             <img src={speaker?.picture || DEFAULT_AVATAR} alt={speaker?.presenter} />
           </div>
@@ -31,15 +31,19 @@ const CustomModal = ({ isOpen, handleModalOpen, speaker }) => {
             <h4>{speaker?.presenter}</h4>
             <p>Contact: <a target="_blank" rel="noreferrer" style={{color: "blue"}} href={`mailto:${speaker?.email}`}>{speaker?.email}</a></p>
 
-            <a href={speaker?.media}  target='_blank'download className="theme-btn">
+           {speaker?.media && ( <a href={speaker?.media}  target='_blank'download className="theme-btn">
               Download Presentation
-            </a>
+            </a>)}
             </div>
             
           </div>
-        </div>
-            <p className="scrollable-bio">{speaker?.summary}</p>
-
+        </div>}
+       {!isPastList && <h3>Summary of {speaker?.title}</h3>}
+       
+            <p className={isPastList?"scrollable-bio":"scrollable-bio-3"} style={{textAlign: "justify"}}>{speaker?.summary}</p>
+            {speaker?.media && !isPastList && ( <a href={speaker?.media}  target='_blank'download className="theme-btn">
+              Download Presentation
+            </a>)}
       </div>
     </div>
   );

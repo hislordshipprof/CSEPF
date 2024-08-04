@@ -2,9 +2,11 @@
 import { useTrips } from "@/utils/apiRequestHooks";
 import { DEFAULT_AVATAR } from "@/utils/utils";
 import Link from "next/link";
-
+import { SwiperSlide } from "swiper/react";
+import Slider from "../slider/Slider";
 export default function FeaturedTrips() {
   const { trips, isLoading, isError } = useTrips({is_featured:true});
+  const swiperOptions = {};
 
  
   const get_day_month = (date) => {
@@ -34,13 +36,17 @@ export default function FeaturedTrips() {
           </div>
         </div>
         <div className="news-wrapper">
+        <Slider options={swiperOptions}>
+
           <div className="row">
-          {trips?.slice(0, 3).map((trip) => (
+
+          {trips?.map((trip) => (
+            <SwiperSlide key={trip.id}>
             <div
-              className="col-xl-6 col-lg-8 col-md-8 wow fadeInUp"
+              className=" wow fadeInUp"
               data-wow-delay=".3s"
             >
-              <div className="single-news-items">
+              <div className="single-news-items" style={{display:"flex",height:"580px"}}>
                 <div
                   className="news-image bg-cover"
                   style={{ backgroundImage: `url(${trip?.images[0]?.image || DEFAULT_AVATAR})`,
@@ -57,7 +63,7 @@ export default function FeaturedTrips() {
                     </Link>
                   </h3>
                   <p style={{textAlign:"justify"}}>
-                  {trip?.summary?.substring(0, 150)}...
+                  {trip?.summary?.substring(0, 140)}...
                   </p>
                   <Link href={{ pathname: "/trips-details", query: { _id: trip?.id } }} className="theme-btn-2 mt-3">
                     Read More
@@ -65,10 +71,12 @@ export default function FeaturedTrips() {
                 </div>
               </div>
             </div>
+            </SwiperSlide>
           ))}
           
-          
           </div>
+          </Slider>
+
         </div>
       </section>
     </>
