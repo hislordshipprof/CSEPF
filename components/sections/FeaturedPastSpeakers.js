@@ -79,7 +79,7 @@ export default function FeaturedPastSpeakers() {
                 className="theme-btn wow fadeInUp"
                 data-wow-delay=".5s"
               >
-                View All Presentations
+                View All 
                 <i className="fa-solid fa-arrow-right-long" />
               </Link>
             </div>
@@ -125,6 +125,7 @@ export default function FeaturedPastSpeakers() {
             </div>
 
             <CustomModal
+            isPastList={true}
               isOpen={isOpen}
               handleModalOpen={handleModalOpen}
               speaker={currentSpeaker}

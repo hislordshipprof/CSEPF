@@ -29,16 +29,19 @@ export default function CohortDetails({ searchParams }) {
           <div className="container">
             <div className="team-details-wrapper">
               <div className="row g-4 align-items-center">
-                <div className="col-lg-5">
+                <div className="col-lg-5 "  >
                   <div className="team-details-image">
                     <img
                       src={fellows?.picture || DEFAULT_AVATAR}
                       alt="team-img"
+                      style={{height:"450px",objectFit:"cover",}}
                     />
                   </div>
                 </div>
                 <div className="col-lg-7">
                   <div className="team-details-content">
+              
+                    <div className="progress-area mt-0">
                     <div className="details-info">
                       <h3>{fellows?.full_name}</h3>
 
@@ -49,15 +52,12 @@ export default function CohortDetails({ searchParams }) {
                       <span>Email:{fellows?.email}</span>
                     </div>
                     <p className="mt-3">{fellows?.bio}</p>
-                    <div className="progress-area mt-4">
                       <div className="progress-wrap">
                         <div className="pro-items">
                           <div className="pro-head">
                             <h6 className="title">
                               <i className="fas fa-file-alt"></i>{" "}
-                              {/* Font Awesome file icon */}
-                            </h6>
-                            <a
+                              <a
                               href={fellows?.resume}
                               download
                               className="point"
@@ -65,10 +65,10 @@ export default function CohortDetails({ searchParams }) {
                             >
                               Download Resume
                             </a>
+                            </h6>
+                           
                           </div>
-                          <div className="progress">
-                            <div className="progress-value style-two" />
-                          </div>
+                          
                         </div>
                       </div>
                     </div>

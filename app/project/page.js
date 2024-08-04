@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useProjects } from "@/utils/apiRequestHooks";
 import Preloader from "@/components/elements/Preloader";
-import { YEARS } from "@/utils/utils";
+import { DEFAULT_AVATAR, YEARS } from "@/utils/utils";
 export default function Project() {
   const [selectedClass, setSelectedClass] = useState("");
   

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Preloader from "@/components/elements/Preloader";
 import { useGetTrip } from "@/utils/apiRequestHooks";
+import { DEFAULT_AVATAR } from "@/utils/utils";
 
 export default function TripsDetails({ searchParams }) {
 
@@ -69,7 +70,7 @@ export default function TripsDetails({ searchParams }) {
                           <SwiperSlide key={index}>
                             <div
                               className="post-featured-thumb bg-cover"
-                              style={{ backgroundImage: `url("${image}")`,width: "100%", height: 400, objectFit: "contain" }}
+                              style={{ backgroundImage: `url("${image||DEFAULT_AVATAR}")`,width: "100%", height: 400, objectFit: "contain" }}
                             />
                           </SwiperSlide>
                         ))}

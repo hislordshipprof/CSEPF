@@ -86,7 +86,8 @@ export default function Testimonial3() {
                           <i className="fas fa-star" />
                         </div>
                       </div>
-                      <VideoPopup  style={3} url={testimonial?.media}/>
+                      {testimonial?.media !== null &&
+                      <VideoPopup  style={3} url={testimonial?.media}/>}
 
                     </div>
                     <p className="scrollable-bio-2">{testimonial?.content}</p>
