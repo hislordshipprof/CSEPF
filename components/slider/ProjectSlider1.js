@@ -40,7 +40,6 @@ const swiperOptions = {
 };
 
 export default function ProjectSlider1({ fellows }) {
-  // console.log('=======fellows',JSON.stringify(fellows,null,2))
   return (
     <>
       <div className="swiper project-slider pt-5">

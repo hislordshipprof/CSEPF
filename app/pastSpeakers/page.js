@@ -25,8 +25,6 @@ export default function PastSpeakers() {
     setOpen(!isOpen);
   };
   if (isLoading) return <div><Preloader /></div>;
-  console.log("pastSpeakers", JSON.stringify(pastSpeakers, null, 2));
-
   return (
     <>
       <Layout

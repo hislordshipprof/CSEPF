@@ -9,7 +9,7 @@ URLS.GET_PROJECT = "/projects.info"
 URLS.LIST_TESTIMONIALS = "/testimonials.list"
 URLS.LIST_TRIPS = "/trips.list"
 URLS.GET_TRIP = "/trips.info"
-URLS.CONTACT_US = "/contact_us"
+URLS.CONTACT_US = "/contact.us"
 URLS.APPLY = "/applications.create"
 
 

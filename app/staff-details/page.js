@@ -15,7 +15,6 @@ export default function StaffDetails({searchParams}) {
     };
     return socialLinks;
   };
-  console.log('===========',JSON.stringify(staffData,null,2))
   return (
     <>
       <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Staff Details">

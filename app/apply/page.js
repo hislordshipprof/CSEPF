@@ -54,10 +54,8 @@ export default function Apply() {
           picture: null,
           motivation: "",
         });
-        alert("Application submitted successfully");
       } else {
         setIsLoading(false);
-        alert("An error occurred, please try again");
       }
     });
   };

@@ -4,7 +4,6 @@ import ProjectSlider1 from "../slider/ProjectSlider1";
 
 export default function FellowsProjects() {
   const { fellows, isLoading, isError } = useFellows({ cohort: new Date().getFullYear() });
-  console.log('=======fellows',JSON.stringify(fellows,null,2))
 
   return (
     <>

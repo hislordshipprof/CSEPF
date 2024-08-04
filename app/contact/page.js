@@ -3,25 +3,54 @@ import VideoPopup from "@/components/elements/VideoPopup";
 import Layout from "@/components/layout/Layout";
 import React, { useState } from "react";
 import Link from "next/link";
+import { APICall } from "@/utils/apiCall";
+import URLS from "@/utils/urls";
+import Preloader from "@/components/elements/Preloader";
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
+  const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    alert('Form Data:', formData);
-  };
+    if (
+      formData.name === "" ||
+      formData.email === "" ||
+      formData.message === ""
+    ) {
+      alert("Please fill out all fields");
+      return;
+    }
+    setLoading(true);
 
+    APICall(URLS.CONTACT_US, formData).then((response) => {
+      setLoading(false);
+      if (response.success) {
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+      }
+    });
+  };
+  if (loading) {
+    return (
+      <div>
+        <Preloader />
+      </div>
+    );
+  }
   return (
     <>
       <Layout headerStyle={1} footerStyle={4} breadcrumbTitle="Contact Us">
@@ -149,13 +178,13 @@ export default function Contact() {
                             <div className="form-clt">
                               <span>Your name*</span>
                               <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-          />
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Your Name"
+                                value={formData.name}
+                                onChange={handleChange}
+                              />
                             </div>
                           </div>
                           <div
@@ -165,13 +194,13 @@ export default function Contact() {
                             <div className="form-clt">
                               <span>Your Email*</span>
                               <input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-          />
+                                type="text"
+                                name="email"
+                                id="email"
+                                placeholder="Your Email"
+                                value={formData.email}
+                                onChange={handleChange}
+                              />
                             </div>
                           </div>
                           <div
@@ -181,12 +210,12 @@ export default function Contact() {
                             <div className="form-clt">
                               <span>Write Message*</span>
                               <textarea
-            name="message"
-            id="message"
-            placeholder="Write Message"
-            value={formData.message}
-            onChange={handleChange}
-          />
+                                name="message"
+                                id="message"
+                                placeholder="Write Message"
+                                value={formData.message}
+                                onChange={handleChange}
+                              />
                             </div>
                           </div>
                           <div
